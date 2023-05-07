@@ -1,4 +1,12 @@
 {
+    "about": {
+        "name": "Karl-Johan Westhoff",
+        "summary": "10+ yeas of experience in designing and building structures for the Ocean, hereunder making the software tools for doing the engineering. I have extensive experience with managing client facing and technically challenging projects of various size.",
+        "email": "karl.johan.westhoff@gmail.com",
+        "phone": "(408) 416-1761",
+        "linkedin": "https://www.linkedin.com/in/karl-johan-westhoff-36460011",
+        "github": "https://github.com/KJWesthoff"
+    },
     "workexperience": [
         {
             "company": {
@@ -14,7 +22,7 @@
             },
             "tasks": [
                 "Working remote, developing in house web based project management tool.",
-                "Relocating to California, getting the kids up and running starting school in a new language during the pandemic."
+                "Relocating to California, getting the kids up and running starting school in a new titleuage during the pandemic."
             ]
         },
         {
@@ -155,51 +163,64 @@
         {
             "ocean_engineering": [
                 {
-                    "skill": "My whole career has had an element of engineering for the ocean, i am very fimilar with the requirements and standards from the marine and oil & gas industry"
+                    "title": "Oil and Gas Industruy",
+                    "description": "10+ yas in the flexible pipe industry making big and awesome stuctures, adhering to the second-to-noon requirements and standards for safety in oil & gas industry. I have workted with submerged structured, both in the watercolumn and on seabed"
+                },
+                {
+                    "title": "Working with Ships",
+                    "description": "Calculating strains and stresses of floating structures subjected to wave loads, and producing engineerig designs adhering to class standards"
                 }
             ],
             "structural_dynamics": [
                 {
-                    "skill": "Blast performance of structured (really quick dynamics)"
+                    "title": "Shock and explosions",
+                    "description": "I got to play with really fast dynamics, and to attempt to model blast envents in explicit finite element (Autodyn) carruing out my M.Sc. thesis."
                 },
                 {
-                    "skill": "Strength of ships"
+                    "title": "Strength of ships"
                 },
                 {
-                    "skill": "Fatigue of structured subjected to wave loading)"
+                    "title": "Fatigue of structures subjected to wave loading)"
+                },
+                {
+                    "title": "In fleld measuremnt campaings"
                 }
             ],
             "project_management": [
                 {
-                    "skill": "I enjoy the project management approch where efforts are directed towards measurable goals, both as contruibuter to projects and as a mager of projects"
+                    "title": "Front end engineering design",
+                    "description": ""
+                },
+                {
+                    "title": "I enjoy the project management approch where efforts are directed towards measurable goals, both as contruibuter to projects and as a mager of projects"
                 }
             ],
             "software": [
                 {
                     "programming": [
                         {
-                            "lang": "Python",
+                            "title": "Python",
                             "logo": "python.svg",
                             "level": 5,
                             "link": "",
                             "description": "I love python, used it for engineering design tools, web backends, go-to tool for all sort of things.."
                         },
                         {
-                            "lang": "C/C++",
+                            "title": "C/C++",
                             "logo": "cpp.svg",
                             "level": 2,
                             "link": "",
                             "description": "I have used C/C++ mainly in academics, and on arduino iot projects"
                         },
                         {
-                            "lang": "FORTRAN",
+                            "title": "FORTRAN",
                             "logo": "fortran.svg",
                             "level": 1,
                             "link": "",
                             "description": "I used fortran for programming a Finite Element program in univerity"
                         },
                         {
-                            "lang": "MATLAB",
+                            "title": "MATLAB",
                             "logo": "matlab.svg",
                             "level": 4,
                             "link": "https://www.mathworks.com/products/matlab.html",
@@ -208,196 +229,196 @@
                     ],
                     "webstack": [
                         {
-                            "lang": "HTML",
+                            "title": "HTML",
                             "logo": "html5.svg",
                             "level": 5,
                             "link": "https://www.w3.org/",
                             "description": "I can do vanilla HTML (even after vorking with frameworks;-)"
                         },
                         {
-                            "lang": "CSS",
+                            "title": "CSS",
                             "logo": "css3.svg",
                             "level": 5,
                             "link": "https://www.w3schools.com/css/default.asp",
                             "description": "I can do vanilla CSS (even after vorking with Bootsrap;-)"
                         },
                         {
-                            "lang": "JS",
+                            "title": "JS",
                             "logo": "js.svg",
                             "level": 5,
                             "link": "https://www.w3schools.com/js/js_es6.asp",
                             "description": "I like that it runs everyvhere in browsers"
                         },
                         {
-                            "lang": "React",
+                            "title": "React",
                             "logo": "react.svg",
                             "level": 4,
                             "link": "https://react.dev/",
                             "description": "I learned react at Berkeley Bootcamp and have used it on some projects"
                         },
                         {
-                            "lang": "Redux",
+                            "title": "Redux",
                             "logo": "redux.svg",
                             "level": 2,
                             "link": "https://redux.js.org/",
                             "description": "I have used Redux on 1 project, often it can be avoided"
                         },
                         {
-                            "lang": "Vue",
+                            "title": "Vue",
                             "logo": "vue.svg",
                             "level": 4,
                             "link": "https://vuejs.org/",
                             "description": "I have started using vue on recent projects both at work an on persnonal projects"
                         },
                         {
-                            "lang": "Node",
+                            "title": "Node",
                             "logo": "node.svg",
                             "level": 4,
                             "link": "https://nodejs.org/en",
                             "description": "Running js backends and easpy-peasy import of frontend packages with npm"
                         },
                         {
-                            "lang": "Pinia",
+                            "title": "Pinia",
                             "logo": "pinia.svg",
                             "level": 4,
                             "link": "https://pinia.vuejs.org/",
                             "description": "Super easy variable storage for vue projects"
                         },
                         {
-                            "lang": "Vuelidate",
+                            "title": "Vuelidate",
                             "logo": "vuelidate.svg",
                             "level": 2,
                             "link": "https://vuelidate-next.netlify.app/",
                             "description": "Form validation for vue projects, its nice and simple"
                         },
                         {
-                            "lang": "Tailwinds CSS",
+                            "title": "Tailwinds CSS",
                             "logo": "tailwind.svg",
                             "level": 2,
                             "link": "https://tailwindcss.com/",
                             "description": "Used for this page"
                         },
                         {
-                            "lang": "Bootstrap",
+                            "title": "Bootstrap",
                             "logo": "bootstrap.svg",
                             "level": 4,
                             "link": "https://getbootstrap.com/",
                             "description": "Super easy to get web apps looking nice quickly"
                         },
                         {
-                            "lang": "Okta",
+                            "title": "Okta",
                             "logo": "okta.svg",
                             "level": 3,
                             "link": "https://www.okta.com/",
                             "description": "Authentication framwork we implemented and used at work"
                         },
                         {
-                            "lang": "Express",
+                            "title": "Express",
                             "logo": "",
                             "level": 3,
                             "link": "https://expressjs.com/",
                             "description": "Node JS backend, including routing and middleware for authentication and protection of pages etc."
                         },
                         {
-                            "lang": "Mongoose",
+                            "title": "Mongoose",
                             "logo": "mongoose.svg",
                             "level": 2,
                             "link": "https://mongoosejs.com/",
                             "description": "ODM for mongo db, learned it at bootcamp"
                         },
                         {
-                            "lang": "GraphQL",
+                            "title": "GraphQL",
                             "logo": "graphql.svg",
                             "level": 1,
                             "link": "https://graphql.org/",
-                            "description": "I have used it as a API query language (we used Apollo on an express server with Node)"
+                            "description": "I have used it as a API query titleuage (we used Apollo on an express server with Node)"
                         },
                         {
-                            "lang": "MySQL",
+                            "title": "MySQL",
                             "logo": "mysql.svg",
                             "level": 2,
                             "link": "https://www.mysql.com/",
                             "description": "SQL server for personal projects, i have used it with Sqlalchemy in python backends and with Sequielize on Node/express "
                         },
                         {
-                            "lang": "MSSQL",
+                            "title": "MSSQL",
                             "logo": "azuresql.svg",
                             "level": 1,
                             "link": "",
                             "description": "SQL server used on azure at work, i have used it with Sqlalchemy in python backends"
                         },
                         {
-                            "lang": "MongoDB",
+                            "title": "MongoDB",
                             "logo": "mongodb.svg",
                             "level": 2,
                             "link": "https://www.mongodb.com/",
                             "description": "Super easy bucket server i have used for personal projects, with Mongoose or Benie for pythonic backends "
                         },
                         {
-                            "lang": "CosmosDB",
+                            "title": "CosmosDB",
                             "logo": "azure.svg",
                             "level": 1,
                             "link": "https://azure.microsoft.com/en-us/products/cosmos-db",
                             "description": " Same a Mogo but for work, where we use Azure"
                         },
                         {
-                            "lang": "Flask",
+                            "title": "Flask",
                             "logo": "flask.svg",
                             "level": 2,
                             "link": "https://palletsprojects.com/p/flask/",
                             "description": "Pythonic backed, i have used it in multiple projects"
                         },
                         {
-                            "lang": "FastAPI",
+                            "title": "FastAPI",
                             "logo": "fastapi.svg",
                             "level": 3,
                             "link": "https://fastapi.tiangolo.com/",
                             "description": "Pythonic backed, used at work super quick to set up and can include authentication with Okta"
                         },
                         {
-                            "lang": "Docker",
+                            "title": "Docker",
                             "logo": "docker.svg",
                             "level": 3,
                             "link": "https://www.docker.com/",
                             "description": "Part of our deployment process at work"
                         },
                         {
-                            "lang": "Kubernetes",
+                            "title": "Kubernetes",
                             "logo": "kubernetes.svg",
                             "level": 3,
                             "link": "https://kubernetes.io/",
                             "description": "Part of our deployment process at work"
                         },
                         {
-                            "lang": "Git",
+                            "title": "Git",
                             "logo": "github-mark.svg",
                             "level": 4,
                             "link": "https://github.com/",
                             "description": "We use it at work and i use it personally to keep track of code abd also as CI/CD tool to deploy using github actions"
                         },
                         {
-                            "lang": "Tanstack Query",
+                            "title": "Tanstack Query",
                             "logo": "",
                             "level": 3,
                             "link": "https://tanstack.com/query/latest",
                             "description": "Awesome tool for keeping data up to date between frontend and backend apps i have used it both with React and Vue"
                         },
                         {
-                            "lang": "Tanstack Table",
+                            "title": "Tanstack Table",
                             "logo": "",
                             "level": 3,
                             "link": "https://tanstack.com/table/v8",
                             "description": "Awesome tool for making interactive tables that can do anything"
                         },
                         {
-                            "lang": "Pydantic",
+                            "title": "Pydantic",
                             "logo": "pydantic.svg",
                             "level": 3,
                             "link": "https://docs.pydantic.dev/latest/",
                             "description": "Awesome tool for data validation, i used it with fast api"
                         },
                         {
-                            "lang": "Beanie",
+                            "title": "Beanie",
                             "logo": "",
                             "level": 3,
                             "link": "https://beanie-odm.dev/",
