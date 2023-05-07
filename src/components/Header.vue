@@ -26,7 +26,6 @@
         for doing the engineering. I have extensive experience with managing client facing and technically challenging
         projects of various size.</p>
     </div>
-
   </div>
 </template>
 

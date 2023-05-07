@@ -1,8 +1,11 @@
 <script setup>
-import TopOfCV from './components/TopOfCV.vue'
+import Header from './components/Header.vue'
+import Skills from './components/Skills.vue'
+import WorkExperience from './components/WorkExperience.vue'
 </script>
 
 <template>
-  
-  <TopOfCV/>
+  <Header/>
+  <Skills/>
+  <WorkExperience/>
 </template>

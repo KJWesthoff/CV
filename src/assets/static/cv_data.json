@@ -1,0 +1,411 @@
+{
+    "workexperience": [
+        {
+            "company": {
+                "name": "National Oilwell Varco (NOV)",
+                "description": "NOV delivers highly engineered flexible pipe systems to the biggest companies in offshore oil and gas industry",
+                "location": "San Mateo, California",
+                "logo": "nov.svg"
+            },
+            "title": "Part time Engineer/Full time dad",
+            "tenure": {
+                "start": "March 2020",
+                "end": "Pesent"
+            },
+            "tasks": [
+                "Working remote, developing in house web based project management tool.",
+                "Relocating to California, getting the kids up and running starting school in a new language during the pandemic."
+            ]
+        },
+        {
+            "company": {
+                "name": "NOV",
+                "description": "",
+                "location": "Copenhagen, Denmark",
+                "logo": "nov.svg"
+            },
+            "title": "Senior Engineer",
+            "tenure": {
+                "start": "June 2010",
+                "end": "March 2020"
+            },
+            "tasks": [
+                "System assessment engineer and project manager responsible for the technical and commercial execution of client facing service projects in in the offshore oil and gas industry.",
+                "Project management responsibility for a large front end engineering design (FEED) projects ( ~1000-3500 engineering hrs.) bringing new technology to market and pushing boundaries for flexible risers.",
+                "Planning and execution of an off-site technical forensics campaign in the Caucasus area, including handling import/export of materials and personnel,and strategy for health and safety (HSE).",
+                "Engineering during sales phase and tactical on-site management for a engineering procurement construction and installation (EPCI) project delivering a ship to shore on/off loading system in West Africa.",
+                "Design engineer, designing flexible pipe and riser systems. Primary tasks as a project engineer delivering design reports and documentation on time and support for production. Furthermore I helped develop a multitude of engineering design tools."
+            ]
+        },
+        {
+            "company": {
+                "name": "Lloyds Register / Odegaard & Danneskiold-Samsoe",
+                "description": "Odegaard & Danneskold-Samsøe (ODS) carried out Engineering consultancy within fluid dynamics, noise and vibration. ODS was acquired by LR in 2005",
+                "location": "Copenhagen, Denmark",
+                "logo": "lloyds_register.png"
+            },
+            "title": "Consultant, Marine",
+            "tenure": {
+                "start": "June 2206",
+                "end": "June 2010"
+            },
+            "tasks": [
+                "System assessment engineer and project manager responsible for the technical and commercial execution of client facing service projects in in the offshore oil and gas industry.",
+                "Project management responsibility for a large front end engineering design (FEED) projects ( ~1000-3500 engineering hrs.) bringing new technology to market and pushing boundaries for flexible risers.",
+                "Planning and execution of an off-site technical forensics campaign in the Caucasus area, including handling import/export of materials and personnel,and strategy for health and safety (HSE).",
+                "Engineering during sales phase and tactical on-site management for a engineering procurement construction and installation (EPCI) project delivering a ship to shore on/off loading system in West Africa.",
+                "Design engineer, designing flexible pipe and riser systems. Primary tasks as a project engineer delivering design reports and documentation on time and support for production. Furthermore I helped develop a multitude of engineering design tools."
+            ]
+        },
+        {
+            "company": {
+                "name": "Danish Navy Material Command",
+                "description": "Government/Military Organisation",
+                "location": "Holmen, Copenhagen, Denmark",
+                "logo": "forsvaret.svg",
+                "link": "https://www.forsvaret.dk/"
+            },
+            "title": "Consultant, Marine",
+            "tenure": {
+                "start": "June 2206",
+                "end": "June 2010"
+            },
+            "tasks": [
+                "Continuing an internship I worked in the ship design department, carrying out 3d-modelling and cad workshop drawings.",
+            ]
+        }
+    ],
+    "education": [
+        {
+            "education": {
+                "school": "DTU - Technical University of Denmark",
+                "logo": "dtu.svg",
+                "link": "https://www.dtu.dk/english/",
+                "title": "M.Sc., Mechanical Engineering",
+                "tenure": {
+                    "start": 2003,
+                    "end": 2006
+                },
+                "keywords": [
+                    "Solid Mechanics",
+                    "Structural Dynamics",
+                    "Fiber Reinfoced Composites",
+                    "Finite Element Analyses",
+                    "Marine Engineering"
+                ],
+                "description":"Thesis work at DTU, Blast Performance of CFRP Composites: 
+                        The project was carried out in cooperation with the Danish Defence Research Establishment (now
+                        a part of (FMT) and Falck-Schmidt Defence System. The project dealt with carbon fiber composite
+                        materials subjected to high explosives and included numerical modelling and design of and execution of
+                        blast experiments."
+            }
+        },
+        {
+            "education": {
+                "school": "DTU - Technical University of Denmark",
+                "title": "B.Sc, Naval Architecture and Marine Engineering",
+                "logo": "dtu.svg",
+                "link": "https://www.dtu.dk/english/",
+                "tenure": {
+                    "start": 2000,
+                    "end": 2003
+                },
+                "keywords": [
+                    "Mechanical Engineering",
+                    "Naval Arcitecture",
+                    "Submarine Design"
+                ],
+                "description": ""
+            }
+        }
+    ],
+    "certifications": [
+        {
+            "certifiction": {
+                "name": "IPMA - D",
+                "institution": "IPMA: International Project Management Association",
+                "issued": "May 2015",
+                "expires": "May 2020",
+                "logo": "",
+                "validation": "DEN3789",
+                "description": "",
+                "link": "https://ipma.world/"
+            }
+        },
+        {
+            "certifiction": {
+                "name": "Berkeley Coding Bootcamp",
+                "institution": "UC Berkeley Extension",
+                "issued": "May 2021",
+                "expires": "",
+                "logo": "",
+                "validation": "74b1446548425e1612008cd5d849e0aa",
+                "description": "",
+                "link": "https://bootcamp.berkeley.edu/coding/"
+            }
+        }
+    ],
+    "volunteering": [
+        {
+            "item": "Voluneering in my son's 1st & 2'nd grade",
+            "description": ""
+        }
+    ],
+    "skills": [
+        {
+            "ocean_engineering": [
+                {
+                    "skill": "My whole career has had an element of engineering for the ocean, i am very fimilar with the requirements and standards from the marine and oil & gas industry"
+                }
+            ],
+            "structural_dynamics": [
+                {
+                    "skill": "Blast performance of structured (really quick dynamics)"
+                },
+                {
+                    "skill": "Strength of ships"
+                },
+                {
+                    "skill": "Fatigue of structured subjected to wave loading)"
+                }
+            ],
+            "project_management": [
+                {
+                    "skill": "I enjoy the project management approch where efforts are directed towards measurable goals, both as contruibuter to projects and as a mager of projects"
+                }
+            ],
+            "software": [
+                {
+                    "programming": [
+                        {
+                            "lang": "Python",
+                            "logo": "python.svg",
+                            "level": 5,
+                            "link": "",
+                            "description": "I love python, used it for engineering design tools, web backends, go-to tool for all sort of things.."
+                        },
+                        {
+                            "lang": "C/C++",
+                            "logo": "cpp.svg",
+                            "level": 2,
+                            "link": "",
+                            "description": "I have used C/C++ mainly in academics, and on arduino iot projects"
+                        },
+                        {
+                            "lang": "FORTRAN",
+                            "logo": "fortran.svg",
+                            "level": 1,
+                            "link": "",
+                            "description": "I used fortran for programming a Finite Element program in univerity"
+                        },
+                        {
+                            "lang": "MATLAB",
+                            "logo": "matlab.svg",
+                            "level": 4,
+                            "link": "https://www.mathworks.com/products/matlab.html",
+                            "description": "Academics, and tooling for vibration analyes (until python took over;-)"
+                        }
+                    ],
+                    "webstack": [
+                        {
+                            "lang": "HTML",
+                            "logo": "html5.svg",
+                            "level": 5,
+                            "link": "https://www.w3.org/",
+                            "description": "I can do vanilla HTML (even after vorking with frameworks;-)"
+                        },
+                        {
+                            "lang": "CSS",
+                            "logo": "css3.svg",
+                            "level": 5,
+                            "link": "https://www.w3schools.com/css/default.asp",
+                            "description": "I can do vanilla CSS (even after vorking with Bootsrap;-)"
+                        },
+                        {
+                            "lang": "JS",
+                            "logo": "js.svg",
+                            "level": 5,
+                            "link": "https://www.w3schools.com/js/js_es6.asp",
+                            "description": "I like that it runs everyvhere in browsers"
+                        },
+                        {
+                            "lang": "React",
+                            "logo": "react.svg",
+                            "level": 4,
+                            "link": "https://react.dev/",
+                            "description": "I learned react at Berkeley Bootcamp and have used it on some projects"
+                        },
+                        {
+                            "lang": "Redux",
+                            "logo": "redux.svg",
+                            "level": 2,
+                            "link": "https://redux.js.org/",
+                            "description": "I have used Redux on 1 project, often it can be avoided"
+                        },
+                        {
+                            "lang": "Vue",
+                            "logo": "vue.svg",
+                            "level": 4,
+                            "link": "https://vuejs.org/",
+                            "description": "I have started using vue on recent projects both at work an on persnonal projects"
+                        },
+                        {
+                            "lang": "Node",
+                            "logo": "node.svg",
+                            "level": 4,
+                            "link": "https://nodejs.org/en",
+                            "description": "Running js backends and easpy-peasy import of frontend packages with npm"
+                        },
+                        {
+                            "lang": "Pinia",
+                            "logo": "pinia.svg",
+                            "level": 4,
+                            "link": "https://pinia.vuejs.org/",
+                            "description": "Super easy variable storage for vue projects"
+                        },
+                        {
+                            "lang": "Vuelidate",
+                            "logo": "vuelidate.svg",
+                            "level": 2,
+                            "link": "https://vuelidate-next.netlify.app/",
+                            "description": "Form validation for vue projects, its nice and simple"
+                        },
+                        {
+                            "lang": "Tailwinds CSS",
+                            "logo": "tailwind.svg",
+                            "level": 2,
+                            "link": "https://tailwindcss.com/",
+                            "description": "Used for this page"
+                        },
+                        {
+                            "lang": "Bootstrap",
+                            "logo": "bootstrap.svg",
+                            "level": 4,
+                            "link": "https://getbootstrap.com/",
+                            "description": "Super easy to get web apps looking nice quickly"
+                        },
+                        {
+                            "lang": "Okta",
+                            "logo": "okta.svg",
+                            "level": 3,
+                            "link": "https://www.okta.com/",
+                            "description": "Authentication framwork we implemented and used at work"
+                        },
+                        {
+                            "lang": "Express",
+                            "logo": "",
+                            "level": 3,
+                            "link": "https://expressjs.com/",
+                            "description": "Node JS backend, including routing and middleware for authentication and protection of pages etc."
+                        },
+                        {
+                            "lang": "Mongoose",
+                            "logo": "mongoose.svg",
+                            "level": 2,
+                            "link": "https://mongoosejs.com/",
+                            "description": "ODM for mongo db, learned it at bootcamp"
+                        },
+                        {
+                            "lang": "GraphQL",
+                            "logo": "graphql.svg",
+                            "level": 1,
+                            "link": "https://graphql.org/",
+                            "description": "I have used it as a API query language (we used Apollo on an express server with Node)"
+                        },
+                        {
+                            "lang": "MySQL",
+                            "logo": "mysql.svg",
+                            "level": 2,
+                            "link": "https://www.mysql.com/",
+                            "description": "SQL server for personal projects, i have used it with Sqlalchemy in python backends and with Sequielize on Node/express "
+                        },
+                        {
+                            "lang": "MSSQL",
+                            "logo": "azuresql.svg",
+                            "level": 1,
+                            "link": "",
+                            "description": "SQL server used on azure at work, i have used it with Sqlalchemy in python backends"
+                        },
+                        {
+                            "lang": "MongoDB",
+                            "logo": "mongodb.svg",
+                            "level": 2,
+                            "link": "https://www.mongodb.com/",
+                            "description": "Super easy bucket server i have used for personal projects, with Mongoose or Benie for pythonic backends "
+                        },
+                        {
+                            "lang": "CosmosDB",
+                            "logo": "azure.svg",
+                            "level": 1,
+                            "link": "https://azure.microsoft.com/en-us/products/cosmos-db",
+                            "description": " Same a Mogo but for work, where we use Azure"
+                        },
+                        {
+                            "lang": "Flask",
+                            "logo": "flask.svg",
+                            "level": 2,
+                            "link": "https://palletsprojects.com/p/flask/",
+                            "description": "Pythonic backed, i have used it in multiple projects"
+                        },
+                        {
+                            "lang": "FastAPI",
+                            "logo": "fastapi.svg",
+                            "level": 3,
+                            "link": "https://fastapi.tiangolo.com/",
+                            "description": "Pythonic backed, used at work super quick to set up and can include authentication with Okta"
+                        },
+                        {
+                            "lang": "Docker",
+                            "logo": "docker.svg",
+                            "level": 3,
+                            "link": "https://www.docker.com/",
+                            "description": "Part of our deployment process at work"
+                        },
+                        {
+                            "lang": "Kubernetes",
+                            "logo": "kubernetes.svg",
+                            "level": 3,
+                            "link": "https://kubernetes.io/",
+                            "description": "Part of our deployment process at work"
+                        },
+                        {
+                            "lang": "Git",
+                            "logo": "github-mark.svg",
+                            "level": 4,
+                            "link": "https://github.com/",
+                            "description": "We use it at work and i use it personally to keep track of code abd also as CI/CD tool to deploy using github actions"
+                        },
+                        {
+                            "lang": "Tanstack Query",
+                            "logo": "",
+                            "level": 3,
+                            "link": "https://tanstack.com/query/latest",
+                            "description": "Awesome tool for keeping data up to date between frontend and backend apps i have used it both with React and Vue"
+                        },
+                        {
+                            "lang": "Tanstack Table",
+                            "logo": "",
+                            "level": 3,
+                            "link": "https://tanstack.com/table/v8",
+                            "description": "Awesome tool for making interactive tables that can do anything"
+                        },
+                        {
+                            "lang": "Pydantic",
+                            "logo": "pydantic.svg",
+                            "level": 3,
+                            "link": "https://docs.pydantic.dev/latest/",
+                            "description": "Awesome tool for data validation, i used it with fast api"
+                        },
+                        {
+                            "lang": "Beanie",
+                            "logo": "",
+                            "level": 3,
+                            "link": "https://beanie-odm.dev/",
+                            "description": "Awesome ODM tool for mogpdb built on pydantic, i used it for a FastAPI backend"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
