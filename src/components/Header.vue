@@ -1,6 +1,6 @@
 <script setup>
 import data from '../assets/static/cv_data.json'  
-console.log(data)
+
 </script>
 
 <template>

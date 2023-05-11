@@ -16,64 +16,42 @@ const viewBox = computed(() => {
     return `0 0 ${width} ${height}`
 })
 
-const radiusScale = d3.scaleSqrt().domain([1, 5]).range([5, 15]);
+const radiusScale = computed(() => d3.scaleSqrt().domain([1, 5]).range([5, 15]));
 
-const svg = d3.select("svg g")
+const simulation = computed(() => d3.forceSimulation()
+    .force('charge', d3.forceManyBody().strength(5))
+    .force('center', d3.forceCenter(width / 2, height / 2))
+    .force('ground', d3.forceY(height))
+    .force('x', d3.forceX().x(width / 2))
+    .force('collision', d3.forceCollide().radius(d => radiusScale.value(d.level)))
+)
 
-const circles = computed(() => {
+
+const ticked = computed(() => {
+    const svg = d3.select("svg g")
     svg.selectAll(".scircle")
-        .data(data.skills.software.webstack)
-        .enter()
-        .append("circle")
-        .attr("r", d => radiusScale(d.level))
-        .attr("class", "scircle fill-blue-300")
-
-})
-
-const text = computed(() => {
+        .attr('cx', function (d) {
+            console.log(d)
+            return d.x;
+        })
+        .attr('cy', function (d) {
+            return d.y;
+        });
     svg.selectAll(".stext")
-        .data(data.skills.software.webstack)
-        .enter()
-        .append("text")
-        .attr("class", "stext text-center text-xs")
-        .text(d => d.title)
-        .append("icon")
-        .attr("name", d => d.logo)
+        .attr('x', function (d) {
+            return d.x;
+        })
+        .attr('y', function (d) {
+            return d.y;
+        });
 })
 
-watchEffect(() => {
-
-    const ticked2 = () => {
-        
-        svg.selectAll(".scircle")
-            
-            .attr('cx', function (d) {
-                return d.x;
-            })
-            .attr('cy', function (d) {
-                return d.y;
-            });
-        svg.selectAll(".stext")
-            .attr('x', function (d) {
-                return d.x;
-            })
-            .attr('y', function (d) {
-                return d.y;
-            });
-    }
-
-    const simulation = d3.forceSimulation()
-        .force('charge', d3.forceManyBody().strength(5))
-        .force('center', d3.forceCenter(width / 2, height / 2))
-        .force('ground', d3.forceY(height))
-        .force('x', d3.forceX().x(width / 2))
-        .force('collision', d3.forceCollide().radius(d => radiusScale(d.level)))
 
 
 
+onMounted(() => {
 
-
-    simulation.nodes(data.skills.software.webstack).on("tick", ticked2)
+    simulation.value.nodes(data.skills.software.webstack).on("tick", ticked.value)
 
 
 })
@@ -94,8 +72,18 @@ watchEffect(() => {
         </div>
         <div id="bubbles" class="h-100">
             <svg class="svg-holder" :viewBox="viewBox">
-                <g>
-                    <circle v-for="(c, i) in data.skills.software.webstack" :r="3" class="scircle"></circle>
+                <g :transform="'translate(100,100)'">
+                    <circle v-for="(d, i) in data.skills.software.webstack" :r="radiusScale(d.level)"
+                        class="scircle fill-blue-300">
+                    </circle>
+                </g>
+                <g :transform="'translate(100,100)'">
+                    <text v-for="(d, i) in data.skills.software.webstack" class="stext text-center text-s">
+                    {{ d.title }}
+                    </text>
+                </g>
+                <g :transform="'translate(100,100)'">
+                    <icon width = "5" height = "3"  v-for="(d, i) in data.skills.software.webstack" key="skill.title" :name=d.logo></icon>
                 </g>
             </svg>
         </div>
