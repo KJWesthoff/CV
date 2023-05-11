@@ -315,7 +315,7 @@
                 },
                 {
                     "title": "Express",
-                    "logo": "",
+                    "logo": "dtu.svg",
                     "level": 3,
                     "link": "https://expressjs.com/",
                     "description": "Node JS backend, including routing and middleware for authentication and protection of pages etc."
@@ -399,14 +399,14 @@
                 },
                 {
                     "title": "Tanstack Query",
-                    "logo": "",
+                    "logo": "dtu.svg",
                     "level": 3,
                     "link": "https://tanstack.com/query/latest",
                     "description": "Awesome tool for keeping data up to date between frontend and backend apps i have used it both with React and Vue"
                 },
                 {
                     "title": "Tanstack Table",
-                    "logo": "",
+                    "logo": "dtu.svg",
                     "level": 3,
                     "link": "https://tanstack.com/table/v8",
                     "description": "Awesome tool for making interactive tables that can do anything"

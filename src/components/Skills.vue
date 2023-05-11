@@ -117,7 +117,7 @@ onMounted(() => {
 
         <div>
             <h1>test</h1>
-            <p>{{ radtest(3) }}</p>
+            <p>{{ radiusScale(3) }}</p>
         </div>
         <div id="bubbles" class="h-100">
             <svg class="svg-holder" :viewBox="viewBox">
