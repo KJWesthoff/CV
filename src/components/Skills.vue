@@ -16,13 +16,9 @@ const viewBox = computed(() => {
     return `0 0 ${width} ${height}`
 })
 
-
 const radiusScale = d3.scaleSqrt().domain([1, 5]).range([5, 15]);
 
 const svg = d3.select("svg g")
-
-
-
 
 const circles = computed(() => {
     svg.selectAll(".scircle")
@@ -46,39 +42,35 @@ const text = computed(() => {
 })
 
 watchEffect(() => {
-    //const width = 900;
-    //const height = 300;
 
-    //.attr("width", width)
-    //.attr("height", height)
-    //.append("g")
     const ticked2 = () => {
-    
-    svg.selectAll(".scircle")
-        .attr('cx', function (d) {
-            return d.x;
-        })
-        .attr('cy', function (d) {
-            return d.y;
-        });
-    svg.selectAll(".stext")
-        .attr('x', function (d) {
-            return d.x;
-        })
-        .attr('y', function (d) {
-            return d.y;
-        });
+        
+        svg.selectAll(".scircle")
+            
+            .attr('cx', function (d) {
+                return d.x;
+            })
+            .attr('cy', function (d) {
+                return d.y;
+            });
+        svg.selectAll(".stext")
+            .attr('x', function (d) {
+                return d.x;
+            })
+            .attr('y', function (d) {
+                return d.y;
+            });
     }
 
-    const simulation =  d3.forceSimulation()
+    const simulation = d3.forceSimulation()
         .force('charge', d3.forceManyBody().strength(5))
         .force('center', d3.forceCenter(width / 2, height / 2))
         .force('ground', d3.forceY(height))
         .force('x', d3.forceX().x(width / 2))
         .force('collision', d3.forceCollide().radius(d => radiusScale(d.level)))
-        .on('tick', ticked2)
-     
-    
+
+
+
 
 
     simulation.nodes(data.skills.software.webstack).on("tick", ticked2)
@@ -103,7 +95,7 @@ watchEffect(() => {
         <div id="bubbles" class="h-100">
             <svg class="svg-holder" :viewBox="viewBox">
                 <g>
-                    <circle v-for="(c,i) in data.skills.software.webstack" :r="3" class="scircle"></circle>
+                    <circle v-for="(c, i) in data.skills.software.webstack" :r="3" class="scircle"></circle>
                 </g>
             </svg>
         </div>
