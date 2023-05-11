@@ -79,7 +79,7 @@
                 "end": "June 2010"
             },
             "tasks": [
-                "Continuing an internship I worked in the ship design department, carrying out 3d-modelling and cad workshop drawings.",
+                "Continuing an internship I worked in the ship design department, carrying out 3d-modelling and cad workshop drawings."
             ]
         }
     ],
@@ -101,11 +101,7 @@
                     "Finite Element Analyses",
                     "Marine Engineering"
                 ],
-                "description":"Thesis work at DTU, Blast Performance of CFRP Composites: 
-                        The project was carried out in cooperation with the Danish Defence Research Establishment (now
-                        a part of (FMT) and Falck-Schmidt Defence System. The project dealt with carbon fiber composite
-                        materials subjected to high explosives and included numerical modelling and design of and execution of
-                        blast experiments."
+                "description": "Thesis work at DTU, Blast Performance of CFRP Composites: The project was carried out in cooperation with the Danish Defence Research Establishment (now a part of (FMT) and Falck-Schmidt Defence System. The project dealt with carbon fiber composite materials subjected to high explosives and included numerical modelling and design of and execution of blast experiments."
             }
         },
         {
@@ -159,274 +155,284 @@
             "description": ""
         }
     ],
-    "skills": [
-        {
-            "ocean_engineering": [
+    "skills": {
+        "ocean_engineering": [
+            {
+                "title": "Oil and Gas Industruy",
+                "description": "10+ yas in the flexible pipe industry making big and awesome stuctures, adhering to the second-to-noon requirements and standards for safety in oil & gas industry. I have workted with submerged structured, both in the watercolumn and on seabed"
+            },
+            {
+                "title": "Working with Ships",
+                "description": "Calculating strains and stresses of floating structures subjected to wave loads, and producing engineerig designs adhering to class standards"
+            }
+        ],
+        "structural_dynamics": [
+            {
+                "title": "Shock and explosions",
+                "description": "I got to play with really fast dynamics, and to attempt to model blast envents in explicit finite element (Autodyn) carruing out my M.Sc. thesis."
+            },
+            {
+                "title": "Strength of ships"
+            },
+            {
+                "title": "Fatigue of structures subjected to wave loading)"
+            },
+            {
+                "title": "In fleld measuremnt campaings"
+            }
+        ],
+        "project_management": [
+            {
+                "title": "Front end engineering design",
+                "description": ""
+            },
+            {
+                "title": "I enjoy the project management approch where efforts are directed towards measurable goals, both as contruibuter to projects and as a mager of projects"
+            }
+        ],
+        "software": {
+            "programming": [
                 {
-                    "title": "Oil and Gas Industruy",
-                    "description": "10+ yas in the flexible pipe industry making big and awesome stuctures, adhering to the second-to-noon requirements and standards for safety in oil & gas industry. I have workted with submerged structured, both in the watercolumn and on seabed"
+                    "title": "Python",
+                    "logo": "python.svg",
+                    "level": 5,
+                    "link": "",
+                    "description": "I love python, used it for engineering design tools, web backends, go-to tool for all sort of things.."
                 },
                 {
-                    "title": "Working with Ships",
-                    "description": "Calculating strains and stresses of floating structures subjected to wave loads, and producing engineerig designs adhering to class standards"
+                    "title": "C/C++",
+                    "logo": "cpp.svg",
+                    "level": 2,
+                    "link": "",
+                    "description": "I have used C/C++ mainly in academics, and on arduino iot projects"
+                },
+                {
+                    "title": "FORTRAN",
+                    "logo": "fortran.svg",
+                    "level": 1,
+                    "link": "",
+                    "description": "I used fortran for programming a Finite Element program in univerity"
+                },
+                {
+                    "title": "MATLAB",
+                    "logo": "matlab.svg",
+                    "level": 4,
+                    "link": "https://www.mathworks.com/products/matlab.html",
+                    "description": "Academics, and tooling for vibration analyes (until python took over;-)"
+                },
+                {
+                    "title": "JS",
+                    "logo": "js.svg",
+                    "level": 5,
+                    "link": "https://www.w3schools.com/js/js_es6.asp",
+                    "description": "I like that it runs everyvhere in browsers"
                 }
             ],
-            "structural_dynamics": [
+            "webstack": [
                 {
-                    "title": "Shock and explosions",
-                    "description": "I got to play with really fast dynamics, and to attempt to model blast envents in explicit finite element (Autodyn) carruing out my M.Sc. thesis."
+                    "title": "HTML",
+                    "logo": "html5.svg",
+                    "level": 5,
+                    "link": "https://www.w3.org/",
+                    "description": "I can do vanilla HTML (even after vorking with frameworks;-)"
                 },
                 {
-                    "title": "Strength of ships"
+                    "title": "CSS",
+                    "logo": "css3.svg",
+                    "level": 5,
+                    "link": "https://www.w3schools.com/css/default.asp",
+                    "description": "I can do vanilla CSS (even after vorking with Bootsrap;-)"
                 },
                 {
-                    "title": "Fatigue of structures subjected to wave loading)"
+                    "title": "JS",
+                    "logo": "js.svg",
+                    "level": 5,
+                    "link": "https://www.w3schools.com/js/js_es6.asp",
+                    "description": "I like that it runs everyvhere in browsers"
                 },
                 {
-                    "title": "In fleld measuremnt campaings"
-                }
-            ],
-            "project_management": [
-                {
-                    "title": "Front end engineering design",
-                    "description": ""
+                    "title": "React",
+                    "logo": "react.svg",
+                    "level": 4,
+                    "link": "https://react.dev/",
+                    "description": "I learned react at Berkeley Bootcamp and have used it on some projects"
                 },
                 {
-                    "title": "I enjoy the project management approch where efforts are directed towards measurable goals, both as contruibuter to projects and as a mager of projects"
-                }
-            ],
-            "software": [
+                    "title": "Redux",
+                    "logo": "redux.svg",
+                    "level": 2,
+                    "link": "https://redux.js.org/",
+                    "description": "I have used Redux on 1 project, often it can be avoided"
+                },
                 {
-                    "programming": [
-                        {
-                            "title": "Python",
-                            "logo": "python.svg",
-                            "level": 5,
-                            "link": "",
-                            "description": "I love python, used it for engineering design tools, web backends, go-to tool for all sort of things.."
-                        },
-                        {
-                            "title": "C/C++",
-                            "logo": "cpp.svg",
-                            "level": 2,
-                            "link": "",
-                            "description": "I have used C/C++ mainly in academics, and on arduino iot projects"
-                        },
-                        {
-                            "title": "FORTRAN",
-                            "logo": "fortran.svg",
-                            "level": 1,
-                            "link": "",
-                            "description": "I used fortran for programming a Finite Element program in univerity"
-                        },
-                        {
-                            "title": "MATLAB",
-                            "logo": "matlab.svg",
-                            "level": 4,
-                            "link": "https://www.mathworks.com/products/matlab.html",
-                            "description": "Academics, and tooling for vibration analyes (until python took over;-)"
-                        }
-                    ],
-                    "webstack": [
-                        {
-                            "title": "HTML",
-                            "logo": "html5.svg",
-                            "level": 5,
-                            "link": "https://www.w3.org/",
-                            "description": "I can do vanilla HTML (even after vorking with frameworks;-)"
-                        },
-                        {
-                            "title": "CSS",
-                            "logo": "css3.svg",
-                            "level": 5,
-                            "link": "https://www.w3schools.com/css/default.asp",
-                            "description": "I can do vanilla CSS (even after vorking with Bootsrap;-)"
-                        },
-                        {
-                            "title": "JS",
-                            "logo": "js.svg",
-                            "level": 5,
-                            "link": "https://www.w3schools.com/js/js_es6.asp",
-                            "description": "I like that it runs everyvhere in browsers"
-                        },
-                        {
-                            "title": "React",
-                            "logo": "react.svg",
-                            "level": 4,
-                            "link": "https://react.dev/",
-                            "description": "I learned react at Berkeley Bootcamp and have used it on some projects"
-                        },
-                        {
-                            "title": "Redux",
-                            "logo": "redux.svg",
-                            "level": 2,
-                            "link": "https://redux.js.org/",
-                            "description": "I have used Redux on 1 project, often it can be avoided"
-                        },
-                        {
-                            "title": "Vue",
-                            "logo": "vue.svg",
-                            "level": 4,
-                            "link": "https://vuejs.org/",
-                            "description": "I have started using vue on recent projects both at work an on persnonal projects"
-                        },
-                        {
-                            "title": "Node",
-                            "logo": "node.svg",
-                            "level": 4,
-                            "link": "https://nodejs.org/en",
-                            "description": "Running js backends and easpy-peasy import of frontend packages with npm"
-                        },
-                        {
-                            "title": "Pinia",
-                            "logo": "pinia.svg",
-                            "level": 4,
-                            "link": "https://pinia.vuejs.org/",
-                            "description": "Super easy variable storage for vue projects"
-                        },
-                        {
-                            "title": "Vuelidate",
-                            "logo": "vuelidate.svg",
-                            "level": 2,
-                            "link": "https://vuelidate-next.netlify.app/",
-                            "description": "Form validation for vue projects, its nice and simple"
-                        },
-                        {
-                            "title": "Tailwinds CSS",
-                            "logo": "tailwind.svg",
-                            "level": 2,
-                            "link": "https://tailwindcss.com/",
-                            "description": "Used for this page"
-                        },
-                        {
-                            "title": "Bootstrap",
-                            "logo": "bootstrap.svg",
-                            "level": 4,
-                            "link": "https://getbootstrap.com/",
-                            "description": "Super easy to get web apps looking nice quickly"
-                        },
-                        {
-                            "title": "Okta",
-                            "logo": "okta.svg",
-                            "level": 3,
-                            "link": "https://www.okta.com/",
-                            "description": "Authentication framwork we implemented and used at work"
-                        },
-                        {
-                            "title": "Express",
-                            "logo": "",
-                            "level": 3,
-                            "link": "https://expressjs.com/",
-                            "description": "Node JS backend, including routing and middleware for authentication and protection of pages etc."
-                        },
-                        {
-                            "title": "Mongoose",
-                            "logo": "mongoose.svg",
-                            "level": 2,
-                            "link": "https://mongoosejs.com/",
-                            "description": "ODM for mongo db, learned it at bootcamp"
-                        },
-                        {
-                            "title": "GraphQL",
-                            "logo": "graphql.svg",
-                            "level": 1,
-                            "link": "https://graphql.org/",
-                            "description": "I have used it as a API query titleuage (we used Apollo on an express server with Node)"
-                        },
-                        {
-                            "title": "MySQL",
-                            "logo": "mysql.svg",
-                            "level": 2,
-                            "link": "https://www.mysql.com/",
-                            "description": "SQL server for personal projects, i have used it with Sqlalchemy in python backends and with Sequielize on Node/express "
-                        },
-                        {
-                            "title": "MSSQL",
-                            "logo": "azuresql.svg",
-                            "level": 1,
-                            "link": "",
-                            "description": "SQL server used on azure at work, i have used it with Sqlalchemy in python backends"
-                        },
-                        {
-                            "title": "MongoDB",
-                            "logo": "mongodb.svg",
-                            "level": 2,
-                            "link": "https://www.mongodb.com/",
-                            "description": "Super easy bucket server i have used for personal projects, with Mongoose or Benie for pythonic backends "
-                        },
-                        {
-                            "title": "CosmosDB",
-                            "logo": "azure.svg",
-                            "level": 1,
-                            "link": "https://azure.microsoft.com/en-us/products/cosmos-db",
-                            "description": " Same a Mogo but for work, where we use Azure"
-                        },
-                        {
-                            "title": "Flask",
-                            "logo": "flask.svg",
-                            "level": 2,
-                            "link": "https://palletsprojects.com/p/flask/",
-                            "description": "Pythonic backed, i have used it in multiple projects"
-                        },
-                        {
-                            "title": "FastAPI",
-                            "logo": "fastapi.svg",
-                            "level": 3,
-                            "link": "https://fastapi.tiangolo.com/",
-                            "description": "Pythonic backed, used at work super quick to set up and can include authentication with Okta"
-                        },
-                        {
-                            "title": "Docker",
-                            "logo": "docker.svg",
-                            "level": 3,
-                            "link": "https://www.docker.com/",
-                            "description": "Part of our deployment process at work"
-                        },
-                        {
-                            "title": "Kubernetes",
-                            "logo": "kubernetes.svg",
-                            "level": 3,
-                            "link": "https://kubernetes.io/",
-                            "description": "Part of our deployment process at work"
-                        },
-                        {
-                            "title": "Git",
-                            "logo": "github-mark.svg",
-                            "level": 4,
-                            "link": "https://github.com/",
-                            "description": "We use it at work and i use it personally to keep track of code abd also as CI/CD tool to deploy using github actions"
-                        },
-                        {
-                            "title": "Tanstack Query",
-                            "logo": "",
-                            "level": 3,
-                            "link": "https://tanstack.com/query/latest",
-                            "description": "Awesome tool for keeping data up to date between frontend and backend apps i have used it both with React and Vue"
-                        },
-                        {
-                            "title": "Tanstack Table",
-                            "logo": "",
-                            "level": 3,
-                            "link": "https://tanstack.com/table/v8",
-                            "description": "Awesome tool for making interactive tables that can do anything"
-                        },
-                        {
-                            "title": "Pydantic",
-                            "logo": "pydantic.svg",
-                            "level": 3,
-                            "link": "https://docs.pydantic.dev/latest/",
-                            "description": "Awesome tool for data validation, i used it with fast api"
-                        },
-                        {
-                            "title": "Beanie",
-                            "logo": "",
-                            "level": 3,
-                            "link": "https://beanie-odm.dev/",
-                            "description": "Awesome ODM tool for mogpdb built on pydantic, i used it for a FastAPI backend"
-                        }
-                    ]
+                    "title": "Vue",
+                    "logo": "vue.svg",
+                    "level": 4,
+                    "link": "https://vuejs.org/",
+                    "description": "I have started using vue on recent projects both at work an on persnonal projects"
+                },
+                {
+                    "title": "Node",
+                    "logo": "node.svg",
+                    "level": 4,
+                    "link": "https://nodejs.org/en",
+                    "description": "Running js backends and easpy-peasy import of frontend packages with npm"
+                },
+                {
+                    "title": "Pinia",
+                    "logo": "pinia.svg",
+                    "level": 4,
+                    "link": "https://pinia.vuejs.org/",
+                    "description": "Super easy variable storage for vue projects"
+                },
+                {
+                    "title": "Vuelidate",
+                    "logo": "vuelidate.svg",
+                    "level": 2,
+                    "link": "https://vuelidate-next.netlify.app/",
+                    "description": "Form validation for vue projects, its nice and simple"
+                },
+                {
+                    "title": "Tailwinds CSS",
+                    "logo": "tailwind.svg",
+                    "level": 2,
+                    "link": "https://tailwindcss.com/",
+                    "description": "Used for this page"
+                },
+                {
+                    "title": "Bootstrap",
+                    "logo": "bootstrap.svg",
+                    "level": 4,
+                    "link": "https://getbootstrap.com/",
+                    "description": "Super easy to get web apps looking nice quickly"
+                },
+                {
+                    "title": "Okta",
+                    "logo": "okta.svg",
+                    "level": 3,
+                    "link": "https://www.okta.com/",
+                    "description": "Authentication framwork we implemented and used at work"
+                },
+                {
+                    "title": "Express",
+                    "logo": "",
+                    "level": 3,
+                    "link": "https://expressjs.com/",
+                    "description": "Node JS backend, including routing and middleware for authentication and protection of pages etc."
+                },
+                {
+                    "title": "Mongoose",
+                    "logo": "mongoose.svg",
+                    "level": 2,
+                    "link": "https://mongoosejs.com/",
+                    "description": "ODM for mongo db, learned it at bootcamp"
+                },
+                {
+                    "title": "GraphQL",
+                    "logo": "graphql.svg",
+                    "level": 1,
+                    "link": "https://graphql.org/",
+                    "description": "I have used it as a API query titleuage (we used Apollo on an express server with Node)"
+                },
+                {
+                    "title": "MySQL",
+                    "logo": "mysql.svg",
+                    "level": 2,
+                    "link": "https://www.mysql.com/",
+                    "description": "SQL server for personal projects, i have used it with Sqlalchemy in python backends and with Sequielize on Node/express "
+                },
+                {
+                    "title": "MSSQL",
+                    "logo": "azuresql.svg",
+                    "level": 1,
+                    "link": "",
+                    "description": "SQL server used on azure at work, i have used it with Sqlalchemy in python backends"
+                },
+                {
+                    "title": "MongoDB",
+                    "logo": "mongodb.svg",
+                    "level": 2,
+                    "link": "https://www.mongodb.com/",
+                    "description": "Super easy bucket server i have used for personal projects, with Mongoose or Benie for pythonic backends "
+                },
+                {
+                    "title": "CosmosDB",
+                    "logo": "azure.svg",
+                    "level": 1,
+                    "link": "https://azure.microsoft.com/en-us/products/cosmos-db",
+                    "description": " Same a Mogo but for work, where we use Azure"
+                },
+                {
+                    "title": "Flask",
+                    "logo": "flask.svg",
+                    "level": 2,
+                    "link": "https://palletsprojects.com/p/flask/",
+                    "description": "Pythonic backed, i have used it in multiple projects"
+                },
+                {
+                    "title": "FastAPI",
+                    "logo": "fastapi.svg",
+                    "level": 3,
+                    "link": "https://fastapi.tiangolo.com/",
+                    "description": "Pythonic backed, used at work super quick to set up and can include authentication with Okta"
+                },
+                {
+                    "title": "Docker",
+                    "logo": "docker.svg",
+                    "level": 3,
+                    "link": "https://www.docker.com/",
+                    "description": "Part of our deployment process at work"
+                },
+                {
+                    "title": "Kubernetes",
+                    "logo": "kubernetes.svg",
+                    "level": 3,
+                    "link": "https://kubernetes.io/",
+                    "description": "Part of our deployment process at work"
+                },
+                {
+                    "title": "Git",
+                    "logo": "github-mark.svg",
+                    "level": 4,
+                    "link": "https://github.com/",
+                    "description": "We use it at work and i use it personally to keep track of code abd also as CI/CD tool to deploy using github actions"
+                },
+                {
+                    "title": "Tanstack Query",
+                    "logo": "",
+                    "level": 3,
+                    "link": "https://tanstack.com/query/latest",
+                    "description": "Awesome tool for keeping data up to date between frontend and backend apps i have used it both with React and Vue"
+                },
+                {
+                    "title": "Tanstack Table",
+                    "logo": "",
+                    "level": 3,
+                    "link": "https://tanstack.com/table/v8",
+                    "description": "Awesome tool for making interactive tables that can do anything"
+                },
+                {
+                    "title": "Pydantic",
+                    "logo": "pydantic.svg",
+                    "level": 3,
+                    "link": "https://docs.pydantic.dev/latest/",
+                    "description": "Awesome tool for data validation, i used it with fast api"
+                },
+                {
+                    "title": "Beanie",
+                    "logo": "beanie.svg",
+                    "level": 3,
+                    "link": "https://beanie-odm.dev/",
+                    "description": "Awesome ODM tool for mogpdb built on pydantic, i used it for a FastAPI backend"
+                },
+                {
+                    "title": "D3",
+                    "logo": "d3.svg",
+                    "level": 4,
+                    "link": "https://d3js.org/",
+                    "description": "Fantastic data visualization, if you can dream it -you can make it happen with D3"
                 }
             ]
         }
-    ]
+    }
 }
