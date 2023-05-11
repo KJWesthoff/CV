@@ -1,6 +1,6 @@
 <script setup>
 const skill = defineProps(["title", "logo", "level", "link", "desctiption"])
-console.log("SkillData:", skill)
+//console.log("SkillData:", skill)
 
 </script>
 
