@@ -18,24 +18,21 @@ const viewBox = computed(() => {
 
 const radiusScale = computed(() => d3.scaleSqrt().domain([1, 5]).range([5, 15]));
 
-const simulation = computed(()=> d3.forceSimulation()
+const simulation = d3.forceSimulation()
     .force('charge', d3.forceManyBody().strength(5))
     .force('center', d3.forceCenter(width / 2, height / 2))
     .force('ground', d3.forceY(height))
     .force('x', d3.forceX().x(width / 2))
     .force('collision', d3.forceCollide().radius(d => radiusScale.value(d.level)))
-    )
+    
 
 
-const ticked = computed(() => {
+function ticked() {
     
-    const svg = d3.select("svg")
-    console.log("tick tack")
-    console.log(svg.selectAll(".scircle"))
-    
-    svg.selectAll(".scircle")
+    console.log("tick tacks")
+    d3.select("svg") 
+    .selectAll(".scircle")
         .attr('cx', function (d) {
-            console.log(d)
             return d.x;
         })
         .attr('cy', function (d) {
@@ -48,13 +45,15 @@ const ticked = computed(() => {
     //     .attr('y', function (d) {
     //         return d.y;
     //     });
-})
+}
 
 
 
 
 watchEffect(() => {
-    simulation.value.nodes(data.skills.software.webstack).on("tick", ticked.value)
+    const nodes = d3.select("svg").selectAll(".scircle")
+    console.log(simulation.nodes(nodes))
+    simulation.nodes(nodes).on("tick", ticked)
 })
 
 
