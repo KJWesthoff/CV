@@ -9,12 +9,14 @@ const props = defineProps({
 });
 
 const icon = defineAsyncComponent(() =>
-    import(`../assets/svg/${props.name}`)
+   import(`../assets/svg/${props.name}`)
 );
 </script>
 
 <template>
+    
     <component :is="icon" class="fill-current" />
+    
 </template>
 
 <style scoped>

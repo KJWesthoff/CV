@@ -18,54 +18,65 @@ const viewBox = computed(() => {
 
 const radiusScale = computed(() => d3.scaleSqrt().domain([1, 5]).range([5, 15]));
 
-const simulation = d3.forceSimulation()
+const simulation = computed(() => d3.forceSimulation()
     .force('charge', d3.forceManyBody().strength(5))
     .force('center', d3.forceCenter(width / 2, height / 2))
     .force('ground', d3.forceY(height))
     .force('x', d3.forceX().x(width / 2))
     .force('collision', d3.forceCollide().radius(d => radiusScale.value(d.level)))
-    
+)
 
 
 
-    // svg.selectAll(".stext")
-    //     .attr('x', function (d) {
-    //         return d.x;
-    //     })
-    //     .attr('y', function (d) {
-    //         return d.y;
-    //     });
+// svg.selectAll(".stext")
+//     .attr('x', function (d) {
+//         return d.x;
+//     })
+//     .attr('y', function (d) {
+//         return d.y;
+//     });
 
 
 
 
 
 onMounted(() => {
-    const nodes = d3.select("svg g").selectAll(".scircle")
-    .data(data.skills.software.webstack)
+    const baf = data.skills.software.webstack
 
+    const circles = d3.selectAll("svg g").selectAll(".scircle")
+        .data(baf);
 
-    const simulation = d3.forceSimulation()
-    .force('charge', d3.forceManyBody().strength(5))
-    .force('center', d3.forceCenter(width / 2, height / 2))
-    .force('ground', d3.forceY(height))
-    .force('x', d3.forceX().x(width / 2))
-    .force('collision', d3.forceCollide().radius(d => radiusScale.value(d.level)))
+    const logos = d3.selectAll("svg g").selectAll(".icons")
+        .data(baf);
 
+    const text = d3.selectAll("svg g").selectAll(".stext")
+        .data(baf);
 
-    simulation.nodes(data.skills.software.webstack).on("tick", ticked)
-    
+    simulation.value.nodes(data.skills.software.webstack).on("tick", ticked)
+
     function ticked() {
-    
-    console.log("tick tacks")
-    nodes
-        .attr('cx', function (d) {
-            console.log("d.x ", d)
-            return d.x;
-        })
-        .attr('cy', function (d) {
-            return d.y;
-        });
+        circles
+            .attr('cx', function (d) {
+                return d.x;
+            })
+            .attr('cy', function (d) {
+                return d.y;
+            })
+        logos
+            .attr('x', function (d) {
+                console.log("d:", d)
+                return d.x;
+            })
+            .attr('y', function (d) {
+                return d.y;
+            })
+        text
+            .attr('x', function (d) {
+                return d.x;
+            })
+            .attr('y', function (d) {
+                return d.y;
+            });
     }
 })
 
@@ -85,19 +96,23 @@ onMounted(() => {
         </div>
         <div id="bubbles" class="h-100">
             <svg class="svg-holder" :viewBox="viewBox">
+                
                 <g>
-                    <circle v-for="(d, i) in data.skills.software.webstack" :level="d.level" :name="d.title" :r="radiusScale(d.level)"
-                        class="scircle fill-blue-300">
+                    <circle v-for="(d, i) in data.skills.software.webstack" :key="d.title" :level="d.level" :name="d.title"
+                        :r="radiusScale(d.level)" class="scircle fill-blue-300">
                     </circle>
                 </g>
-                <!-- <g :transform="'translate(100,100)'">
+                <g>
                     <text v-for="(d, i) in data.skills.software.webstack" class="stext text-center text-s">
-                    {{ d.title }}
+                        {{ d.title }}
                     </text>
-                </g> -->
-                <!-- <g :transform="'translate(100,100)'">
-                    <icon width = "5" height = "3"  v-for="(d, i) in data.skills.software.webstack" :key="d.title" :name=d.logo></icon>
-                </g> -->
+                </g>
+                <g>
+                    <svg v-for="(d, i) in data.skills.software.webstack" class="icons" :key="d.title">
+                        <icon width="10" height="10" :name=d.logo></icon>
+                    </svg>
+
+                </g>
             </svg>
         </div>
 
