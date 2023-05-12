@@ -41,8 +41,10 @@ const simulation = d3.forceSimulation()
 
 
 onMounted(() => {
-    const nodes = d3.select("svg").selectAll(".scircle")
-    
+    const nodes = d3.select("svg g").selectAll(".scircle")
+    .data(data.skills.software.webstack)
+
+
     const simulation = d3.forceSimulation()
     .force('charge', d3.forceManyBody().strength(5))
     .force('center', d3.forceCenter(width / 2, height / 2))
@@ -51,14 +53,14 @@ onMounted(() => {
     .force('collision', d3.forceCollide().radius(d => radiusScale.value(d.level)))
 
 
-    simulation.nodes(nodes).on("tick", ticked)
+    simulation.nodes(data.skills.software.webstack).on("tick", ticked)
+    
     function ticked() {
     
     console.log("tick tacks")
-    d3.select("svg") 
-    .selectAll(".scircle")
+    nodes
         .attr('cx', function (d) {
-            
+            console.log("d.x ", d)
             return d.x;
         })
         .attr('cy', function (d) {
