@@ -27,17 +27,7 @@ const simulation = d3.forceSimulation()
     
 
 
-function ticked() {
-    
-    console.log("tick tacks")
-    d3.select("svg") 
-    .selectAll(".scircle")
-        .attr('cx', function (d) {
-            return d.x;
-        })
-        .attr('cy', function (d) {
-            return d.y;
-        });
+
     // svg.selectAll(".stext")
     //     .attr('x', function (d) {
     //         return d.x;
@@ -45,15 +35,36 @@ function ticked() {
     //     .attr('y', function (d) {
     //         return d.y;
     //     });
-}
 
 
 
 
-watchEffect(() => {
+
+onMounted(() => {
     const nodes = d3.select("svg").selectAll(".scircle")
-    console.log(simulation.nodes(nodes))
+    
+    const simulation = d3.forceSimulation()
+    .force('charge', d3.forceManyBody().strength(5))
+    .force('center', d3.forceCenter(width / 2, height / 2))
+    .force('ground', d3.forceY(height))
+    .force('x', d3.forceX().x(width / 2))
+    .force('collision', d3.forceCollide().radius(d => radiusScale.value(d.level)))
+
+
     simulation.nodes(nodes).on("tick", ticked)
+    function ticked() {
+    
+    console.log("tick tacks")
+    d3.select("svg") 
+    .selectAll(".scircle")
+        .attr('cx', function (d) {
+            
+            return d.x;
+        })
+        .attr('cy', function (d) {
+            return d.y;
+        });
+    }
 })
 
 
@@ -73,7 +84,7 @@ watchEffect(() => {
         <div id="bubbles" class="h-100">
             <svg class="svg-holder" :viewBox="viewBox">
                 <g>
-                    <circle v-for="(d, i) in data.skills.software.webstack" :r="radiusScale(d.level)"
+                    <circle v-for="(d, i) in data.skills.software.webstack" :level="d.level" :name="d.title" :r="radiusScale(d.level)"
                         class="scircle fill-blue-300">
                     </circle>
                 </g>
