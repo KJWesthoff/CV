@@ -1,11 +1,12 @@
 
 
 <script setup>
-import { onMounted, watchEffect } from 'vue';
+
+import { onMounted } from 'vue';
 import data from '../assets/static/cv_data.json'
 import SkillsPill from './SkillsPill.vue';
 import * as d3 from 'd3'
-import { computed } from 'vue'
+import { computed, defineProps } from 'vue'
 
 
 
