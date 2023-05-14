@@ -40,7 +40,7 @@ onMounted(() => {
     const icons = d3.selectAll(".icons")
         .data(props.data);
     const circles = d3.selectAll(".scircle")
-        .data(data.skills.software.webstack);
+        .data(props.data);
 
 
     simulation.value.nodes(props.data).on("tick", ticked)
@@ -54,6 +54,7 @@ onMounted(() => {
             .attr('y', function (d) {
                 return d.y-iconSize/2;
             })
+      
         circles
             .attr('cx', function (d) {
                 return d.x;
