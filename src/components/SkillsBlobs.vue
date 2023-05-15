@@ -48,11 +48,16 @@ onMounted(() => {
     function ticked() {
         icons
             .attr('x', function (d) {
-                console.log("dx run", d.x)
-                return d.x-iconSize/2;
+                return d.x- radiusScale.value(d.level)/2;
             })
             .attr('y', function (d) {
-                return d.y-iconSize/2;
+                return d.y- radiusScale.value(d.level)/2;
+            })
+            .attr('height', function (d) {
+                return radiusScale.value(d.level);
+            })
+            .attr('width', function (d) {
+                return radiusScale.value(d.level);
             })
       
         circles
@@ -75,7 +80,7 @@ onMounted(() => {
                         </circle>
                         
                         <svg class = "icons">
-                            <icon :width="iconSize" :height="iconSize" :name=d.logo></icon>
+                            <icon :name=d.logo></icon>
                         </svg>
                     
                 

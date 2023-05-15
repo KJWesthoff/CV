@@ -11,18 +11,19 @@
         {
             "company": {
                 "name": "National Oilwell Varco (NOV)",
-                "description": "NOV delivers highly engineered flexible pipe systems to the biggest companies in offshore oil and gas industry",
+                "description": "NOV delivers highly engineered flexible pipe systems for the biggest companies in the offshore oil and gas industry",
                 "location": "San Mateo, California",
                 "logo": "nov.svg"
             },
-            "title": "Part time Engineer/Full time dad",
+            "title": "Part time Engineer, software development",
             "tenure": {
                 "start": "March 2020",
-                "end": "Pesent"
+                "end": "Present"
             },
             "tasks": [
                 "Working remote, developing in house web based project management tool.",
-                "Relocating to California, getting the kids up and running starting school in a new titleuage during the pandemic."
+                "Relocating to California, getting the kids up and running starting school in a new language during the pandemic.",
+                "Building software skills"
             ]
         },
         {
@@ -32,17 +33,53 @@
                 "location": "Copenhagen, Denmark",
                 "logo": "nov.svg"
             },
-            "title": "Senior Engineer",
+            "title": "Senior Engineer, System Assessment Services",
             "tenure": {
                 "start": "June 2010",
                 "end": "March 2020"
             },
             "tasks": [
-                "System assessment engineer and project manager responsible for the technical and commercial execution of client facing service projects in in the offshore oil and gas industry.",
-                "Project management responsibility for a large front end engineering design (FEED) projects ( ~1000-3500 engineering hrs.) bringing new technology to market and pushing boundaries for flexible risers.",
-                "Planning and execution of an off-site technical forensics campaign in the Caucasus area, including handling import/export of materials and personnel,and strategy for health and safety (HSE).",
-                "Engineering during sales phase and tactical on-site management for a engineering procurement construction and installation (EPCI) project delivering a ship to shore on/off loading system in West Africa.",
-                "Design engineer, designing flexible pipe and riser systems. Primary tasks as a project engineer delivering design reports and documentation on time and support for production. Furthermore I helped develop a multitude of engineering design tools."
+                "Project management responsibility for large front end engineering design (FEED) projects ( ~1000-3500 engineering hrs.) bringing new technology to market and pushing boundaries for flexible risers.",
+                "System assessment engineer and project manager responsible for the technical and commercial execution of client facing service projects in the offshore oil and gas industry.",
+                "Planning and execution of an off-site technical forensics campaign in the Caucasus area, including handling import/export of materials and personnel, and strategy for health and safety (HSE).",
+                "Engineering during sales phase and tactical on-site management for a engineering procurement construction and installation (EPCI) project delivering a ship to shore on/off loading system in West Africa."
+                
+            ]
+        },
+        {
+            "company": {
+                "name": "NOV",
+                "description": "",
+                "location": "Copenhagen, Denmark",
+                "logo": "nov.svg"
+            },
+            "title": "Senior Engineer, Pipe System Design",
+            "tenure": {
+                "start": "June 2015",
+                "end": "March 2020"
+            },
+            "tasks": [
+                "Design engineer, designing flexible pipe and riser systems", 
+                "Deliver design reports and documentation on time", 
+                "Handle client communication on technical engineering subjects",
+                "Build software skills developing a multitude of engineering design tools."
+            ]
+        },
+        {
+            "company": {
+                "name": "NOV",
+                "description": "",
+                "location": "Copenhagen, Denmark",
+                "logo": "nov.svg"
+            },
+            "title": "Design Engineer, Pipe Design",
+            "tenure": {
+                "start": "May 2010",
+                "end": "June 2015"
+            },
+            "tasks": [
+                "Design flexible pipes for the toughest offshore conditions, worldwide",
+                "Participate in technical meetings with clients"
             ]
         },
         {
@@ -50,19 +87,17 @@
                 "name": "Lloyds Register / Odegaard & Danneskiold-Samsoe",
                 "description": "Odegaard & Danneskold-Samsøe (ODS) carried out Engineering consultancy within fluid dynamics, noise and vibration. ODS was acquired by LR in 2005",
                 "location": "Copenhagen, Denmark",
-                "logo": "lloyds_register.png"
+                "logo": "lloyds-register.svg"
             },
             "title": "Consultant, Marine",
             "tenure": {
-                "start": "June 2206",
+                "start": "June 2006",
                 "end": "June 2010"
             },
             "tasks": [
-                "System assessment engineer and project manager responsible for the technical and commercial execution of client facing service projects in in the offshore oil and gas industry.",
-                "Project management responsibility for a large front end engineering design (FEED) projects ( ~1000-3500 engineering hrs.) bringing new technology to market and pushing boundaries for flexible risers.",
-                "Planning and execution of an off-site technical forensics campaign in the Caucasus area, including handling import/export of materials and personnel,and strategy for health and safety (HSE).",
-                "Engineering during sales phase and tactical on-site management for a engineering procurement construction and installation (EPCI) project delivering a ship to shore on/off loading system in West Africa.",
-                "Design engineer, designing flexible pipe and riser systems. Primary tasks as a project engineer delivering design reports and documentation on time and support for production. Furthermore I helped develop a multitude of engineering design tools."
+                "Finite Element (FEA) calculations of strength and vibration of ships",
+                "Field measurement work of acoustics and structural vibration"
+        
             ]
         },
         {
@@ -75,8 +110,8 @@
             },
             "title": "Consultant, Marine",
             "tenure": {
-                "start": "June 2206",
-                "end": "June 2010"
+                "start": "Apr 2003",
+                "end": "June 2006"
             },
             "tasks": [
                 "Continuing an internship I worked in the ship design department, carrying out 3d-modelling and cad workshop drawings."
@@ -89,7 +124,7 @@
                 "school": "DTU - Technical University of Denmark",
                 "logo": "dtu.svg",
                 "link": "https://www.dtu.dk/english/",
-                "title": "M.Sc., Mechanical Engineering",
+                "title": "M.Sc. Mechanical Engineering",
                 "tenure": {
                     "start": 2003,
                     "end": 2006
@@ -107,7 +142,7 @@
         {
             "education": {
                 "school": "DTU - Technical University of Denmark",
-                "title": "B.Sc, Naval Architecture and Marine Engineering",
+                "title": "B.Sc Naval Architecture and Marine Engineering",
                 "logo": "dtu.svg",
                 "link": "https://www.dtu.dk/english/",
                 "tenure": {
@@ -169,16 +204,31 @@
         "structural_dynamics": [
             {
                 "title": "Shock and explosions",
+                "logo": "explosion.svg",
+                "level": 2,
+                "link": "",
                 "description": "I got to play with really fast dynamics, and to attempt to model blast envents in explicit finite element (Autodyn) carruing out my M.Sc. thesis."
             },
             {
-                "title": "Strength of ships"
+                "title": "Strength of marine strucures",
+                "logo": "explosion.svg",
+                "level": 2,
+                "link": "",
+                "description": "I got to play with really fast dynamics, and to attempt to model blast envents in explicit finite element (Autodyn) carruing out my M.Sc. thesis."
             },
             {
-                "title": "Fatigue of structures subjected to wave loading)"
+                "title": "Fatigue of structures subjected to wave loading)",
+                "logo": "explosion.svg",
+                "level": 2,
+                "link": "",
+                "description": "I got to play with really fast dynamics, and to attempt to model blast envents in explicit finite element (Autodyn) carruing out my M.Sc. thesis."
             },
             {
-                "title": "In fleld measuremnt campaings"
+                "title": "In fleld measuremnt campaings",
+                "logo": "explosion.svg",
+                "level": 2,
+                "link": "",
+                "description": "I got to play with really fast dynamics, and to attempt to model blast envents in explicit finite element (Autodyn) carruing out my M.Sc. thesis."
             }
         ],
         "project_management": [
@@ -253,6 +303,13 @@
                 "level": 5,
                 "link": "https://www.w3schools.com/js/js_es6.asp",
                 "description": "I like that it runs everyvhere in browsers"
+            },
+            {
+                "title": "Excel/VBA",
+                "logo": "vba.svg",
+                "level": 4,
+                "link": "https://learn.microsoft.com/en-us/office/vba/api/overview/excel",
+                "description": "We have taken Excel and vba way beyond it's intendend use ;-)"
             }
         ],
         "webstack": [
@@ -432,18 +489,11 @@
                 "description": "We use it at work and i use it personally to keep track of code abd also as CI/CD tool to deploy using github actions"
             },
             {
-                "title": "Tanstack Query",
-                "logo": "tanstack_query.svg",
-                "level": 3,
-                "link": "https://tanstack.com/query/latest",
-                "description": "Awesome tool for keeping data up to date between frontend and backend apps i have used it both with React and Vue"
-            },
-            {
-                "title": "Tanstack Table",
+                "title": "Tanstack",
                 "logo": "tanstack_table.svg",
                 "level": 3,
-                "link": "https://tanstack.com/table/v8",
-                "description": "Awesome tool for making interactive tables that can do anything"
+                "link": "https://tanstack.com/query/latest",
+                "description": "I am using tanstack Table which is an awesome tool for making interactive tables that can do anything and tanstack Query which is an awesome tool for keeping data up to date between frontend and backend apps i have used it both with React and Vue"
             },
             {
                 "title": "Pydantic",
