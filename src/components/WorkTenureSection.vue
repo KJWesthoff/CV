@@ -24,7 +24,7 @@ const data = props.data
 
                 <h6>{{ data.tenure.start }} - {{ data.tenure.end }}</h6>
 
-              
+
             </div>
             <ul class="list-disc" v-for="task in data.tasks">
                 <li class="ml-10 mb-1">{{ task }}</li>

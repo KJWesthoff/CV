@@ -3,6 +3,8 @@ import Header from './components/Header.vue'
 import Skills from './components/Skills.vue'
 import WorkExperience from './components/WorkExperience.vue'
 import Education from './components/Education.vue';
+import Certifications from './components/Certifications.vue';
+
 </script>
 
 <template>
@@ -10,5 +12,6 @@ import Education from './components/Education.vue';
   <Skills/>
   <WorkExperience/>
   <Education/>
+  <Certifications/>
 
 </template>

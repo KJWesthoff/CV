@@ -3,7 +3,7 @@
 <script setup>
 
 import { onMounted } from 'vue';
-import data from '../assets/static/cv_data.json'
+//import data from '../assets/static/cv_data.json'
 import * as d3 from 'd3'
 import { computed, defineProps } from 'vue'
 
@@ -18,7 +18,7 @@ const maxBlobRadius = 15
 const iconSize = minBlobRadius*2;
 const props = defineProps(['data'])
 
-
+const data = props.data
 
 
 const viewBox = computed(() => {
@@ -34,6 +34,13 @@ const simulation = computed(() => d3.forceSimulation()
     .force('x', d3.forceX().x(width / 2))
     .force('collision', d3.forceCollide().radius(d => radiusScale.value(d.level)))
 )
+
+
+
+
+// Group the data
+const gData = d3.group(data, d=> d.items)
+console.log("gData: ", gData)
 
 onMounted(() => {
   
