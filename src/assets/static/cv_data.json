@@ -163,7 +163,7 @@
                 "institution": "IPMA: International Project Management Association",
                 "issued": "May 2015",
                 "expires": "May 2020",
-                "logo": "",
+                "logo": "ipma.svg",
                 "validation": "DEN3789",
                 "description": "",
                 "link": "https://ipma.world/"
@@ -175,7 +175,7 @@
                 "institution": "UC Berkeley Extension",
                 "issued": "May 2021",
                 "expires": "",
-                "logo": "",
+                "logo": "berkeley.svg",
                 "validation": "74b1446548425e1612008cd5d849e0aa",
                 "description": "",
                 "link": "https://bootcamp.berkeley.edu/coding/"
@@ -195,14 +195,14 @@
             "items": [
                 {
                     "title": "Oil and Gas Industry",
-                    "logo": "",
+                    "logo": "rig.svg",
                     "level":5,
                     "link":"",
                     "description": "10+ yas in the flexible pipe industry making big and awesome stuctures, adhering to the second-to-noon requirements and standards for safety in oil & gas industry. I have workted with submerged structured, both in the watercolumn and on seabed"
                 },
                 {
                     "title": "Working with Ships",
-                    "logo": "",
+                    "logo": "ship.svg",
                     "level":5,
                     "link":"",
                     "description": "Calculating strains and stresses of floating structures subjected to wave loads, and producing engineerig designs adhering to class standards"

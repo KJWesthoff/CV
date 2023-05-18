@@ -3,7 +3,6 @@
 <script setup>
 
 import { onMounted } from 'vue';
-//import data from '../assets/static/cv_data.json'
 import * as d3 from 'd3'
 import { computed, defineProps } from 'vue'
 
@@ -18,7 +17,7 @@ const maxBlobRadius = 15
 const iconSize = minBlobRadius*2;
 const props = defineProps(['data'])
 
-const data = props.data
+
 
 
 const viewBox = computed(() => {
@@ -38,19 +37,26 @@ const simulation = computed(() => d3.forceSimulation()
 
 
 
-// Group the data
-const gData = d3.group(data, d=> d.items)
-console.log("gData: ", gData)
+// Process the data into a flat structure
+const data = props.data.reduce((a,c) => {
+    const newItems = [...c.items]
+    newItems.map(i => {
+        i.name = c.name
+        i.group = c.group
+    })
+    return a.concat(newItems)              
+}, [])
+
 
 onMounted(() => {
   
     const icons = d3.selectAll(".icons")
-        .data(props.data);
+        .data(data);
     const circles = d3.selectAll(".scircle")
-        .data(props.data);
+        .data(data);
 
 
-    simulation.value.nodes(props.data).on("tick", ticked)
+    simulation.value.nodes(data).on("tick", ticked)
 
     function ticked() {
         icons
@@ -81,8 +87,8 @@ onMounted(() => {
 <template>
          <div id="bubbles" class="h-100">
             <svg class="svg-holder" :viewBox="viewBox">
-               <g v-for="(d, i) in props.data" :key="d.title">
-                        <circle :name="d.title" :r="radiusScale(d.level)" class="scircle fill-blue-300 stroke-black stroke-1">
+               <g v-for="(d, i) in data" :key="d.title">
+                        <circle :name="d.title" :r="radiusScale(d.level)" class="scircle fill-none stroke-black stroke-1">
 
                         </circle>
                         
