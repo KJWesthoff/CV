@@ -6,9 +6,11 @@ import { onMounted } from 'vue';
 import * as d3 from 'd3'
 import { computed, defineProps } from 'vue'
 
+import resolveConfig from 'tailwindcss/resolveConfig'
+import tailwindConfig from '../../tailwind.config'
 
 
-
+// config paramates for "stage"
 const width = 300;
 const height = 200;
 
@@ -33,6 +35,27 @@ const simulation = computed(() => d3.forceSimulation()
     .force('x', d3.forceX().x(width / 2))
     .force('collision', d3.forceCollide().radius(d => radiusScale.value(d.level)))
 )
+
+
+// Get the tailwind colors from config
+const twConfig = resolveConfig(tailwindConfig)
+console.log(twConfig.theme.colors.green[200])
+const baseColors = twConfig.theme.colors
+
+// remove the relative color choises from the tw list
+//const colorList = Object.keys(baseColors).filter(i => !['inherit', 'current', 'transparent', 'neutral','black','white','red','pink','rose','violet'].includes(i) ).reverse()
+const colorList = ['green', 'indigo', 'fuchsia','zinc','blue']
+console.log(colorList)
+
+
+const groups = props.data.map(d => d.group)
+const twColor = d3.scaleOrdinal().domain(groups)
+  .range(colorList);
+
+
+const twValue = d3.scaleOrdinal().domain([1,5])
+  .range([50,100,200,300,400,500,600,700,800,900]);
+
 
 
 
@@ -80,6 +103,11 @@ onMounted(() => {
             .attr('cy', function (d) {
                 return d.y;
             })
+            .attr('fill', function (d) {
+                const cName = twColor(d.group)
+                const cValue = twValue(d.level)
+                return  twConfig.theme.colors[cName][cValue];
+            })
     }
 })
 </script>
@@ -88,7 +116,7 @@ onMounted(() => {
          <div id="bubbles" class="h-100">
             <svg class="svg-holder" :viewBox="viewBox">
                <g v-for="(d, i) in data" :key="d.title">
-                        <circle :name="d.title" :r="radiusScale(d.level)" class="scircle fill-none stroke-black stroke-1">
+                        <circle :name="d.title" :r="radiusScale(d.level)" class="scircle stroke-black stroke-1">
 
                         </circle>
                         

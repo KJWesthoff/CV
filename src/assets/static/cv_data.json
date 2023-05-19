@@ -22,7 +22,6 @@
             },
             "tasks": [
                 "Working remote, developing in house web based project management tool.",
-                "Relocating to California, getting the kids up and running starting school in a new language during the pandemic.",
                 "Building software skills"
             ]
         },
@@ -35,7 +34,7 @@
             },
             "title": "Senior Engineer, System Assessment Services",
             "tenure": {
-                "start": "June 2010",
+                "start": "June 2016",
                 "end": "March 2020"
             },
             "tasks": [
@@ -54,8 +53,8 @@
             },
             "title": "Senior Engineer, Pipe System Design",
             "tenure": {
-                "start": "June 2015",
-                "end": "March 2020"
+                "start": "June 2013",
+                "end": "March 2016"
             },
             "tasks": [
                 "Design engineer, designing flexible pipe and riser systems",
@@ -74,7 +73,7 @@
             "title": "Design Engineer, Pipe Design",
             "tenure": {
                 "start": "May 2010",
-                "end": "June 2015"
+                "end": "June 2013"
             },
             "tasks": [
                 "Design flexible pipes for the toughest offshore conditions, worldwide",
@@ -95,7 +94,7 @@
             },
             "tasks": [
                 "Finite Element (FEA) calculations of strength and vibration of ships",
-                "Field measurement work of acoustics and structural vibration"
+                "Field measurement work, acoustics and structural vibration"
             ]
         },
         {
@@ -222,21 +221,21 @@
                 },
                 {
                     "title": "Strength of marine strucures",
-                    "logo": "explosion.svg",
+                    "logo": "ansys.svg",
                     "level": 2,
                     "link": "",
                     "description": "I got to play with really fast dynamics, and to attempt to model blast envents in explicit finite element (Autodyn) carruing out my M.Sc. thesis."
                 },
                 {
                     "title": "Fatigue of structures subjected to wave loading)",
-                    "logo": "explosion.svg",
+                    "logo": "wave.svg",
                     "level": 2,
                     "link": "",
                     "description": "I got to play with really fast dynamics, and to attempt to model blast envents in explicit finite element (Autodyn) carruing out my M.Sc. thesis."
                 },
                 {
                     "title": "In fleld measuremnt campaings",
-                    "logo": "explosion.svg",
+                    "logo": "vibration.svg",
                     "level": 2,
                     "link": "",
                     "description": "I got to play with really fast dynamics, and to attempt to model blast envents in explicit finite element (Autodyn) carruing out my M.Sc. thesis."
