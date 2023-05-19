@@ -160,7 +160,7 @@ const tidyUpClick = () => {
 <template>
     <button :onClick=" tidyUpClick ">Clean it up Johnny</button>
     <div id="bubbles" class="h-100">
-        <svg class="svg-holder" :viewBox="viewBox">
+        <svg :onClick="tidyUpClick" class="svg-holder" :viewBox="viewBox">
            <g v-for="g in props.data" :key = "g">
             <text class="group-text text-center" :id ="g">
                 

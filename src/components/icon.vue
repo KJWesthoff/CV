@@ -9,7 +9,7 @@ const props = defineProps({
 });
 
 const icon = defineAsyncComponent(() =>
-   import(`../../public/assets/svg/${props.name}`)
+   import(`public/assets/svg/${props.name}`)
    
 );
 </script>
