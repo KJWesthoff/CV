@@ -222,21 +222,21 @@
                 {
                     "title": "Strength of marine strucures",
                     "logo": "ship_global.svg",
-                    "level": 2,
+                    "level": 5,
                     "link": "",
                     "description": "I got to play with really fast dynamics, and to attempt to model blast envents in explicit finite element (Autodyn) carruing out my M.Sc. thesis."
                 },
                 {
                     "title": "Fatigue of structures subjected to wave loading)",
                     "logo": "wave.svg",
-                    "level": 2,
+                    "level": 5,
                     "link": "",
                     "description": "I got to play with really fast dynamics, and to attempt to model blast envents in explicit finite element (Autodyn) carruing out my M.Sc. thesis."
                 },
                 {
                     "title": "In fleld measuremnt campaings",
                     "logo": "vibration.svg",
-                    "level": 2,
+                    "level": 4,
                     "link": "",
                     "description": "I got to play with really fast dynamics, and to attempt to model blast envents in explicit finite element (Autodyn) carruing out my M.Sc. thesis."
                 }
@@ -348,13 +348,6 @@
                     "level": 5,
                     "link": "https://www.w3schools.com/css/default.asp",
                     "description": "I can do vanilla CSS (even after vorking with Bootsrap;-)"
-                },
-                {
-                    "title": "JS",
-                    "logo": "js.svg",
-                    "level": 5,
-                    "link": "https://www.w3schools.com/js/js_es6.asp",
-                    "description": "I like that it runs everyvhere in browsers"
                 },
                 {
                     "title": "React",
@@ -527,7 +520,7 @@
                 {
                     "title": "Beanie",
                     "logo": "beanie.svg",
-                    "level": 3,
+                    "level": 2,
                     "link": "https://beanie-odm.dev/",
                     "description": "Awesome ODM tool for mogpdb built on pydantic, i used it for a FastAPI backend"
                 },
@@ -537,6 +530,13 @@
                     "level": 4,
                     "link": "https://d3js.org/",
                     "description": "Fantastic data visualization, if you can dream it -you can make it happen with D3"
+                },
+                {
+                    "title": "Rancher",
+                    "logo": "rancher.svg",
+                    "level": 2,
+                    "link": "https://www.rancher.com/",
+                    "description": "Kubernetes container orchestration mase easy, we ahve use dit at work"
                 }
             ]
         },
