@@ -38,9 +38,9 @@
                 "end": "March 2020"
             },
             "tasks": [
-                "Project management responsibility for large front end engineering design (FEED) projects ( ~1000-3500 engineering hrs.) bringing new technology to market and pushing boundaries for flexible risers.",
+                "Project management responsibility for large front end engineering design (FEED) projects ( ~1000-3500 engineering hrs. up to 250.000$) bringing new technology to market and pushing boundaries for flexible risers.",
                 "System assessment engineer and project manager responsible for the technical and commercial execution of client facing service projects in the offshore oil and gas industry.",
-                "Planning and execution of an off-site technical forensics campaign in the Caucasus area, including handling import/export of materials and personnel, and strategy for health and safety (HSE).",
+                "Planning and execution of off-site technical forensics campaign in the Caucasus area, including handling import/export of materials and personnel, and strategy for health and safety (HSE).",
                 "Engineering during sales phase and tactical on-site management for a engineering procurement construction and installation (EPCI) project delivering a ship to shore on/off loading system in West Africa."
             ]
         },
@@ -105,7 +105,7 @@
                 "logo": "forsvaret.svg",
                 "link": "https://www.forsvaret.dk/"
             },
-            "title": "Consultant, Marine",
+            "title": "Student Assistant",
             "tenure": {
                 "start": "Apr 2003",
                 "end": "June 2006"
@@ -221,7 +221,7 @@
                 },
                 {
                     "title": "Strength of marine strucures",
-                    "logo": "ansys.svg",
+                    "logo": "ship_global.svg",
                     "level": 2,
                     "link": "",
                     "description": "I got to play with really fast dynamics, and to attempt to model blast envents in explicit finite element (Autodyn) carruing out my M.Sc. thesis."
@@ -537,6 +537,54 @@
                     "level": 4,
                     "link": "https://d3js.org/",
                     "description": "Fantastic data visualization, if you can dream it -you can make it happen with D3"
+                }
+            ]
+        },
+        {
+            "group":"applications",
+            "name":"Applications",
+            "items":[
+                {
+                    "title": "Linux",
+                    "logo": "linux.svg",
+                    "level": 2,
+                    "link": "https://linuxmint.com/",
+                    "description": "I (and the whole family) uses Linux for our devices at home"
+                },
+                {
+                    "title": "Excel",
+                    "logo": "excel.svg",
+                    "level": 4,
+                    "link": "https://office.com/",
+                    "description": "We have (mis)used excel/vba to the max at work"
+                },
+                {
+                    "title": "Ansys",
+                    "logo": "ansys.svg",
+                    "level": 4,
+                    "link": "https://office.com/",
+                    "description": "We have (mis)used excel/vba to the max at work"
+                },
+                {
+                    "title": "Marc/Mentat",
+                    "logo": "element.svg",
+                    "level": 2,
+                    "link": "https://office.com/",
+                    "description": "Highly non linear analyses og materials subjected to large strain/displacements"
+                },
+                {
+                    "title": "AutoCad",
+                    "logo": "autodesk.svg",
+                    "level": 2,
+                    "link": "https://office.com/",
+                    "description": "I have used autocad to everything from sketches and illustrations to engineering shop drawings"
+                },
+                {
+                    "title": "PowerBI",
+                    "logo": "powerbi.svg",
+                    "level": 2,
+                    "link": "https://office.com/",
+                    "description": "I have used power BI as a seaily customizable front end to display data from API's"
                 }
             ]
         }
