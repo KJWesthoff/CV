@@ -585,6 +585,13 @@
                     "level": 2,
                     "link": "https://office.com/",
                     "description": "I have used power BI as a seaily customizable front end to display data from API's"
+                },
+                {
+                    "title": "VSCode",
+                    "logo": "vscode.svg",
+                    "level": 4,
+                    "link": "https://code.visualstudio.com/",
+                    "description": "I have used power BI as a seaily customizable front end to display data from API's"
                 }
             ]
         }

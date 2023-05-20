@@ -69,17 +69,24 @@ const messUpSim = computed(() => d3.forceSimulation()
 )
 
 const tidyUpSim = computed(() => d3.forceSimulation()
-    .force('charge', d3.forceManyBody().strength(-1))
+    .force('charge', d3.forceManyBody().strength(-4))
     .force("x", d3.forceX().x(d => {
         return xPos(d.group)
     }))
     .force("y", d3.forceY(1).y(height / 2))
 )
 
-
+//initialize
 onMounted(() => {
     messItuUpClick() 
 })
+
+//helperfunction to measure text
+function update(data) {
+  d3.selectAll(".group-text")
+   .join(data)
+   .each(function(d) { d.bbox = this.getBBox(); });
+}
 
 
 const messItuUpClick = function() {
@@ -94,7 +101,8 @@ const messItuUpClick = function() {
         .data(props.data)
         .text(d => "")
 
-
+    d3.selectAll(".group-rect").remove()
+        
 
     messUpSim.value.nodes(data).on("tick", ticked)
     messUpSim.value.alpha(1).restart()
@@ -138,15 +146,40 @@ const tidyUpClick = function() {
         .data(data);
     const texts = d3.selectAll(".group-text")
         .data(props.data)
+        .style("font-size", 7)
+        .style("text-anchor", "middle")
         .text(d => d.name)
         .attr("x", d => xPos(d.group))
         .attr("y", height / 4)
-        .attr("font-size", 7)
-        .style("text-anchor", "middle")
-        .attr('transform', d => 'rotate(-60 ' + xPos(d.group) + ' ' + height / 4 + ')' )
-        
-
-
+        //.attr('transform', d => 'rotate(-0 ' + xPos(d.group) + ' ' + height / 4 + ')' )
+    
+    
+    
+        // add bounding boxes to thedata    
+    update(props.data)
+    
+    const svg = d3.selectAll('.svg-holder')
+    const xMargin = 4
+    const yMargin = 2
+    svg.append("g")
+    .selectAll("rect")
+    .data(props.data)
+    .join("rect")
+      .attr("x", d => xPos(d.group))
+      .attr("y", height / 4)
+      .attr("stroke", "black")
+      .attr("class", "group-rect")
+      .attr('stroke-width', '1')
+      .style("fill", "none")
+      //.style("opacity", "0.5")
+      .attr("width", d => d.bbox.width + 2 * xMargin)
+      .attr("height", d => d.bbox.height + 2 * yMargin)
+      .attr('transform', function(d) {
+        return `translate(-${xMargin}, -${d.bbox.height * 0.8 + yMargin})`
+      })
+      //.attr('transform', d => 'rotate(-0 ' + xPos(d.group) + ' ' + height / 4 + ')' )
+     
+      
 
     tidyUpSim.value.nodes(data).on("tick", ticked)
     tidyUpSim.value.alpha(1).restart()
@@ -188,8 +221,8 @@ watch(messedUp, () => {
 <template>
     <div id="bubbles" class="h-100">
         <svg :onClick="toggleClick" class="svg-holder" :viewBox="viewBox">
-            <g v-for="g in props.data" :key="g">
-                <text class="group-text text-center" :id="g">
+            <g>
+                <text v-for="g in props.data" :key="g" class="group-text text-center font-sm" :id="g">
                 </text>
             </g>
             <g v-for="(d, i) in data" :key="d.title">
