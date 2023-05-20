@@ -10,38 +10,21 @@ import resolveConfig from 'tailwindcss/resolveConfig'
 import tailwindConfig from '../../tailwind.config'
 
 
-// config paramates for "stage"
+// config paramates for man svg "stage"
 const width = 300;
 const height = 200;
 
-const minBlobRadius = 5
+const minBlobRadius = 4
 const maxBlobRadius = 12
 const props = defineProps(['data'])
 
+// make the view box dynamic
 const viewBox = computed(() => {
     return `0 0 ${width} ${height}`
 })
 
+// scale for radii based on paramters above
 const radiusScale = computed(() => d3.scaleSqrt().domain([1, 5]).range([minBlobRadius, maxBlobRadius]));
-
-const simulation = computed(() => d3.forceSimulation()
-    .force('charge', d3.forceManyBody().strength(10))
-    .force('center', d3.forceCenter(width / 2, height / 2))
-    .force('collision', d3.forceCollide().radius(d => radiusScale.value(d.level)))
-)
-
-const simulation2 = computed(() => d3.forceSimulation()
-    .force('charge', d3.forceManyBody().strength(-1))
-    .force("x", d3.forceX().x(d => {
-
-        return xPos(d.group)
-    }))
-    .force("y", d3.forceY(1).y(height / 2))
-    //.force('collision', d3.forceCollide().radius(d => radiusScale.value(d.level)/4))
-)
-
-
-
 
 // Get the tailwind colors from config
 const twConfig = resolveConfig(tailwindConfig)
@@ -78,26 +61,43 @@ const data = props.data.reduce((a, c) => {
 }, [])
 
 
+// Force Simulations defining where the blobs go..
+const messUpSim = computed(() => d3.forceSimulation()
+    .force('charge', d3.forceManyBody().strength(10))
+    .force('center', d3.forceCenter(width / 2, height / 2))
+    .force('collision', d3.forceCollide().radius(d => radiusScale.value(d.level)))
+)
+
+const tidyUpSim = computed(() => d3.forceSimulation()
+    .force('charge', d3.forceManyBody().strength(-1))
+    .force("x", d3.forceX().x(d => {
+        return xPos(d.group)
+    }))
+    .force("y", d3.forceY(1).y(height / 2))
+)
+
 
 onMounted(() => {
     messItuUpClick() 
 })
 
 
-const messItuUpClick = () => {
+const messItuUpClick = function() {
 
+    messUpSim.value.restart()
     const icons = d3.selectAll(".icons")
         .data(data);
     const circles = d3.selectAll(".scircle")
         .data(data);
-    const texts = d3.selectAll(".group-text")
+    // delete the texts
+    d3.selectAll(".group-text")
         .data(props.data)
         .text(d => "")
 
 
 
-    simulation.value.nodes(data).on("tick", ticked)
-    simulation.value.alpha(1).restart()
+    messUpSim.value.nodes(data).on("tick", ticked)
+    messUpSim.value.alpha(1).restart()
 
     function ticked() {
         icons
@@ -130,7 +130,8 @@ const messItuUpClick = () => {
 }
 
 
-const tidyUpClick = () => {
+const tidyUpClick = function() {
+    messUpSim.value.stop()
     const icons = d3.selectAll(".icons")
         .data(data);
     const circles = d3.selectAll(".scircle")
@@ -140,14 +141,16 @@ const tidyUpClick = () => {
         .text(d => d.name)
         .attr("x", d => xPos(d.group))
         .attr("y", height / 4)
+        .attr("font-size", 7)
         .style("text-anchor", "middle")
-        .attr("font-size", 5)
+        .attr('transform', d => 'rotate(-60 ' + xPos(d.group) + ' ' + height / 4 + ')' )
+        
 
 
 
-    simulation2.value.nodes(data).on("tick", ticked2)
-    simulation2.value.alpha(1).restart()
-    function ticked2() {
+    tidyUpSim.value.nodes(data).on("tick", ticked)
+    tidyUpSim.value.alpha(1).restart()
+    function ticked() {
         icons
             .attr('x', function (d) {
                 return d.x - radiusScale.value(d.level) / 2;
@@ -168,21 +171,16 @@ const tidyUpClick = () => {
 }
 
 
-
+// toggle the different states of the animation by click in the svg
 const messedUp = ref(true)
 
-const toggleClick = function () { messedUp.value = !messedUp.value }
-
-watch(messedUp, () => {
-    console.log("messedUp is: ", messedUp.value)
+function toggleClick() { messedUp.value = !messedUp.value }
+watch(messedUp, () => { 
     if (messedUp.value) {
-        console.log("Messing up")
         messItuUpClick()
     } else {
-        console.log("Tidying up")
         tidyUpClick()
     }
-
 })
 
 </script>
@@ -192,20 +190,14 @@ watch(messedUp, () => {
         <svg :onClick="toggleClick" class="svg-holder" :viewBox="viewBox">
             <g v-for="g in props.data" :key="g">
                 <text class="group-text text-center" :id="g">
-
                 </text>
             </g>
-
             <g v-for="(d, i) in data" :key="d.title">
                 <circle :name="d.title" :r="radiusScale(d.level)" class="scircle stroke-black stroke-1">
-
                 </circle>
-
                 <svg class="icons">
                     <icon :name=d.logo></icon>
                 </svg>
-
-
             </g>
         </svg>
     </div>

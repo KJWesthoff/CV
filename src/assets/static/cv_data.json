@@ -542,7 +542,7 @@
         },
         {
             "group":"applications",
-            "name":"Applications",
+            "name":"Tools",
             "items":[
                 {
                     "title": "Linux",
