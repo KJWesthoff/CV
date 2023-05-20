@@ -2,7 +2,7 @@
 
 <script setup>
 
-import { onMounted } from 'vue';
+import { onMounted, ref, watch } from 'vue';
 import * as d3 from 'd3'
 import { computed, defineProps } from 'vue'
 
@@ -33,12 +33,14 @@ const simulation = computed(() => d3.forceSimulation()
 const simulation2 = computed(() => d3.forceSimulation()
     .force('charge', d3.forceManyBody().strength(-1))
     .force("x", d3.forceX().x(d => {
-       
+
         return xPos(d.group)
     }))
-    .force("y", d3.forceY(1).y(height/2))
+    .force("y", d3.forceY(1).y(height / 2))
     //.force('collision', d3.forceCollide().radius(d => radiusScale.value(d.level)/4))
 )
+
+
 
 
 // Get the tailwind colors from config
@@ -46,7 +48,7 @@ const twConfig = resolveConfig(tailwindConfig)
 
 // remove the relative color choises from the tw list
 //const colorList = Object.keys(baseColors).filter(i => !['inherit', 'current', 'transparent', 'neutral','black','white','red','pink','rose','violet'].includes(i) ).reverse()
-const colorList = ['green', 'blue', 'orange', 'zinc', 'slate','rose']
+const colorList = ['green', 'blue', 'orange', 'zinc', 'slate', 'rose']
 
 
 
@@ -76,15 +78,26 @@ const data = props.data.reduce((a, c) => {
 }, [])
 
 
+
 onMounted(() => {
+    messItuUpClick() 
+})
+
+
+const messItuUpClick = () => {
 
     const icons = d3.selectAll(".icons")
         .data(data);
     const circles = d3.selectAll(".scircle")
         .data(data);
+    const texts = d3.selectAll(".group-text")
+        .data(props.data)
+        .text(d => "")
+
 
 
     simulation.value.nodes(data).on("tick", ticked)
+    simulation.value.alpha(1).restart()
 
     function ticked() {
         icons
@@ -114,7 +127,8 @@ onMounted(() => {
                 return twConfig.theme.colors[cName][cValue];
             })
     }
-})
+}
+
 
 const tidyUpClick = () => {
     const icons = d3.selectAll(".icons")
@@ -124,16 +138,16 @@ const tidyUpClick = () => {
     const texts = d3.selectAll(".group-text")
         .data(props.data)
         .text(d => d.name)
-        .attr("x", d=>xPos(d.group))
-        .attr("y", height/4)
+        .attr("x", d => xPos(d.group))
+        .attr("y", height / 4)
         .style("text-anchor", "middle")
-        .attr("font-size", 5)        
-    
+        .attr("font-size", 5)
 
-    
-    simulation2.value.nodes(data).on("tick", ticked)
 
-    function ticked() {
+
+    simulation2.value.nodes(data).on("tick", ticked2)
+    simulation2.value.alpha(1).restart()
+    function ticked2() {
         icons
             .attr('x', function (d) {
                 return d.x - radiusScale.value(d.level) / 2;
@@ -150,22 +164,37 @@ const tidyUpClick = () => {
             .attr('cy', function (d) {
                 return d.y;
             })
+    }
+}
 
+
+
+const messedUp = ref(true)
+
+const toggleClick = function () { messedUp.value = !messedUp.value }
+
+watch(messedUp, () => {
+    console.log("messedUp is: ", messedUp.value)
+    if (messedUp.value) {
+        console.log("Messing up")
+        messItuUpClick()
+    } else {
+        console.log("Tidying up")
+        tidyUpClick()
     }
 
-}
+})
 
 </script>
 
 <template>
-    <button :onClick=" tidyUpClick ">Clean it up Johnny</button>
     <div id="bubbles" class="h-100">
-        <svg :onClick="tidyUpClick" class="svg-holder" :viewBox="viewBox">
-           <g v-for="g in props.data" :key = "g">
-            <text class="group-text text-center" :id ="g">
-                
-            </text>    
-        </g>     
+        <svg :onClick="toggleClick" class="svg-holder" :viewBox="viewBox">
+            <g v-for="g in props.data" :key="g">
+                <text class="group-text text-center" :id="g">
+
+                </text>
+            </g>
 
             <g v-for="(d, i) in data" :key="d.title">
                 <circle :name="d.title" :r="radiusScale(d.level)" class="scircle stroke-black stroke-1">
