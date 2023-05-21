@@ -15,13 +15,6 @@ import SkillsBlobs from './SkillsBlobs.vue';
         <h1>Skills</h1>
         <SkillsBlobs :data="data.skills" ></SkillsBlobs>
      
-        <!-- <div class="flex flex-wrap justify-center items-cente">
-            <div v-for="skill in data.skills.webstack.items">
-                <SkillsPill class="bg-green-300" key="skill.title" :title=skill.title :logo=skill.logo></SkillsPill>
-            </div>
-            <div v-for="skill in data.skills.programming.items">
-                <SkillsPill class="bg-blue-300" key="skill.title" :title=skill.title :logo=skill.logo></SkillsPill>
-            </div>
-        </div> -->
+      
     </div>
 </template>

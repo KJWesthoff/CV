@@ -146,39 +146,16 @@ const tidyUpClick = function() {
         .data(data);
     const texts = d3.selectAll(".group-text")
         .data(props.data)
-        .style("font-size", 7)
+        .style("font-size", 5)
         .style("text-anchor", "middle")
         .text(d => d.name)
         .attr("x", d => xPos(d.group))
         .attr("y", height / 4)
-        //.attr('transform', d => 'rotate(-0 ' + xPos(d.group) + ' ' + height / 4 + ')' )
+        .attr('transform', d => 'rotate(-50 ' + xPos(d.group) + ' ' + height / 4 + ')' )
     
     
     
-        // add bounding boxes to thedata    
-    update(props.data)
-    
-    const svg = d3.selectAll('.svg-holder')
-    const xMargin = 4
-    const yMargin = 2
-    svg.append("g")
-    .selectAll("rect")
-    .data(props.data)
-    .join("rect")
-      .attr("x", d => xPos(d.group))
-      .attr("y", height / 4)
-      .attr("stroke", "black")
-      .attr("class", "group-rect")
-      .attr('stroke-width', '1')
-      .style("fill", "none")
-      //.style("opacity", "0.5")
-      .attr("width", d => d.bbox.width + 2 * xMargin)
-      .attr("height", d => d.bbox.height + 2 * yMargin)
-      .attr('transform', function(d) {
-        return `translate(-${xMargin}, -${d.bbox.height * 0.8 + yMargin})`
-      })
-      //.attr('transform', d => 'rotate(-0 ' + xPos(d.group) + ' ' + height / 4 + ')' )
-     
+  
       
 
     tidyUpSim.value.nodes(data).on("tick", ticked)
@@ -216,6 +193,45 @@ watch(messedUp, () => {
     }
 })
 
+const ttText = ref("")
+const ee = ref("")
+
+// Tooltips
+onMounted(()=>{
+d3.selectAll(".scircle")
+    .on("mouseover", (e,i)=> { 
+        
+        console.log("mosin over")
+        
+        tooltipHolder.attr("class","visible")
+
+    })
+    .on("mousemove", (e,i)=>{
+        console.log("mosin around",e)
+        ee.value = e
+
+        tooltipText.attr("x", d3.pointer(e)[0])
+        tooltipText.attr("y", d3.pointer(e)[1])
+        ttText.value = i
+    })
+    .on("mouseout", (e,i)=>{
+        console.log("mosin out")
+        tooltipHolder.attr("class","invisible")
+    })
+  
+    
+    const tooltip = d3.select('.tooltip')
+        .style('opacity', 0);    
+    
+    const tooltipText = d3.select('.tooltip_text')
+    const tooltipHolder = d3.select("#tooltip-holder")
+
+
+
+
+})
+
+
 </script>
 
 <template>
@@ -232,6 +248,17 @@ watch(messedUp, () => {
                     <icon :name=d.logo></icon>
                 </svg>
             </g>
+                
+          
+            
         </svg>
+        
+        <div id="tooltip-holder" class = "invisible">
+        <div class = "tooltipModal absolute bg-white p-2 rounded-md opacity-90 font-mono max-w-md" :style="'top:'+ee.y+'px'+'; left:'+ee.x+'px'">
+            <h4 class = "underline underline-offset-4 text-xl font-bold text-sm" >{{ ttText.title }}</h4>
+            <p class="italic">{{ ttText.description }}</p>
+        </div>
+    </div>
+
     </div>
 </template>
