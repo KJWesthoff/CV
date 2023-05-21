@@ -10,7 +10,7 @@ import data from '../assets/static/cv_data.json'
 
       <div>
         <h1 class="text-3xl font-bold">{{data.about.name}}</h1>
-        <h4>Engineer</h4>
+        <h4 class="text-lg font-bold underline underline-offset-4">Engineer</h4>
       </div>
 
       
@@ -23,6 +23,19 @@ import data from '../assets/static/cv_data.json'
 
     <div class="about">
       <p>{{data.about.summary}}</p>
+    </div>
+    <div class="mt-2">
+      <p>What others have said about me:</p>
+      <ul>
+        <li  v-for="d in data.about.quotes">
+          <p class="leading-3 mb-1">
+          <span class="italic text-xs">"{{d.quote}}"</span><br>
+          <span class="text-xs">({{ d.by }})</span>
+        </p>  
+        </li>
+
+      </ul>
+    
     </div>
   </div>
 </template>

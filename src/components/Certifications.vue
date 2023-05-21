@@ -6,7 +6,7 @@ import data from '../assets/static/cv_data.json'
 
 <template>
     <div class="header container mx-auto bg-gray-200 rounded-xl shadow border p-8 m-10 w-200">
-        <h1>Certifications</h1>
+        <h1  class = "text-lg font-bold underline underline-offset-4">Certifications</h1>
         <CertificationItem v-for="d in data.certifications" :data="d"></CertificationItem>
     </div>
 </template>

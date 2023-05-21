@@ -1,7 +1,21 @@
 {
     "about": {
         "name": "Karl-Johan Westhoff",
-        "summary": "15+ yeas of experience in designing and building structures for the Ocean, hereunder making the software tools for doing the engineering. I have extensive experience with managing client facing and technically challenging projects of various size.",
+        "summary": "Curious, engineer with a mixed bag of 15+ year's experience in designing and building structures for the Ocean, hereunder making the software tools for doing the engineering. I have extensive experience with managing client facing and technically challenging projects of various size.",
+        "quotes": [
+            {
+                "quote": "You are the kind of person who kan make things work, that's is why we gave you all the impossible jobs",
+                "by": "Uffe, former manager"
+            },
+            {
+                "quote": "Karl-Johan do you hold a Ph.D? - no wait that cant be - because you are actually funny",
+                "by": "Suneel, former colleague"
+            },
+            {
+                "quote": "Look at this man, working so hard he has no time to talk to me",
+                "by": "Customer, on a barge in Africa, (I was busy doing a 3.rd party approval of equipment over a mobile link)"
+            }
+        ],
         "email": "karl.johan.westhoff@gmail.com",
         "phone": "(408) 416-1761",
         "linkedin": "https://www.linkedin.com/in/karl-johan-westhoff-36460011",
@@ -23,6 +37,10 @@
             "tasks": [
                 "Working remote, developing in house web based project management tool.",
                 "Building software skills"
+            ],
+            "learnings": [
+                "A lot about building software",
+                "Structuring work from home"
             ]
         },
         {
@@ -42,6 +60,9 @@
                 "System assessment engineer and project manager responsible for the technical and commercial execution of client facing service projects in the offshore oil and gas industry.",
                 "Planning and execution of off-site technical forensics campaign in the Caucasus area, including handling import/export of materials and personnel, and strategy for health and safety (HSE).",
                 "Engineering during sales phase and tactical on-site management for a engineering procurement construction and installation (EPCI) project delivering a ship to shore on/off loading system in West Africa."
+            ],
+            "learnings": [
+                "Being a leader and how get the best people to drive your project"
             ]
         },
         {
@@ -61,6 +82,10 @@
                 "Deliver design reports and documentation on time",
                 "Handle client communication on technical engineering subjects",
                 "Build software skills developing a multitude of engineering design tools."
+            ],
+            "learnings": [
+                "Processes, and that they need constant improvements",
+                "Passing on knowledge and inspire others"
             ]
         },
         {
@@ -78,6 +103,9 @@
             "tasks": [
                 "Design flexible pipes for the toughest offshore conditions, worldwide",
                 "Participate in technical meetings with clients"
+            ],
+            "learnings": [
+                "How to play a part in the much bigger context of a offshore O&G project"
             ]
         },
         {
@@ -95,12 +123,15 @@
             "tasks": [
                 "Finite Element (FEA) calculations of strength and vibration of ships",
                 "Field measurement work, acoustics and structural vibration"
+            ],
+            "learnings": [
+                "Working independently, take responsibility and make things work"
             ]
         },
         {
             "company": {
                 "name": "Danish Navy Material Command",
-                "description": "Government/Military Organisation",
+                "description": "Government/Military Organization",
                 "location": "Holmen, Copenhagen, Denmark",
                 "logo": "forsvaret.svg",
                 "link": "https://www.forsvaret.dk/"
@@ -133,7 +164,7 @@
                     "Finite Element Analyses",
                     "Marine Engineering"
                 ],
-                "description": "Thesis work at DTU, Blast Performance of CFRP Composites: The project was carried out in cooperation with the Danish Defence Research Establishment (now a part of (FMT) and Falck-Schmidt Defence System. The project dealt with carbon fiber composite materials subjected to high explosives and included numerical modelling and design of and execution of blast experiments."
+                "description": "Thesis work at DTU, Blast Performance of CFRP Composites: The project was carried out in cooperation with the Danish Defense Research Establishment (now a part of (FMT) and Falck-Schmidt Defense System. The project dealt with carbon fiber composite materials subjected to high explosives and included numerical modelling and design of and execution of blast experiments."
             }
         },
         {
@@ -148,7 +179,7 @@
                 },
                 "keywords": [
                     "Mechanical Engineering",
-                    "Naval Arcitecture",
+                    "Naval Architecture",
                     "Submarine Design"
                 ],
                 "description": ""
@@ -195,16 +226,16 @@
                 {
                     "title": "Oil and Gas Industry",
                     "logo": "rig.svg",
-                    "level":5,
-                    "link":"",
-                    "description": "10+ yas in the flexible pipe industry making big and awesome stuctures, adhering to the second-to-noon requirements and standards for safety in oil & gas industry. I have workted with submerged structured, both in the watercolumn and on seabed"
+                    "level": 5,
+                    "link": "",
+                    "description": "10+ yas in the flexible pipe industry making big and awesome structures, adhering to the second-to-noon requirements and standards for safety in oil & gas industry. I have worked with submerged structured, both in the water column and on seabed"
                 },
                 {
                     "title": "Working with Ships",
                     "logo": "ship.svg",
-                    "level":5,
-                    "link":"",
-                    "description": "Calculating strains and stresses of floating structures subjected to wave loads, and producing engineerig designs adhering to class standards"
+                    "level": 5,
+                    "link": "",
+                    "description": "Calculating strains and stresses of floating structures subjected to wave loads, and producing engineering designs adhering to class standards"
                 }
             ]
         },
@@ -217,28 +248,28 @@
                     "logo": "explosion.svg",
                     "level": 2,
                     "link": "",
-                    "description": "I got to play with really fast dynamics, and to attempt to model blast envents in explicit finite element (Autodyn) carruing out my M.Sc. thesis."
+                    "description": "Experience with really fast dynamics modelling blast events in explicit finite element (Autodyn) carrying out my M.Sc. thesis."
                 },
                 {
-                    "title": "Strength of marine strucures",
+                    "title": "Strength of marine structures",
                     "logo": "ship_global.svg",
                     "level": 5,
                     "link": "",
-                    "description": "I got to play with really fast dynamics, and to attempt to model blast envents in explicit finite element (Autodyn) carruing out my M.Sc. thesis."
+                    "description": "Modelling and reporting strength and dynamic response of ships to waves and propulsion both on commercial vessels and the worlds largest superyachts"
                 },
                 {
                     "title": "Fatigue of structures subjected to wave loading)",
                     "logo": "wave.svg",
                     "level": 5,
                     "link": "",
-                    "description": "I got to play with really fast dynamics, and to attempt to model blast envents in explicit finite element (Autodyn) carruing out my M.Sc. thesis."
+                    "description": "Fatigue modelling is a requirement for structures in the O&G domain, and flexible pipes are complex structures to determine stress response of"
                 },
                 {
-                    "title": "In fleld measuremnt campaings",
+                    "title": "In field measurement campaigns",
                     "logo": "vibration.svg",
                     "level": 4,
                     "link": "",
-                    "description": "I got to play with really fast dynamics, and to attempt to model blast envents in explicit finite element (Autodyn) carruing out my M.Sc. thesis."
+                    "description": "Carrying out noise and vibration measurements in difficult conditions all over the worlds using novel equipment, hereunder microphones hydrophones accelerometers strain gauges etc. and analyzing the results afterwards"
                 }
             ]
         },
@@ -251,35 +282,35 @@
                     "logo": "gantt.svg",
                     "level": 5,
                     "link": "",
-                    "description": "I am used to the rigorous planning, constant updates and constant cooridination required to succede in the huge infrastructure projects of the Oil and Gas industry, including agile short term task planning using PDCA lean boards etc. to full fledged gantt charted projects which are to interface with the largest infrastructure projects in the world."
+                    "description": "I am used to the rigorous planning, constant updates and constant coordination required to succeed in the huge infrastructure projects of the Oil and Gas industry, including agile short term task planning using PDCA lean boards etc. to full fledged Gantt charted projects which are to interface with the largest infrastructure projects in the world."
                 },
                 {
                     "title": "Risk Analyses",
                     "logo": "risk_analyses.svg",
                     "level": 5,
                     "link": "",
-                    "description": "Risk analyses is a part of everthiong in the Oil and Gas industry both regarding financial risks and the risk for life. I am used to adhering  to the stringest requirements and carrying out risl managament of all layers including everything from strategic risk analyses/planning over HIRA's to Toolbox talks in fhe field. I like the oil and gas indu stry for this particular reason -alwaus think sakfety, it is ypur loved ones who will suffer if you are injured"
+                    "description": "Risk analyses is a part of everything in the Oil and Gas industry both regarding financial risks and the risk for life. I am used to adhering  to the stringiest requirements and carrying out risk management of all layers including everything from strategic risk analyses/planning over HIRA's to Toolbox talks in fhe field. I like the oil and gas indu stry for this particular reason -always think safety, it is your loved ones who will suffer if you are injured"
                 },
                 {
                     "title": "Engineering Studies",
                     "logo": "pm_engineering.svg",
                     "level": 5,
                     "link": "",
-                    "description": "Extendive exprirence as project manager for Front End Engineering Design projects carried out for major global energy companies, every thing from lifetime extension of assets over evaluation of exceeded paramters to full forensics of failed equipments and root cause analyses there of"
+                    "description": "Extensive experience as project manager for Front End Engineering Design projects carried out for major global energy companies, every thing from lifetime extension of assets over evaluation of exceeded parameters to full forensics of failed equipments and root cause analyses there of"
                 },
                 {
                     "title": "Client Services",
                     "logo": "pm_service.svg",
                     "level": 5,
                     "link": "",
-                    "description": "Managemd of a plethora of Client focused technical asisstance with inputs from many engineering diciplines, keeping our clinets operations runnimg safely"
+                    "description": "Management of a plethora of Client focused technical assistance with inputs from many engineering disciplines, keeping our clients operations running safely"
                 },
                 {
                     "title": "FEED",
                     "logo": "pm_multitask.svg",
                     "level": 5,
                     "link": "",
-                    "description": "Extendive exprirence as project manager for Front End Engineering Design projects, carried out for major global energy companies, scopes typically rangling 1000-5000 engineering hours."
+                    "description": "Extensive experience as project manager for Front End Engineering Design projects, carried out for major global energy companies, scopes typically ranging 1000-5000 engineering hours."
                 }
             ]
         },
@@ -306,28 +337,28 @@
                     "logo": "fortran.svg",
                     "level": 1,
                     "link": "https://fortran-lang.org/en/",
-                    "description": "I used fortran for programming a Finite Element program in univerity"
+                    "description": "I used fortran for programming a Finite Element program in university"
                 },
                 {
                     "title": "MATLAB",
                     "logo": "matlab.svg",
                     "level": 4,
                     "link": "https://www.mathworks.com/products/matlab.html",
-                    "description": "Academics, and tooling for vibration analyes (until python took over;-)"
+                    "description": "Academics, and tooling for vibration analyses (until python took over;-)"
                 },
                 {
                     "title": "JS",
                     "logo": "js.svg",
                     "level": 5,
                     "link": "https://www.w3schools.com/js/js_es6.asp",
-                    "description": "I like that it runs everyvhere in browsers"
+                    "description": "I like that it runs everywhere in browsers"
                 },
                 {
                     "title": "Excel/VBA",
                     "logo": "vba.svg",
                     "level": 4,
                     "link": "https://learn.microsoft.com/en-us/office/vba/api/overview/excel",
-                    "description": "We have taken Excel and vba way beyond it's intendend use ;-)"
+                    "description": "We have taken Excel and vba way beyond it's intended use ;-)"
                 }
             ]
         },
@@ -340,14 +371,14 @@
                     "logo": "html5.svg",
                     "level": 5,
                     "link": "https://www.w3.org/",
-                    "description": "I can do vanilla HTML (even after vorking with frameworks;-)"
+                    "description": "I can do vanilla HTML (even after working with frameworks;-)"
                 },
                 {
                     "title": "CSS",
                     "logo": "css3.svg",
                     "level": 5,
                     "link": "https://www.w3schools.com/css/default.asp",
-                    "description": "I can do vanilla CSS (even after vorking with Bootsrap;-)"
+                    "description": "I can do vanilla CSS (even after working with Bootstrap;-)"
                 },
                 {
                     "title": "React",
@@ -368,14 +399,14 @@
                     "logo": "vue.svg",
                     "level": 4,
                     "link": "https://vuejs.org/",
-                    "description": "I have started using vue on recent projects both at work an on persnonal projects"
+                    "description": "I have started using vue on recent projects both at work an on personal projects"
                 },
                 {
                     "title": "Node",
                     "logo": "node.svg",
                     "level": 4,
                     "link": "https://nodejs.org/en",
-                    "description": "Running js backends and easpy-peasy import of frontend packages with npm"
+                    "description": "Running js backends and easy import of frontend packages with npm"
                 },
                 {
                     "title": "Pinia",
@@ -396,7 +427,7 @@
                     "logo": "tailwind.svg",
                     "level": 2,
                     "link": "https://tailwindcss.com/",
-                    "description": "Used for this page"
+                    "description": "Used for styling on this page"
                 },
                 {
                     "title": "Bootstrap",
@@ -410,7 +441,7 @@
                     "logo": "okta.svg",
                     "level": 3,
                     "link": "https://www.okta.com/",
-                    "description": "Authentication framwork we implemented and used at work"
+                    "description": "Authentication framework we implemented and used at work"
                 },
                 {
                     "title": "Express",
@@ -431,14 +462,14 @@
                     "logo": "graphql.svg",
                     "level": 1,
                     "link": "https://graphql.org/",
-                    "description": "I have used it as a API query titleuage (we used Apollo on an express server with Node)"
+                    "description": "API query language (used with Apollo on an express server with Node)"
                 },
                 {
                     "title": "MySQL",
                     "logo": "mysql.svg",
                     "level": 2,
                     "link": "https://www.mysql.com/",
-                    "description": "SQL server for personal projects, i have used it with Sqlalchemy in python backends and with Sequielize on Node/express "
+                    "description": "SQL server for personal projects, i have used it with Sqlalchemy in python backends and with Sequelize on Node/express "
                 },
                 {
                     "title": "MSSQL",
@@ -452,14 +483,14 @@
                     "logo": "mongodb.svg",
                     "level": 2,
                     "link": "https://www.mongodb.com/",
-                    "description": "Super easy bucket server i have used for personal projects, with Mongoose or Benie for pythonic backends "
+                    "description": "Super easy bucket server i have used for personal projects, with Mongoose or Beanie for pythonic backends "
                 },
                 {
                     "title": "CosmosDB",
                     "logo": "azure.svg",
                     "level": 1,
                     "link": "https://azure.microsoft.com/en-us/products/cosmos-db",
-                    "description": " Same a Mogo but for work, where we use Azure"
+                    "description": " Same a Mongo but for work, where we use Azure"
                 },
                 {
                     "title": "Flask",
@@ -480,14 +511,14 @@
                     "logo": "docker.svg",
                     "level": 3,
                     "link": "https://www.docker.com/",
-                    "description": "Part of our deployment process at work"
+                    "description": "Part of our deployment pipeline at work"
                 },
                 {
                     "title": "Kubernetes",
                     "logo": "kubernetes.svg",
                     "level": 3,
                     "link": "https://kubernetes.io/",
-                    "description": "Part of our deployment process at work"
+                    "description": "Part of our deployment pipeline at work"
                 },
                 {
                     "title": "GitHib",
@@ -501,14 +532,14 @@
                     "logo": "git.svg",
                     "level": 4,
                     "link": "https://github.com/",
-                    "description": "We use it at work and i use it personally to keep track of code abd also as CI/CD tool to deploy using github actions"
+                    "description": "Used at work and personally to keep track of code abd also as CI/CD tool to deploy using github actions"
                 },
                 {
                     "title": "Tanstack",
                     "logo": "tanstack_table.svg",
                     "level": 3,
                     "link": "https://tanstack.com/query/latest",
-                    "description": "I am using tanstack Table which is an awesome tool for making interactive tables that can do anything and tanstack Query which is an awesome tool for keeping data up to date between frontend and backend apps i have used it both with React and Vue"
+                    "description": "Tanstack Table is an awesome tool for making interactive tables that can do anything and Tanstack Query which is an awesome tool for keeping data up to date between frontend and backend apps i have used it both with React and Vue"
                 },
                 {
                     "title": "Pydantic",
@@ -522,28 +553,28 @@
                     "logo": "beanie.svg",
                     "level": 2,
                     "link": "https://beanie-odm.dev/",
-                    "description": "Awesome ODM tool for mogpdb built on pydantic, i used it for a FastAPI backend"
+                    "description": "Awesome ODM tool for Mogodb built on Pydantic, i used it for a FastAPI backend"
                 },
                 {
                     "title": "D3",
                     "logo": "d3.svg",
                     "level": 4,
                     "link": "https://d3js.org/",
-                    "description": "Fantastic data visualization, if you can dream it -you can make it happen with D3"
+                    "description": "Fantastic data visualization, if you can dream it -you can make it happen with D3, this figure was made using D3js"
                 },
                 {
                     "title": "Rancher",
                     "logo": "rancher.svg",
                     "level": 2,
                     "link": "https://www.rancher.com/",
-                    "description": "Kubernetes container orchestration mase easy, we ahve use dit at work"
+                    "description": "Kubernetes container orchestration made easy"
                 }
             ]
         },
         {
-            "group":"applications",
-            "name":"Tools",
-            "items":[
+            "group": "applications",
+            "name": "Tools",
+            "items": [
                 {
                     "title": "Linux",
                     "logo": "linux.svg",
@@ -563,7 +594,7 @@
                     "logo": "ansys.svg",
                     "level": 4,
                     "link": "https://office.com/",
-                    "description": "We have (mis)used excel/vba to the max at work"
+                    "description": "Static and quasi static analyses orf stress, modal and forced vibration response"
                 },
                 {
                     "title": "Marc/Mentat",
@@ -577,21 +608,21 @@
                     "logo": "autodesk.svg",
                     "level": 2,
                     "link": "https://office.com/",
-                    "description": "I have used autocad to everything from sketches and illustrations to engineering shop drawings"
+                    "description": "AutoCad to everything from sketches and illustrations to engineering shop drawings"
                 },
                 {
                     "title": "PowerBI",
                     "logo": "powerbi.svg",
                     "level": 2,
                     "link": "https://office.com/",
-                    "description": "I have used power BI as a seaily customizable front end to display data from API's"
+                    "description": "Power BI used as an easily customizable front end to display data from API's"
                 },
                 {
                     "title": "VSCode",
                     "logo": "vscode.svg",
                     "level": 4,
                     "link": "https://code.visualstudio.com/",
-                    "description": "I have used power BI as a seaily customizable front end to display data from API's"
+                    "description": "Go to favorite text editor"
                 }
             ]
         }

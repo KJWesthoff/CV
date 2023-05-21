@@ -78,18 +78,18 @@ const tidyUpSim = computed(() => d3.forceSimulation()
 
 //initialize
 onMounted(() => {
-    messItuUpClick() 
+    messItuUpClick()
 })
 
 //helperfunction to measure text
 function update(data) {
-  d3.selectAll(".group-text")
-   .join(data)
-   .each(function(d) { d.bbox = this.getBBox(); });
+    d3.selectAll(".group-text")
+        .join(data)
+        .each(function (d) { d.bbox = this.getBBox(); });
 }
 
 
-const messItuUpClick = function() {
+const messItuUpClick = function () {
 
     messUpSim.value.restart()
     const icons = d3.selectAll(".icons")
@@ -102,7 +102,7 @@ const messItuUpClick = function() {
         .text(d => "")
 
     d3.selectAll(".group-rect").remove()
-        
+
 
     messUpSim.value.nodes(data).on("tick", ticked)
     messUpSim.value.alpha(1).restart()
@@ -138,7 +138,7 @@ const messItuUpClick = function() {
 }
 
 
-const tidyUpClick = function() {
+const tidyUpClick = function () {
     messUpSim.value.stop()
     const icons = d3.selectAll(".icons")
         .data(data);
@@ -151,12 +151,12 @@ const tidyUpClick = function() {
         .text(d => d.name)
         .attr("x", d => xPos(d.group))
         .attr("y", height / 4)
-        .attr('transform', d => 'rotate(-50 ' + xPos(d.group) + ' ' + height / 4 + ')' )
-    
-    
-    
-  
-      
+        .attr('transform', d => 'rotate(-50 ' + xPos(d.group) + ' ' + height / 4 + ')')
+
+
+
+
+
 
     tidyUpSim.value.nodes(data).on("tick", ticked)
     tidyUpSim.value.alpha(1).restart()
@@ -185,7 +185,7 @@ const tidyUpClick = function() {
 const messedUp = ref(true)
 
 function toggleClick() { messedUp.value = !messedUp.value }
-watch(messedUp, () => { 
+watch(messedUp, () => {
     if (messedUp.value) {
         messItuUpClick()
     } else {
@@ -197,37 +197,28 @@ const ttText = ref("")
 const ee = ref("")
 
 // Tooltips
-onMounted(()=>{
-d3.selectAll(".scircle")
-    .on("mouseover", (e,i)=> { 
-        
-        console.log("mosin over")
-        
-        tooltipHolder.attr("class","visible")
+onMounted(() => {
+    d3.selectAll(".scircle")
+        .on("mouseover", (e, i) => {
+            tooltipHolder.attr("class", "visible")
+        })
+        .on("mousemove", (e, i) => {
+            ee.value = e
 
-    })
-    .on("mousemove", (e,i)=>{
-        console.log("mosin around",e)
-        ee.value = e
+            tooltipText.attr("x", d3.pointer(e)[0])
+            tooltipText.attr("y", d3.pointer(e)[1])
+            ttText.value = i
+        })
+        .on("mouseout", (e, i) => {
+            tooltipHolder.attr("class", "invisible")
+        })
 
-        tooltipText.attr("x", d3.pointer(e)[0])
-        tooltipText.attr("y", d3.pointer(e)[1])
-        ttText.value = i
-    })
-    .on("mouseout", (e,i)=>{
-        console.log("mosin out")
-        tooltipHolder.attr("class","invisible")
-    })
-  
-    
+
     const tooltip = d3.select('.tooltip')
-        .style('opacity', 0);    
-    
+        .style('opacity', 0);
+
     const tooltipText = d3.select('.tooltip_text')
     const tooltipHolder = d3.select("#tooltip-holder")
-
-
-
 
 })
 
@@ -242,23 +233,27 @@ d3.selectAll(".scircle")
                 </text>
             </g>
             <g v-for="(d, i) in data" :key="d.title">
-                <circle :name="d.title" :r="radiusScale(d.level)" class="scircle stroke-black stroke-1">
-                </circle>
-                <svg class="icons">
-                    <icon :name=d.logo></icon>
-                </svg>
+
+                <g class="blob">
+                    <circle :name="d.title" :r="radiusScale(d.level)" class="scircle stroke-black stroke-1">
+                    </circle>
+                    <svg class="icons">
+                        <icon :name=d.logo></icon>
+                    </svg>
+                </g>
             </g>
-                
-          
-            
+
+
+
         </svg>
-        
-        <div id="tooltip-holder" class = "invisible">
-        <div class = "tooltipModal absolute bg-white p-2 rounded-md opacity-90 font-mono max-w-md" :style="'top:'+ee.y+'px'+'; left:'+ee.x+'px'">
-            <h4 class = "underline underline-offset-4 text-xl font-bold text-sm" >{{ ttText.title }}</h4>
-            <p class="italic">{{ ttText.description }}</p>
+
+        <div id="tooltip-holder" class="invisible">
+            <div class="tooltipModal absolute bg-white p-2 rounded-md opacity-90 font-mono max-w-md"
+                :style="'top:' + ee.y + 'px' + '; left:' + ee.x + 'px'">
+                <h4 class="underline underline-offset-4 text-xl font-bold text-sm">{{ ttText.title }}</h4>
+                <p class="italic">{{ ttText.description }}</p>
+            </div>
         </div>
-    </div>
 
     </div>
 </template>
