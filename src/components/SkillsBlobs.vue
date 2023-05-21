@@ -198,7 +198,7 @@ const ee = ref("")
 
 // Tooltips
 onMounted(() => {
-    d3.selectAll(".scircle")
+    d3.selectAll("svg .blob .scircle")
         .on("mouseover", (e, i) => {
             tooltipHolder.attr("class", "visible")
         })
@@ -248,7 +248,7 @@ onMounted(() => {
         </svg>
 
         <div id="tooltip-holder" class="invisible">
-            <div class="tooltipModal absolute bg-white p-2 rounded-md opacity-90 font-mono max-w-md"
+            <div class="tooltipModal absolute bg-white p-2 rounded-md opacity-90 max-w-md"
                 :style="'top:' + ee.y + 'px' + '; left:' + ee.x + 'px'">
                 <h4 class="underline underline-offset-4 text-xl font-bold text-sm">{{ ttText.title }}</h4>
                 <p class="italic">{{ ttText.description }}</p>
