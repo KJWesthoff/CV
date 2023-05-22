@@ -200,15 +200,18 @@ const ee = ref("")
 onMounted(() => {
     d3.selectAll(".blob .scircle", ".icons")
         .on("mouseover", (e, i) => {
+            
+            console.log(d3.pointer(e), e.offsetY)
             tooltipHolder.attr("class", "visible")
-        })
-        .on("mousemove", (e, i) => {
             ee.value = e
 
-            tooltipText.attr("x", d3.pointer(e)[0])
-            tooltipText.attr("y", d3.pointer(e)[1])
+            //tooltipText.attr("x", d3.pointer(e)[0])
+            //tooltipText.attr("y", d3.pointer(e)[1])
+            //tooltipHolder.attr("screenX", e.screenX)
+            //tooltipHolder.attr("screenY", e.screenY)
             ttText.value = i
         })
+
         .on("mouseout", (e, i) => {
             tooltipHolder.attr("class", "invisible")
         })
@@ -249,7 +252,7 @@ onMounted(() => {
 
         <div id="tooltip-holder" class="invisible">
             <div class="tooltipModal absolute bg-white p-2 rounded-md opacity-90 max-w-md"
-                :style="'top:' + ee.y + 'px' + '; left:' + ee.x + 'px'">
+                :style="'top:' + ee.pageY + 'px' + '; left:' + ee.pageX + 'px'">
                 <h4 class="underline underline-offset-4 text-xl font-bold text-sm">{{ ttText.title }}</h4>
                 <p class="italic">{{ ttText.description }}</p>
             </div>
