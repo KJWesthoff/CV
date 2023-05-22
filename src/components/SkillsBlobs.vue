@@ -238,7 +238,7 @@ onMounted(() => {
                     <circle :name="d.title" :r="radiusScale(d.level)" class="scircle stroke-black stroke-1">
                     </circle>
                     <svg class="icons">
-                        <icon :name=d.logo></icon>
+                        <Icon :name=d.logo></Icon>
                     </svg>
                 </g>
             </g>

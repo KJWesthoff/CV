@@ -14,7 +14,7 @@ const data = props.data
     <div class="mt-5">
         <h2 class="text-2xl font-bold">{{ data.certification.name }}</h2>
         <h4 class="flex justify between text-2xl">
-            <icon class="mr-5" :name="data.certification.logo"></icon>{{ data.certification.institution }}
+            <Icon class="mr-5" :name="data.certification.logo"></Icon>{{ data.certification.institution }}
         </h4>
         <div class="mt">
             <div>

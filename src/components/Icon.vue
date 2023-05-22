@@ -8,8 +8,14 @@ const props = defineProps({
     },
 });
 
+
+const iconName = props.name.slice(0,-4)
+console.log(iconName)
+
+
 const icon = defineAsyncComponent(() =>
-   import(`../assets/static/svg/${props.name}`)
+   
+   import(`../assets/static/svg/${iconName}.svg`)
    
 );
 </script>
