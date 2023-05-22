@@ -8,10 +8,9 @@ const props = defineProps({
     },
 });
 
-
+// cutaway icon suffix for import statement below to work
+// also - if other suffixes lig .png are to be used other logic could be implemented
 const iconName = props.name.slice(0,-4)
-console.log(iconName)
-
 
 const icon = defineAsyncComponent(() =>
    

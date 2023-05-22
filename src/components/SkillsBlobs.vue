@@ -198,7 +198,7 @@ const ee = ref("")
 
 // Tooltips
 onMounted(() => {
-    d3.selectAll("svg .blob .scircle")
+    d3.selectAll(".blob .scircle", ".icons")
         .on("mouseover", (e, i) => {
             tooltipHolder.attr("class", "visible")
         })
@@ -237,7 +237,7 @@ onMounted(() => {
                 <g class="blob">
                     <circle :name="d.title" :r="radiusScale(d.level)" class="scircle stroke-black stroke-1">
                     </circle>
-                    <svg class="icons">
+                    <svg class="icons" pointer-events="none">
                         <Icon :name=d.logo></Icon>
                     </svg>
                 </g>
