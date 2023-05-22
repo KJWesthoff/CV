@@ -10,8 +10,11 @@ export default defineConfig({
   plugins: [
     vue(),
     svgLoader()
+    // svgLoader({
+    //   defaultImport:'url'
+    // })
   ],
-  base:'/CV/',
+  base:'',
   server: {
     port:8080,
   }

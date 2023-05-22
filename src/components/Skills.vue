@@ -3,7 +3,6 @@
 <script setup>
 
 import data from '../assets/static/cv_data.json'
-import SkillsPill from './SkillsPill.vue';
 import SkillsBlobs from './SkillsBlobs.vue';
 
 
