@@ -10,9 +10,9 @@ import AboutMe from './components/AboutMe.vue';
 
 <template>
   <Header/>
-  <Skills/>
+  <Skills class="break-after-page"></Skills>  
   <WorkExperience/>
-  <Education/>
+  <Education class="break-before-page"></Education>
   <Certifications/>
   <AboutMe/>
 </template>

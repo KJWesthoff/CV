@@ -1,7 +1,7 @@
 {
     "about": {
         "name": "Karl-Johan Westhoff",
-        "summary": "Curious, engineer with an awesome 15+ year's of experience designing and building structures for the Ocean, and aligning processes and making the software tools for doing the engineering. I have extensive experience with managing client facing and technically challenging projects of various size.",
+        "summary": "Curious, engineer with an awesome 15+ year's of experience designing and building structures for the Ocean, aligning processes and making the software tools for doing the engineering. I have extensive experience with managing client facing and technically challenging projects of various size.",
         "quotes": [
             {
                 "quote": "You are the kind of person who kan make things work, that's is why we gave you all the impossible jobs",
@@ -28,11 +28,11 @@
                     "learned": "Even if you have the best crew, only one mistake at the helm can mess everything up"
                 },
                 {
-                    "item": "Iron Man distance triathlons",
-                    "learned": "Tenacity and to appreciate that every effort you put in training pays off (10:31hrs on the IM)"
+                    "item": "Long Distance Triathlons",
+                    "learned": "Tenacity and to appreciate that every effort you put in training pays off (pb. 10:31hrs on the IM)"
                 },
                 {
-                    "item": "Completely remodelling our house",
+                    "item": "Remodelling our house",
                     "learned": "Appreciate all the help you can get, competent professionals are worth it"
                 }
             ],
@@ -250,14 +250,14 @@
             "name": "Ocean Engineering",
             "items": [
                 {
-                    "title": "Oil and Gas Industry",
+                    "title": "Offshore Oil and Gas Industry",
                     "logo": "rig.svg",
-                    "level": 9,
+                    "level": 7,
                     "link": "",
                     "description": "10+ yas in the flexible pipe industry making big and awesome structures, adhering to the second-to-noon requirements and standards for safety in oil & gas industry. I have worked with submerged structured, both in the water column and on seabed"
                 },
                 {
-                    "title": "Working with Ships",
+                    "title": "Ships Structures",
                     "logo": "ship.svg",
                     "level": 7,
                     "link": "",
@@ -266,7 +266,7 @@
                 {
                     "title": "Sub Sea Structures",
                     "logo": "flexible.svg",
-                    "level": 7,
+                    "level": 9,
                     "link": "",
                     "description": ""
                 }
@@ -277,28 +277,28 @@
             "name": "Structural Dynamics",
             "items": [
                 {
-                    "title": "Shock and explosions",
+                    "title": "Shock and Explosions",
                     "logo": "explosion.svg",
                     "level": 2,
                     "link": "",
                     "description": "Experience with really fast dynamics modelling blast events in explicit finite element (Autodyn) carrying out my M.Sc. thesis."
                 },
                 {
-                    "title": "Strength of marine structures",
+                    "title": "Strength of Marine Structures",
                     "logo": "ship_global.svg",
                     "level": 5,
                     "link": "",
                     "description": "Modelling and reporting strength and dynamic response of ships to waves and propulsion both on commercial vessels and the worlds largest superyachts"
                 },
                 {
-                    "title": "Fatigue of structures subjected to wave loading)",
+                    "title": "Fatigue of Structures in Wave Loading)",
                     "logo": "wave.svg",
                     "level": 5,
                     "link": "",
                     "description": "Fatigue modelling is a requirement for structures in the O&G domain, and flexible pipes are complex structures to determine stress response of"
                 },
                 {
-                    "title": "In field measurement campaigns",
+                    "title": "In-field Measurement Campaigns",
                     "logo": "vibration.svg",
                     "level": 4,
                     "link": "",
@@ -606,7 +606,7 @@
         },
         {
             "group": "applications",
-            "name": "Tools",
+            "name": "Software Tools",
             "items": [
                 {
                     "title": "Linux",

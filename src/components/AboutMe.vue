@@ -9,9 +9,9 @@ import data from '../assets/static/cv_data.json'
 <template>
     <div class="header container mx-auto bg-gray-200 rounded-xl shadow border p-8 m-10 w-200">
         <h1 class="text-lg font-bold underline underline-offset-4">About Me</h1>
-        <div class="mt-2">
+        <div class="mt-5">
             <div>
-                <p class="font-bold">Other things i have done and what i learned</p>
+                <p class="font-bold">Other things i have done and what I learned</p>
                 <ul class="list-disc">
                     <li class="ml-10 mb-1" v-for=" d in data.about.personal.learnings">
                     {{ d.item }} <br>
@@ -19,7 +19,7 @@ import data from '../assets/static/cv_data.json'
                     </li>
                 </ul>
 
-                <p class="font-bold"> In may spare time i enjoy</p>
+                <p class="font-bold"> In may free time I enjoy</p>
                 <ul>
                                     <li class="ml-10" v-for ="d in data.about.personal.interests">
                     {{ d }}
