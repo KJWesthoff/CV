@@ -78,7 +78,7 @@ const tidyUpSim = computed(() => d3.forceSimulation()
 
 //initialize
 onMounted(() => {
-    messItuUpClick()
+    messItUpClick()
 })
 
 //helperfunction to measure text
@@ -89,7 +89,7 @@ function update(data) {
 }
 
 
-const messItuUpClick = function () {
+const messItUpClick = function () {
 
     messUpSim.value.restart()
     const icons = d3.selectAll(".icons")
@@ -188,7 +188,7 @@ const messedUp = ref(true)
 function toggleClick() { messedUp.value = !messedUp.value }
 watch(messedUp, () => {
     if (messedUp.value) {
-        messItuUpClick()
+        messItUpClick()
     } else {
         tidyUpClick()
     }
