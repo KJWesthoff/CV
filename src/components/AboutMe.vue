@@ -11,19 +11,20 @@ import data from '../assets/static/cv_data.json'
         <h1 class="text-lg font-bold underline underline-offset-4">About Me</h1>
         <div class="mt-2">
             <div>
-                <p class="font-bold">Things i have done and what i learned</p>
+                <p class="font-bold">Other things i have done and what i learned</p>
                 <ul class="list-disc">
                     <li class="ml-10 mb-1" v-for=" d in data.about.personal.learnings">
                     {{ d.item }} <br>
                     Taught me:  <span class="italic">"{{ d.learned }}"</span>
                     </li>
                 </ul>
+
                 <p class="font-bold"> In may spare time i enjoy</p>
                 <ul>
-                    <li class="ml-10 mb-1" v-for ="d in data.about.personal.interests">
+                                    <li class="ml-10" v-for ="d in data.about.personal.interests">
                     {{ d }}
-                </li>
-                </ul>
+                                    </li>
+                                </ul>
 
 
             </div>

@@ -44,7 +44,7 @@ const twColor = d3.scaleOrdinal().domain(groups)
 
 
 // functon to set shading value based on item.level
-const twValue = d3.scaleOrdinal().domain([1, 2, 3, 4, 5])
+const twValue = d3.scaleOrdinal().domain([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
     .range([50, 100, 200, 300, 400, 500, 600, 700, 800, 900]);
 
 
@@ -201,10 +201,10 @@ const ee = ref("")
 onMounted(() => {
     d3.selectAll(".blob .scircle", ".icons")
         .on("mouseover", (e, i) => {
-            
+
             console.log(d3.pointer(e), e.offsetY)
             tooltipHolder.attr("class", "visible")
-            ee.value = e 
+            ee.value = e
 
             ttText.value = i
         })

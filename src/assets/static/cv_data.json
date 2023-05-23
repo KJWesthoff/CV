@@ -39,7 +39,7 @@
             "interests":[
                 "Camping and hiking in beautiful USA with my family",
                 "Mountain biking in the bay area",
-                "Experience and learn new things"
+                "Experience and learn new things (i have recently build an IOT connected plant watering system)"
         ]
         },
         "email": "karl.johan.westhoff@gmail.com",
@@ -375,7 +375,7 @@
                 {
                     "title": "MATLAB",
                     "logo": "matlab.svg",
-                    "level": 4,
+                    "level": 3,
                     "link": "https://www.mathworks.com/products/matlab.html",
                     "description": "Academics, and tooling for vibration analyses (until python took over;-)"
                 },
