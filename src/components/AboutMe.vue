@@ -19,7 +19,7 @@ import data from '../assets/static/cv_data.json'
                     </li>
                 </ul>
 
-                <p class="font-bold"> In may free time I enjoy</p>
+                <p class="font-bold"> In my free time I enjoy</p>
                 <ul>
                                     <li class="ml-10" v-for ="d in data.about.personal.interests">
                     {{ d }}
