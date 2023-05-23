@@ -11,8 +11,8 @@ import tailwindConfig from '../../tailwind.config'
 
 
 // config paramates for man svg "stage"
-const width = 300;
-const height = 200;
+const width = ref(300);
+const height = ref(200);
 
 const minBlobRadius = 4
 const maxBlobRadius = 12
@@ -20,7 +20,7 @@ const props = defineProps(['data'])
 
 // make the view box dynamic
 const viewBox = computed(() => {
-    return `0 0 ${width} ${height}`
+    return `0 0 ${width.value} ${height.value}`
 })
 
 // scale for radii based on paramters above
@@ -48,7 +48,7 @@ const twValue = d3.scaleOrdinal().domain([1, 2, 3, 4, 5])
     .range([50, 100, 200, 300, 400, 500, 600, 700, 800, 900]);
 
 
-const xPos = d3.scaleOrdinal().domain(groups).range([...Array(groups.length).keys()].map(i => (i + 1) * width / (groups.length + 1)))
+const xPos = d3.scaleOrdinal().domain(groups).range([...Array(groups.length).keys()].map(i => (i + 1) * width.value / (groups.length + 1)))
 
 // Process the data into a flat structure
 const data = props.data.reduce((a, c) => {
@@ -64,7 +64,7 @@ const data = props.data.reduce((a, c) => {
 // Force Simulations defining where the blobs go..
 const messUpSim = computed(() => d3.forceSimulation()
     .force('charge', d3.forceManyBody().strength(10))
-    .force('center', d3.forceCenter(width / 2, height / 2))
+    .force('center', d3.forceCenter(width.value / 2, height.value / 2))
     .force('collision', d3.forceCollide().radius(d => radiusScale.value(d.level)))
 )
 
@@ -73,7 +73,7 @@ const tidyUpSim = computed(() => d3.forceSimulation()
     .force("x", d3.forceX().x(d => {
         return xPos(d.group)
     }))
-    .force("y", d3.forceY(1).y(height / 2))
+    .force("y", d3.forceY(1).y(height.value / 2))
 )
 
 //initialize
@@ -150,8 +150,10 @@ const tidyUpClick = function () {
         .style("text-anchor", "middle")
         .text(d => d.name)
         .attr("x", d => xPos(d.group))
-        .attr("y", height / 4)
-        .attr('transform', d => 'rotate(-50 ' + xPos(d.group) + ' ' + height / 4 + ')')
+        .attr("font-weight", 1000)
+        .attr("text-decoration", "underline")
+        .attr("y", height.value / 6)
+        .attr('transform', d => 'rotate(-50 ' + xPos(d.group) + ' ' + height.value / 6 + ')')
 
 
 
@@ -203,12 +205,8 @@ onMounted(() => {
             
             console.log(d3.pointer(e), e.offsetY)
             tooltipHolder.attr("class", "visible")
-            ee.value = e
+            ee.value = e 
 
-            //tooltipText.attr("x", d3.pointer(e)[0])
-            //tooltipText.attr("y", d3.pointer(e)[1])
-            //tooltipHolder.attr("screenX", e.screenX)
-            //tooltipHolder.attr("screenY", e.screenY)
             ttText.value = i
         })
 
@@ -232,7 +230,7 @@ onMounted(() => {
     <div id="bubbles" class="h-100">
         <svg :onClick="toggleClick" class="svg-holder" :viewBox="viewBox">
             <g>
-                <text v-for="g in props.data" :key="g" class="group-text text-center font-sm" :id="g">
+                <text v-for="g in props.data" :key="g" class="group-text text-center font-sm" :id="g.group">
                 </text>
             </g>
             <g v-for="(d, i) in data" :key="d.title">
@@ -257,6 +255,7 @@ onMounted(() => {
                 <p class="italic">{{ ttText.description }}</p>
             </div>
         </div>
+
 
     </div>
 </template>
