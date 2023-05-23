@@ -1,30 +1,47 @@
 {
     "about": {
         "name": "Karl-Johan Westhoff",
-        "summary": "Curious, engineer with a mixed bag of 15+ year's experience in designing and building structures for the Ocean, hereunder making the software tools for doing the engineering. I have extensive experience with managing client facing and technically challenging projects of various size.",
+        "summary": "Curious, engineer with an awesome 15+ year's of experience designing and building structures for the Ocean, and aligning processes and making the software tools for doing the engineering. I have extensive experience with managing client facing and technically challenging projects of various size.",
         "quotes": [
             {
                 "quote": "You are the kind of person who kan make things work, that's is why we gave you all the impossible jobs",
-                "by": "Uffe, former manager"
+                "by": "Former manager"
             },
             {
                 "quote": "Karl-Johan do you hold a Ph.D? - no wait that cant be - because you are actually funny",
-                "by": "Suneel, former colleague"
+                "by": "Former colleague"
             },
             {
                 "quote": "Look at this man, working so hard he has no time to talk to me",
                 "by": "Customer, on a barge in Africa, (I was busy doing a 3.rd party approval of equipment over a mobile link)"
             }
         ],
-        "offerings":[
+        "offerings": [
             "Experience from the worlds largest infrastructure projects in teh O&G industry",
             "Desire to optimize processes and the capabilities to actually plug in and energize digitalization",
             "Engineering for the Ocean"
         ],
-        "personal":[
-            "I have learned from sailboat racing, that even if you have the best crew, only one mistake at the help can mess everything up",
-            "Long distance triathlons (10:31hrs on the IM) has taught me tenacity and to appreciate that every effort you put in training pays off"
-        ],
+        "personal": {
+            "learnings": [
+                {
+                    "item": "Sailboat Racing",
+                    "learned": "Even if you have the best crew, only one mistake at the helm can mess everything up"
+                },
+                {
+                    "item": "Iron Man distance triathlons",
+                    "learned": "Tenacity and to appreciate that every effort you put in training pays off (10:31hrs on the IM)"
+                },
+                {
+                    "item": "Completely remodelling our house",
+                    "learned": "Appreciate all the help you can get, competent professionals are worth it"
+                }
+            ],
+            "interests":[
+                "Camping and hiking in beautiful USA with my family",
+                "Mountain biking in the bay area",
+                "Experience and learn new things"
+        ]
+        },
         "email": "karl.johan.westhoff@gmail.com",
         "phone": "(408) 416-1761",
         "linkedin": "https://www.linkedin.com/in/karl-johan-westhoff-36460011",
@@ -71,7 +88,7 @@
                 "Engineering during sales phase and tactical on-site management for a engineering procurement construction and installation (EPCI) project delivering a ship to shore on/off loading system in West Africa."
             ],
             "learnings": [
-                "Being a leader and how get the best people to drive your project"
+                "Learned being a leader and how get the best people to drive your project"
             ]
         },
         {
@@ -235,16 +252,23 @@
                 {
                     "title": "Oil and Gas Industry",
                     "logo": "rig.svg",
-                    "level": 5,
+                    "level": 9,
                     "link": "",
                     "description": "10+ yas in the flexible pipe industry making big and awesome structures, adhering to the second-to-noon requirements and standards for safety in oil & gas industry. I have worked with submerged structured, both in the water column and on seabed"
                 },
                 {
                     "title": "Working with Ships",
                     "logo": "ship.svg",
-                    "level": 5,
+                    "level": 7,
                     "link": "",
                     "description": "Calculating strains and stresses of floating structures subjected to wave loads, and producing engineering designs adhering to class standards"
+                },
+                {
+                    "title": "Sub Sea Structures",
+                    "logo": "flexible.svg",
+                    "level": 7,
+                    "link": "",
+                    "description": ""
                 }
             ]
         },

@@ -24,19 +24,7 @@ import data from '../assets/static/cv_data.json'
     <div class="about">
       <p>{{data.about.summary}}</p>
     </div>
-    <div class="mt-2">
-      <p>What others have said about me:</p>
-      <ul>
-        <li  v-for="d in data.about.quotes">
-          <p class="leading-3 mb-1">
-          <span class="italic text-xs">"{{d.quote}}"</span><br>
-          <span class="text-xs">({{ d.by }})</span>
-        </p>  
-        </li>
-
-      </ul>
     
-    </div>
   </div>
 </template>
 

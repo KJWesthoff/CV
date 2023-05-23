@@ -12,7 +12,7 @@ import tailwindConfig from '../../tailwind.config'
 
 // config paramates for man svg "stage"
 const width = ref(300);
-const height = ref(200);
+const height = ref(180);
 
 const minBlobRadius = 4
 const maxBlobRadius = 12
@@ -150,8 +150,7 @@ const tidyUpClick = function () {
         .style("text-anchor", "middle")
         .text(d => d.name)
         .attr("x", d => xPos(d.group))
-        .attr("font-weight", 1000)
-        .attr("text-decoration", "underline")
+        .attr("font-weight", 900)
         .attr("y", height.value / 6)
         .attr('transform', d => 'rotate(-50 ' + xPos(d.group) + ' ' + height.value / 6 + ')')
 
