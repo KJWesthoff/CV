@@ -12,15 +12,15 @@ const data = props.data
 
 <template>
     <div class="mt-5">
-        <h2 class="text-2xl font-bold">{{ data.education.title }}</h2>
+        <h2 class="text-2xl font-bold">{{ data.title }}</h2>
         <h4 class="flex justify between text-2xl">
-            <Icon class="mr-5" :name="data.education.logo"></Icon>{{ data.education.school }}
+            <Icon class="mr-5" :name="data.logo"></Icon>{{ data.school }}
         </h4>
         <div class="mt">
             <div>
-                <h6>{{ data.education.tenure.start }} - {{ data.education.tenure.end }}</h6>
+                <h6>{{ data.tenure.start }} - {{ data.tenure.end }}</h6>
             </div>
-            <ul class="list-disc" v-for="task in data.education.keywords">
+            <ul class="list-disc" v-for="task in data.keywords">
                 <li class="ml-10 mb-1">{{ task }}</li>
             </ul>
 

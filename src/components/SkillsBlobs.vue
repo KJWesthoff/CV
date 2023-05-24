@@ -36,7 +36,8 @@ const colorList = ['green', 'blue', 'orange', 'zinc', 'slate', 'rose']
 
 
 // bastard variable with a list of the top keys in data (for ordial scalig etc.)
-const groups = props.data.map(d => d.group)
+const groups = props.data.skills.map(d => d.group)
+
 
 
 const twColor = d3.scaleOrdinal().domain(groups)
@@ -49,9 +50,10 @@ const twValue = d3.scaleOrdinal().domain([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 
 
 const xPos = d3.scaleOrdinal().domain(groups).range([...Array(groups.length).keys()].map(i => (i + 1) * width.value / (groups.length + 1)))
+const yPos = d3.scaleOrdinal().domain(groups).range([...Array(groups.length).keys()].map(i => (i + 1) * height.value / (groups.length + 1)))
 
 // Process the data into a flat structure
-const data = props.data.reduce((a, c) => {
+const data = props.data.skills.reduce((a, c) => {
     const newItems = [...c.items]
     newItems.map(i => {
         i.name = c.name
@@ -76,32 +78,44 @@ const tidyUpSim = computed(() => d3.forceSimulation()
     .force("y", d3.forceY(1).y(height.value / 2))
 )
 
+const showUpSim = computed(() => d3.forceSimulation()
+    .force('charge', d3.forceManyBody().strength(-0.5))
+    .force("y", d3.forceY().y(d => {
+         return yPos(d.group)
+     }))
+     .force("x", d3.forceX(1).x(width.value/2)
+     ))
+
+
+
+
+
 //initialize
 onMounted(() => {
     messItUpClick()
 })
 
-//helperfunction to measure text
-function update(data) {
-    d3.selectAll(".group-text")
-        .join(data)
-        .each(function (d) { d.bbox = this.getBBox(); });
-}
-
 
 const messItUpClick = function () {
-
+    console.log("messItUp")
+        
     messUpSim.value.restart()
+    
+    d3.select(".y-axis").remove()
+    d3.select(".yaxis-timeline-experience").remove()
+    d3.select(".yaxis-timeline-education").remove()
+    d3.selectAll(".group-text").remove()
     const icons = d3.selectAll(".icons")
         .data(data);
     const circles = d3.selectAll(".scircle")
         .data(data);
     // delete the texts
-    d3.selectAll(".group-text")
-        .data(props.data)
-        .text(d => "")
+   
+    // d3.selectAll(".group-text")
+    //     .data(groups)
+    //     .text(d => "")
 
-    d3.selectAll(".group-rect").remove()
+   
 
 
     messUpSim.value.nodes(data).on("tick", ticked)
@@ -139,13 +153,20 @@ const messItUpClick = function () {
 
 
 const tidyUpClick = function () {
+    console.log("cleanItUp")
     messUpSim.value.stop()
+    
     const icons = d3.selectAll(".icons")
         .data(data);
     const circles = d3.selectAll(".scircle")
         .data(data);
-    const texts = d3.selectAll(".group-text")
-        .data(props.data)
+    const texts = d3.selectAll(".svg-holder")
+        .append("g")
+        .selectAll("text")
+        .data(props.data.skills)
+        .enter()
+        .append('text')
+        .attr("class", "group-text")
         .style("font-size", 5)
         .style("text-anchor", "middle")
         .text(d => d.name)
@@ -153,6 +174,11 @@ const tidyUpClick = function () {
         .attr("font-weight", 900)
         .attr("y", height.value / 6)
         .attr('transform', d => 'rotate(-50 ' + xPos(d.group) + ' ' + height.value / 6 + ')')
+
+
+
+
+
 
 
 
@@ -182,27 +208,145 @@ const tidyUpClick = function () {
 }
 
 
-// toggle the different states of the animation by click in the svg
-const messedUp = ref(true)
+const showUpClick = function () {
+    console.log("showItUp")
+    tidyUpSim.value.stop()
+    
+    
+    d3.selectAll(".group-text").remove()
+    const icons = d3.selectAll(".icons")
+        .data(data);
+    const circles = d3.selectAll(".scircle")
+        .data(data);
+    
+        
+    showUpSim.value.nodes(data).on("tick", ticked)
+    showUpSim.value.alpha(1).restart()
+    
+    // add the work experience on the left
+    // y axis
+    const scaleY = d3.scaleLinear().domain([Date.parse("January 2000"),Date.now()]).range([height.value-10,10])
+    const axisY = d3.axisLeft().scale(scaleY)
+    d3.select(".svg-holder").append("g").attr("class", "y-axis").call(axisY)
 
-function toggleClick() { messedUp.value = !messedUp.value }
-watch(messedUp, () => {
-    if (messedUp.value) {
-        messItUpClick()
+    // add the work experience and education data to the axis
+    
+    const work = computed(() => props.data.workexperience.map(d => {
+        return {
+            "title":d.title,
+            "name":d.company.name, 
+            "logo":d.company.logo, 
+            "start":Date.parse(d.tenure.start), 
+            "end":Date.parse(d.tenure.end)} 
+    }))
+
+    const education = computed(() => props.data.education.map(d => {
+        return {
+            "title":d.title,
+            "name":d.school, 
+            "logo":d.logo, 
+            "start":Date.parse(d.tenure.start), 
+            "end":Date.parse(d.tenure.end)} 
+    }))
+
+
+
+
+    const exptitles = d3.select(".svg-holder")
+    .append("g")
+    .attr("class", "yaxis-timeline-experience")
+    .selectAll("text")
+    .data(work.value)
+    .enter()
+    .append("text")
+    .text(d => d.title)
+    .style("font-size", 5)
+    .attr("font-weight", 900)
+    .attr("x", 10)
+    .attr("y", d=>scaleY(d.start))
+    
+    const edtitles = d3.select(".svg-holder")
+    .append("g")
+    .attr("class", "yaxis-timeline-education")
+    .selectAll("text")
+    .data(education.value)
+    .enter()
+    .append("text")
+    .text(d => d.title)
+    .style("font-size", 5)
+    .attr("font-weight", 900)
+    .attr("x", 10)
+    .attr("y", d=>scaleY(d.start))
+    
+    
+
+
+
+    function ticked() {
+        icons
+            .attr('x', function (d) {
+                return d.x - radiusScale.value(d.level) / 2;
+            })
+            .attr('y', function (d) {
+                return d.y - radiusScale.value(d.level) / 2;
+            })
+
+
+        circles
+            .attr('cx', function (d) {
+                return d.x;
+            })
+            .attr('cy', function (d) {
+                return d.y;
+            })
+    }
+}
+
+
+
+
+// toggle the different states of the animation by click in the svg
+
+const pages = [1, 2, 3]
+const page_idx = ref(0)
+
+
+function toggleClick() {
+    if (page_idx.value >= pages.length - 1) {
+        page_idx.value = 0
     } else {
+        page_idx.value++
+    }
+}
+
+watch(page_idx, () => {
+    if (page_idx.value == 0) {
+        messItUpClick()
+    }
+    if (page_idx.value == 1) {
         tidyUpClick()
     }
+    if (page_idx.value == 2) {
+        showUpClick()
+    }
+
 })
 
+
+// varibels holding the hover envents
 const ttText = ref("")
 const ee = ref("")
 
+
+
+// --------------------------------------------
 // Tooltips
+// --------------------------------------------
 onMounted(() => {
     d3.selectAll(".blob .scircle", ".icons")
         .on("mouseover", (e, i) => {
 
-            console.log(d3.pointer(e), e.offsetY)
+
             tooltipHolder.attr("class", "visible")
             ee.value = e
 
@@ -228,10 +372,10 @@ onMounted(() => {
 <template>
     <div id="bubbles" class="h-100">
         <svg :onClick="toggleClick" class="svg-holder" :viewBox="viewBox">
-            <g>
+            <!-- <g>
                 <text v-for="g in props.data" :key="g" class="group-text text-center font-sm" :id="g.group">
                 </text>
-            </g>
+            </g> -->
             <g v-for="(d, i) in data" :key="d.title">
 
                 <g class="blob">

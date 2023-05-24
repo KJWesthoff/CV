@@ -14,7 +14,7 @@ import SkillsBlobs from './SkillsBlobs.vue';
         <div>
         <h1 class="text-lg font-bold underline underline-offset-4">Skills</h1>
     </div>
-        <SkillsBlobs :data="data.skills"></SkillsBlobs>
+        <SkillsBlobs :data="data"></SkillsBlobs>
 
 
     </div>

@@ -55,10 +55,10 @@
                 "location": "San Mateo, California",
                 "logo": "nov.svg"
             },
-            "title": "Senior Engineer, software development (Remote)",
+            "title": "Senior Engineer, Software Development (Remote)",
             "tenure": {
                 "start": "March 2020",
-                "end": "Present"
+                "end": "June 2023"
             },
             "tasks": [
                 "Working remote, developing in house web based project management tool.",
@@ -174,68 +174,60 @@
     ],
     "education": [
         {
-            "education": {
-                "school": "DTU - Technical University of Denmark",
-                "logo": "dtu.svg",
-                "link": "https://www.dtu.dk/english/",
-                "title": "M.Sc. Mechanical Engineering",
-                "tenure": {
-                    "start": 2003,
-                    "end": 2006
-                },
-                "keywords": [
-                    "Solid Mechanics",
-                    "Structural Dynamics",
-                    "Fiber Reinfoced Composites",
-                    "Finite Element Analyses",
-                    "Marine Engineering"
-                ],
-                "description": "Thesis work at DTU, Blast Performance of CFRP Composites: The project was carried out in cooperation with the Danish Defense Research Establishment (now a part of (FMT) and Falck-Schmidt Defense System. The project dealt with carbon fiber composite materials subjected to high explosives and included numerical modelling and design of and execution of blast experiments."
-            }
+            "school": "DTU - Technical University of Denmark",
+            "logo": "dtu.svg",
+            "link": "https://www.dtu.dk/english/",
+            "title": "M.Sc. Mechanical Engineering",
+            "tenure": {
+                "start": "August 2003",
+                "end": "December 2006"
+            },
+            "keywords": [
+                "Solid Mechanics",
+                "Structural Dynamics",
+                "Fiber Reinfoced Composites",
+                "Finite Element Analyses",
+                "Marine Engineering"
+            ],
+            "description": "Thesis work at DTU, Blast Performance of CFRP Composites: The project was carried out in cooperation with the Danish Defense Research Establishment (now a part of (FMT) and Falck-Schmidt Defense System. The project dealt with carbon fiber composite materials subjected to high explosives and included numerical modelling and design of and execution of blast experiments."
         },
         {
-            "education": {
-                "school": "DTU - Technical University of Denmark",
-                "title": "B.Sc Naval Architecture and Marine Engineering",
-                "logo": "dtu.svg",
-                "link": "https://www.dtu.dk/english/",
-                "tenure": {
-                    "start": 2000,
-                    "end": 2003
-                },
-                "keywords": [
-                    "Mechanical Engineering",
-                    "Naval Architecture",
-                    "Submarine Design"
-                ],
-                "description": ""
-            }
+            "school": "DTU - Technical University of Denmark",
+            "title": "B.Sc. Naval Architecture and Marine Engineering",
+            "logo": "dtu.svg",
+            "link": "https://www.dtu.dk/english/",
+            "tenure": {
+                "start": "June 2000",
+                "end": "June 2003"
+            },
+            "keywords": [
+                "Mechanical Engineering",
+                "Naval Architecture",
+                "Submarine Design"
+            ],
+            "description": ""
         }
     ],
     "certifications": [
         {
-            "certification": {
-                "name": "IPMA - D",
-                "institution": "IPMA: International Project Management Association",
-                "issued": "May 2015",
-                "expires": "May 2020",
-                "logo": "ipma.svg",
-                "validation": "DEN3789",
-                "description": "",
-                "link": "https://ipma.world/"
-            }
+            "name": "IPMA - D",
+            "institution": "IPMA: International Project Management Association",
+            "issued": "May 2015",
+            "expires": "May 2020",
+            "logo": "ipma.svg",
+            "validation": "DEN3789",
+            "description": "",
+            "link": "https://ipma.world/"
         },
         {
-            "certification": {
-                "name": "Berkeley Coding Bootcamp",
-                "institution": "UC Berkeley Extension",
-                "issued": "May 2021",
-                "expires": "",
-                "logo": "berkeley.svg",
-                "validation": "74b1446548425e1612008cd5d849e0aa",
-                "description": "",
-                "link": "https://bootcamp.berkeley.edu/coding/"
-            }
+            "name": "Berkeley Coding Bootcamp",
+            "institution": "UC Berkeley Extension",
+            "issued": "May 2021",
+            "expires": "",
+            "logo": "berkeley.svg",
+            "validation": "74b1446548425e1612008cd5d849e0aa",
+            "description": "",
+            "link": "https://bootcamp.berkeley.edu/coding/"
         }
     ],
     "volunteering": [
