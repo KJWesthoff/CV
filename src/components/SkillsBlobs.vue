@@ -79,12 +79,13 @@ const tidyUpSim = computed(() => d3.forceSimulation()
 )
 
 const showUpSim = computed(() => d3.forceSimulation()
-    .force('charge', d3.forceManyBody().strength(-0.5))
+    .force('charge', d3.forceManyBody().strength(-2))
+    .force('collision', d3.forceCollide().radius(d => radiusScale.value(d.level) / 3))
     .force("y", d3.forceY().y(d => {
-         return yPos(d.group)
-     }))
-     .force("x", d3.forceX(1).x(width.value/2)
-     ))
+        return yPos(d.group)
+    }))
+    .force("x", d3.forceX(1).x(width.value / 2)
+    ))
 
 
 
@@ -98,64 +99,65 @@ onMounted(() => {
 
 const messItUpClick = function () {
     console.log("messItUp")
-        
+
     messUpSim.value.restart()
-    
+
+    // delete text, axes etc from previous
     d3.select(".y-axis").remove()
     d3.select(".yaxis-timeline-experience").remove()
-    d3.select(".yaxis-timeline-education").remove()
     d3.selectAll(".group-text").remove()
+
     const icons = d3.selectAll(".icons")
-        .data(data);
-    const circles = d3.selectAll(".scircle")
-        .data(data);
-    // delete the texts
-   
-    // d3.selectAll(".group-text")
-    //     .data(groups)
-    //     .text(d => "")
-
-   
+        .data(data)
+        
+const circles = d3.selectAll(".scircle")
+    .data(data)
 
 
-    messUpSim.value.nodes(data).on("tick", ticked)
-    messUpSim.value.alpha(1).restart()
 
-    function ticked() {
-        icons
-            .attr('x', function (d) {
-                return d.x - radiusScale.value(d.level) / 2;
-            })
-            .attr('y', function (d) {
-                return d.y - radiusScale.value(d.level) / 2;
-            })
-            .attr('height', function (d) {
-                return radiusScale.value(d.level);
-            })
-            .attr('width', function (d) {
-                return radiusScale.value(d.level);
-            })
 
-        circles
-            .attr('cx', function (d) {
-                return d.x;
-            })
-            .attr('cy', function (d) {
-                return d.y;
-            })
-            .attr('fill', function (d) {
-                const cName = twColor(d.group)
-                const cValue = twValue(d.level)
-                return twConfig.theme.colors[cName][cValue];
-            })
-    }
+
+messUpSim.value.nodes(data).on("tick", ticked)
+messUpSim.value.alpha(1).restart()
+
+function ticked() {
+    icons
+        .attr('x', function (d) {
+            return d.x - radiusScale.value(d.level) / 2;
+        })
+        .attr('y', function (d) {
+            return d.y - radiusScale.value(d.level) / 2;
+        })
+        .attr('height', function (d) {
+            return radiusScale.value(d.level);
+        })
+        .attr('width', function (d) {
+            return radiusScale.value(d.level);
+        })
+
+    circles
+        .attr('cx', function (d) {
+            return d.x;
+        })
+        .attr('cy', function (d) {
+            return d.y;
+        })
+        .attr('fill', function (d) {
+            const cName = twColor(d.group)
+            const cValue = twValue(d.level)
+            return twConfig.theme.colors[cName][cValue];
+        })
+        .attr('r', function (d) {
+            return radiusScale.value(d.level)
+        })
+}
 }
 
 
 const tidyUpClick = function () {
     console.log("cleanItUp")
     messUpSim.value.stop()
-    
+
     const icons = d3.selectAll(".icons")
         .data(data);
     const circles = d3.selectAll(".scircle")
@@ -174,16 +176,6 @@ const tidyUpClick = function () {
         .attr("font-weight", 900)
         .attr("y", height.value / 6)
         .attr('transform', d => 'rotate(-50 ' + xPos(d.group) + ' ' + height.value / 6 + ')')
-
-
-
-
-
-
-
-
-
-
 
     tidyUpSim.value.nodes(data).on("tick", ticked)
     tidyUpSim.value.alpha(1).restart()
@@ -211,74 +203,102 @@ const tidyUpClick = function () {
 const showUpClick = function () {
     console.log("showItUp")
     tidyUpSim.value.stop()
-    
-    
+
+    // remove elements from the previous pages
+
     d3.selectAll(".group-text").remove()
+
     const icons = d3.selectAll(".icons")
         .data(data);
     const circles = d3.selectAll(".scircle")
         .data(data);
-    
-        
+
+
     showUpSim.value.nodes(data).on("tick", ticked)
     showUpSim.value.alpha(1).restart()
-    
-    // add the work experience on the left
-    // y axis
-    const scaleY = d3.scaleLinear().domain([Date.parse("January 2000"),Date.now()]).range([height.value-10,10])
-    const axisY = d3.axisLeft().scale(scaleY)
-    d3.select(".svg-holder").append("g").attr("class", "y-axis").call(axisY)
+
+    let t = d3.transition()
+        .duration(2000)
+
+    d3.selectAll(".scircle")
+        .transition(t)
+        .attr("r", d => 0 )// radiusScale.value(d.level) / 3)
+
+
+
+
+
 
     // add the work experience and education data to the axis
-    
+
     const work = computed(() => props.data.workexperience.map(d => {
         return {
-            "title":d.title,
-            "name":d.company.name, 
-            "logo":d.company.logo, 
-            "start":Date.parse(d.tenure.start), 
-            "end":Date.parse(d.tenure.end)} 
+            "title": d.title,
+            "name": d.company.name,
+            "logo": d.company.logo,
+            "start": Date.parse(d.tenure.start),
+            "end": Date.parse(d.tenure.end)
+        }
     }))
 
     const education = computed(() => props.data.education.map(d => {
         return {
-            "title":d.title,
-            "name":d.school, 
-            "logo":d.logo, 
-            "start":Date.parse(d.tenure.start), 
-            "end":Date.parse(d.tenure.end)} 
+            "title": d.title,
+            "name": d.school,
+            "logo": d.logo,
+            "start": Date.parse(d.tenure.start),
+            "end": Date.parse(d.tenure.end)
+        }
     }))
 
+    const certification = computed(() => props.data.certifications.map(d => {
+        return {
+            "title": d.name,
+            "name": d.issuer,
+            "logo": d.logo,
+            "start": Date.parse(d.issued),
+            "end": Date.parse(d.issued)
+        }
+    }))
+
+    // Setuo an axis with the work/education experience
+    const yaxisData = ([...work.value, ...education.value, ...certification.value])
+
+    const yTicks = yaxisData.map(d => d.start)
+    console.log(Math.min(...yTicks))
+    console.log(Math.max(...yTicks))
+
+    // add the work experience on the left
+    // y axis
+    const scaleY = d3.scaleLinear().domain([Math.min(...yTicks), Date.now()]).range([height.value - 10, 10])
+    const axisY = d3.axisLeft()
+        .scale(scaleY)
+        .tickSize(2, 2)
+        .tickValues(yTicks)
+        .tickFormat(d => new Date(d).getFullYear())
 
 
+    d3.select(".svg-holder").append("g")
+        .attr("class", "y-axis")
+        .attr("transform", "translate(15,0)")
+        .style("font-size", 4)
+        .style("stroke-width", 0.4)
+        .call(axisY)
 
     const exptitles = d3.select(".svg-holder")
-    .append("g")
-    .attr("class", "yaxis-timeline-experience")
-    .selectAll("text")
-    .data(work.value)
-    .enter()
-    .append("text")
-    .text(d => d.title)
-    .style("font-size", 5)
-    .attr("font-weight", 900)
-    .attr("x", 10)
-    .attr("y", d=>scaleY(d.start))
-    
-    const edtitles = d3.select(".svg-holder")
-    .append("g")
-    .attr("class", "yaxis-timeline-education")
-    .selectAll("text")
-    .data(education.value)
-    .enter()
-    .append("text")
-    .text(d => d.title)
-    .style("font-size", 5)
-    .attr("font-weight", 900)
-    .attr("x", 10)
-    .attr("y", d=>scaleY(d.start))
-    
-    
+        .append("g")
+        .attr("class", "yaxis-timeline-experience")
+        .selectAll("text")
+        .data(yaxisData)
+        .enter()
+        .append("text")
+        .text(d => d.title)
+        .style("font-size", 4)
+        .style("alignment-baseline", 'central')
+        .attr("x", 17)
+        .attr("y", d => scaleY(d.start))
+
+
 
 
 
@@ -372,10 +392,6 @@ onMounted(() => {
 <template>
     <div id="bubbles" class="h-100">
         <svg :onClick="toggleClick" class="svg-holder" :viewBox="viewBox">
-            <!-- <g>
-                <text v-for="g in props.data" :key="g" class="group-text text-center font-sm" :id="g.group">
-                </text>
-            </g> -->
             <g v-for="(d, i) in data" :key="d.title">
 
                 <g class="blob">
