@@ -340,37 +340,9 @@
             ]
         },
         {
-            "group": "programming",
-            "name": "Programming",
+            "group": "webstack",
+            "name": "Web Stack",
             "items": [
-                {
-                    "title": "Python",
-                    "logo": "python.svg",
-                    "level": 5,
-                    "link": "https://www.python.org/",
-                    "description": "I love python, used it for engineering design tools, web backends, go-to tool for all sort of things.."
-                },
-                {
-                    "title": "C/C++",
-                    "logo": "cpp.svg",
-                    "level": 2,
-                    "link": "https://isocpp.org/",
-                    "description": "I have used C/C++ mainly in academics, and on arduino iot projects"
-                },
-                {
-                    "title": "FORTRAN",
-                    "logo": "fortran.svg",
-                    "level": 1,
-                    "link": "https://fortran-lang.org/en/",
-                    "description": "I used fortran for programming a Finite Element program in university"
-                },
-                {
-                    "title": "MATLAB",
-                    "logo": "matlab.svg",
-                    "level": 3,
-                    "link": "https://www.mathworks.com/products/matlab.html",
-                    "description": "Academics, and tooling for vibration analyses (until python took over;-)"
-                },
                 {
                     "title": "JS",
                     "logo": "js.svg",
@@ -378,19 +350,6 @@
                     "link": "https://www.w3schools.com/js/js_es6.asp",
                     "description": "I like that it runs everywhere in browsers"
                 },
-                {
-                    "title": "Excel/VBA",
-                    "logo": "vba.svg",
-                    "level": 4,
-                    "link": "https://learn.microsoft.com/en-us/office/vba/api/overview/excel",
-                    "description": "We have taken Excel and vba way beyond it's intended use ;-)"
-                }
-            ]
-        },
-        {
-            "group": "webstack",
-            "name": "Web Stack",
-            "items": [
                 {
                     "title": "HTML",
                     "logo": "html5.svg",
@@ -648,6 +607,41 @@
                     "level": 4,
                     "link": "https://code.visualstudio.com/",
                     "description": "Go to favorite text editor"
+                },
+                {
+                    "title": "Python",
+                    "logo": "python.svg",
+                    "level": 5,
+                    "link": "https://www.python.org/",
+                    "description": "I love python, used it for engineering design tools, web backends, go-to tool for all sort of things.."
+                },
+                {
+                    "title": "C/C++",
+                    "logo": "cpp.svg",
+                    "level": 2,
+                    "link": "https://isocpp.org/",
+                    "description": "I have used C/C++ mainly in academics, and on arduino iot projects"
+                },
+                {
+                    "title": "FORTRAN",
+                    "logo": "fortran.svg",
+                    "level": 1,
+                    "link": "https://fortran-lang.org/en/",
+                    "description": "I used fortran for programming a Finite Element program in university"
+                },
+                {
+                    "title": "MATLAB",
+                    "logo": "matlab.svg",
+                    "level": 3,
+                    "link": "https://www.mathworks.com/products/matlab.html",
+                    "description": "Academics, and tooling for vibration analyses (until python took over;-)"
+                },
+                {
+                    "title": "Excel/VBA",
+                    "logo": "vba.svg",
+                    "level": 4,
+                    "link": "https://learn.microsoft.com/en-us/office/vba/api/overview/excel",
+                    "description": "We have taken Excel and vba way beyond it's intended use ;-)"
                 }
             ]
         }

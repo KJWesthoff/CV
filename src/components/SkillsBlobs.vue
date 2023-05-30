@@ -18,6 +18,8 @@ const minBlobRadius = 4
 const maxBlobRadius = 12
 const props = defineProps(['data'])
 
+console.log(props.data)
+
 // make the view box dynamic
 const viewBox = computed(() => {
     return `0 0 ${width.value} ${height.value}`
@@ -26,6 +28,7 @@ const viewBox = computed(() => {
 // scale for radii based on paramters above
 const radiusScale = computed(() => d3.scaleSqrt().domain([1, 5]).range([minBlobRadius, maxBlobRadius]));
 
+
 // Get the tailwind colors from config
 const twConfig = resolveConfig(tailwindConfig)
 
@@ -33,13 +36,8 @@ const twConfig = resolveConfig(tailwindConfig)
 //const colorList = Object.keys(baseColors).filter(i => !['inherit', 'current', 'transparent', 'neutral','black','white','red','pink','rose','violet'].includes(i) ).reverse()
 const colorList = ['green', 'blue', 'orange', 'zinc', 'slate', 'rose']
 
-
-
 // bastard variable with a list of the top keys in data (for ordial scalig etc.)
 const groups = props.data.skills.map(d => d.group)
-
-
-
 const twColor = d3.scaleOrdinal().domain(groups)
     .range(colorList);
 
@@ -106,51 +104,55 @@ const messItUpClick = function () {
     d3.select(".y-axis").remove()
     d3.select(".yaxis-timeline-experience").remove()
     d3.selectAll(".group-text").remove()
+    d3.selectAll(".group-squares").remove()
+    
+
+    // build the blobs
 
     const icons = d3.selectAll(".icons")
         .data(data)
-        
-const circles = d3.selectAll(".scircle")
-    .data(data)
+
+    const circles = d3.selectAll(".scircle")
+        .data(data)
 
 
 
 
 
-messUpSim.value.nodes(data).on("tick", ticked)
-messUpSim.value.alpha(1).restart()
+    messUpSim.value.nodes(data).on("tick", ticked)
+    messUpSim.value.alpha(1).restart()
 
-function ticked() {
-    icons
-        .attr('x', function (d) {
-            return d.x - radiusScale.value(d.level) / 2;
-        })
-        .attr('y', function (d) {
-            return d.y - radiusScale.value(d.level) / 2;
-        })
-        .attr('height', function (d) {
-            return radiusScale.value(d.level);
-        })
-        .attr('width', function (d) {
-            return radiusScale.value(d.level);
-        })
+    function ticked() {
+        icons
+            .attr('x', function (d) {
+                return d.x - radiusScale.value(d.level) / 2;
+            })
+            .attr('y', function (d) {
+                return d.y - radiusScale.value(d.level) / 2;
+            })
+            .attr('height', function (d) {
+                return radiusScale.value(d.level);
+            })
+            .attr('width', function (d) {
+                return radiusScale.value(d.level);
+            })
 
-    circles
-        .attr('cx', function (d) {
-            return d.x;
-        })
-        .attr('cy', function (d) {
-            return d.y;
-        })
-        .attr('fill', function (d) {
-            const cName = twColor(d.group)
-            const cValue = twValue(d.level)
-            return twConfig.theme.colors[cName][cValue];
-        })
-        .attr('r', function (d) {
-            return radiusScale.value(d.level)
-        })
-}
+        circles
+            .attr('cx', function (d) {
+                return d.x;
+            })
+            .attr('cy', function (d) {
+                return d.y;
+            })
+            .attr('fill', function (d) {
+                const cName = twColor(d.group)
+                const cValue = twValue(d.level)
+                return twConfig.theme.colors[cName][cValue];
+            })
+            .attr('r', function (d) {
+                return radiusScale.value(d.level)
+            })
+    }
 }
 
 
@@ -214,15 +216,55 @@ const showUpClick = function () {
         .data(data);
 
 
+    // calculate y position, width and height of each group of icons
+    // group the blobs bu category
+   
+    const categories = d3.group(d3.selectAll(".blob"))
+
+    console.log(categories)
+    const boxes = computed(()=>d3.selectAll(".webstack"))
+        
+    
+    
+    
+    const bBox = computed(() => d3.selectAll("g .webstack").node().getBBox())
+    
+    
+    // put in squares instead    
+    const squares = d3.selectAll(".svg-holder")
+        .append("g")
+        .selectAll("rect")
+        .data(props.data.skills)
+        .enter()
+        .append('rect')
+        .attr("class", "group-squares")
+        .attr('x', 1)
+        .attr('y', 1)
+        .attr('width', 1)
+        .attr('height', 1)
+        .attr('rx', "5")
+        .attr('ry', "5")
+        .attr('fill', function (d) {
+            const cName = twColor(d.group)
+            const cValue = 300
+            return twConfig.theme.colors[cName][cValue];
+        })
+    
+
+
+
     showUpSim.value.nodes(data).on("tick", ticked)
     showUpSim.value.alpha(1).restart()
 
+
+    // Make an animation removing the blobs, keeping the icons and adding category backgrounds
     let t = d3.transition()
         .duration(2000)
 
+    // remove the circles
     d3.selectAll(".scircle")
         .transition(t)
-        .attr("r", d => 0 )// radiusScale.value(d.level) / 3)
+        .attr("r", d => 0)// radiusScale.value(d.level) / 3)
 
 
 
@@ -261,12 +303,11 @@ const showUpClick = function () {
         }
     }))
 
-    // Setuo an axis with the work/education experience
+    // Setup an axis with the work/education experience
     const yaxisData = ([...work.value, ...education.value, ...certification.value])
 
     const yTicks = yaxisData.map(d => d.start)
-    console.log(Math.min(...yTicks))
-    console.log(Math.max(...yTicks))
+
 
     // add the work experience on the left
     // y axis
@@ -319,7 +360,18 @@ const showUpClick = function () {
             .attr('cy', function (d) {
                 return d.y;
             })
+        
+        
+        squares
+            .attr('width', bBox.value.width)
+            .attr('height', bBox.value.height)
+            .attr('x', bBox.value.x)
+            .attr('y', bBox.value.y)
+
     }
+
+   
+
 }
 
 
@@ -392,17 +444,19 @@ onMounted(() => {
 <template>
     <div id="bubbles" class="h-100">
         <svg :onClick="toggleClick" class="svg-holder" :viewBox="viewBox">
-            <g v-for="(d, i) in data" :key="d.title">
+            
+            <g v-for="g in props.data.skills" :class="'group ' + g.group" :key="g.group">
+                <g v-for="(d, i) in g.items" :key="d.title">
 
-                <g class="blob">
-                    <circle :name="d.title" :r="radiusScale(d.level)" class="scircle stroke-black stroke-1">
-                    </circle>
-                    <svg class="icons" pointer-events="none">
-                        <Icon :name=d.logo></Icon>
-                    </svg>
+                    <g :class="'blob ' + g.group">
+                        <circle :name="d.title" :r="radiusScale(d.level)" class="scircle stroke-black stroke-1">
+                        </circle>
+                        <svg class="icons" pointer-events="none">
+                            <Icon :name=d.logo></Icon>
+                        </svg>
+                    </g>
                 </g>
             </g>
-
 
 
         </svg>
