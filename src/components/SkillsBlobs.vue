@@ -114,10 +114,6 @@ const messItUpClick = function () {
     const circles = d3.selectAll(".scircle")
         .data(data)
 
-
-
-
-
     messUpSim.value.nodes(data).on("tick", ticked)
     messUpSim.value.alpha(1).restart()
 
@@ -217,15 +213,16 @@ const showUpClick = function () {
 
 
     // Add squares for background to each group
-
     console.log("gg: ", props.data.skills)
     console.log("dd: ", props.data.skills.map(d=>d.group))
     function getbBox(group) { 
         return d3.select(`g.group.${group}`).node().getBBox()
     } 
 
-
         d3.select(".svg-holder")
+
+            .append("g")
+            .attr("class", "bBoxes")
             .selectAll("g.bBoxes")
             .data(props.data.skills.map(d=>d.group))
             .enter()
@@ -236,7 +233,7 @@ const showUpClick = function () {
             .attr("class", d=> `group-squares ${d}`)
             .attr('x', d => getbBox(d).x)
             .attr('y', d => getbBox(d).y)
-            .attr('width', d=>  getbBox(d).width)
+            .attr('width', d =>  getbBox(d).width)
             .attr('height', d => getbBox(d).height)
             .attr('rx', "5")
             .attr('ry', "5")
@@ -244,9 +241,10 @@ const showUpClick = function () {
                  const cName = twColor(d)
                  const cValue = 300
                  return twConfig.theme.colors[cName][cValue];
-             })
-
-
+            })
+    
+             
+        d3.select(".bBoxes").lower()
     
 
 
@@ -360,12 +358,12 @@ const showUpClick = function () {
 
             let bBox = d3.select(`g.group.${c.group}`).node().getBBox()
             d3.select(`rect.group-squares.${c.group}`)
-                .attr('width', bBox.width)
-                .attr('height', bBox.height)
-                .attr('x', bBox.x)
-                .attr('y', bBox.y)
+                .attr('width', bBox.width+10)
+                .attr('height', bBox.height+10)
+                .attr('x', bBox.x-5)
+                .attr('y', bBox.y-5)
 
-
+                
 
         }
 
