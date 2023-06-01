@@ -18,14 +18,13 @@ const minBlobRadius = 4
 const maxBlobRadius = 12
 const props = defineProps(['data'])
 
-console.log(props.data)
 
 // make the view box dynamic
 const viewBox = computed(() => {
     return `0 0 ${width.value} ${height.value}`
 })
 
-// scale for radii based on paramters above
+// scale for radii based on parameters above
 const radiusScale = computed(() => d3.scaleSqrt().domain([1, 5]).range([minBlobRadius, maxBlobRadius]));
 
 
@@ -105,7 +104,7 @@ const messItUpClick = function () {
     d3.select(".yaxis-timeline-experience").remove()
     d3.selectAll(".group-text").remove()
     d3.selectAll(".group-squares").remove()
-    
+
 
     // build the blobs
 
@@ -216,39 +215,38 @@ const showUpClick = function () {
         .data(data);
 
 
-    // calculate y position, width and height of each group of icons
-    // group the blobs bu category
-   
-    const categories = d3.group(d3.selectAll(".blob"))
 
-    console.log(categories)
-    const boxes = computed(()=>d3.selectAll(".webstack"))
-        
-    
-    
-    
-    const bBox = computed(() => d3.selectAll("g .webstack").node().getBBox())
-    
-    
-    // put in squares instead    
-    const squares = d3.selectAll(".svg-holder")
-        .append("g")
-        .selectAll("rect")
-        .data(props.data.skills)
-        .enter()
-        .append('rect')
-        .attr("class", "group-squares")
-        .attr('x', 1)
-        .attr('y', 1)
-        .attr('width', 1)
-        .attr('height', 1)
-        .attr('rx', "5")
-        .attr('ry', "5")
-        .attr('fill', function (d) {
-            const cName = twColor(d.group)
-            const cValue = 300
-            return twConfig.theme.colors[cName][cValue];
-        })
+    // Add squares for background to each group
+
+    console.log("gg: ", props.data.skills)
+    console.log("dd: ", props.data.skills.map(d=>d.group))
+    function getbBox(group) { 
+        return d3.select(`g.group.${group}`).node().getBBox()
+    } 
+
+
+        d3.select(".svg-holder")
+            .selectAll("g.bBoxes")
+            .data(props.data.skills.map(d=>d.group))
+            .enter()
+            .append('g')
+            .attr("id", d => d)
+            .attr("class", "bBox")
+            .append('rect')
+            .attr("class", d=> `group-squares ${d}`)
+            .attr('x', d => getbBox(d).x)
+            .attr('y', d => getbBox(d).y)
+            .attr('width', d=>  getbBox(d).width)
+            .attr('height', d => getbBox(d).height)
+            .attr('rx', "5")
+            .attr('ry', "5")
+            .attr('fill', function (d) {
+                 const cName = twColor(d)
+                 const cValue = 300
+                 return twConfig.theme.colors[cName][cValue];
+             })
+
+
     
 
 
@@ -267,12 +265,7 @@ const showUpClick = function () {
         .attr("r", d => 0)// radiusScale.value(d.level) / 3)
 
 
-
-
-
-
     // add the work experience and education data to the axis
-
     const work = computed(() => props.data.workexperience.map(d => {
         return {
             "title": d.title,
@@ -351,6 +344,7 @@ const showUpClick = function () {
             .attr('y', function (d) {
                 return d.y - radiusScale.value(d.level) / 2;
             })
+            .raise()
 
 
         circles
@@ -360,17 +354,28 @@ const showUpClick = function () {
             .attr('cy', function (d) {
                 return d.y;
             })
-        
-        
-        squares
-            .attr('width', bBox.value.width)
-            .attr('height', bBox.value.height)
-            .attr('x', bBox.value.x)
-            .attr('y', bBox.value.y)
+
+        //calculate the updated bounding bos at each tick
+        for (let c of props.data.skills) {
+
+            let bBox = d3.select(`g.group.${c.group}`).node().getBBox()
+            d3.select(`rect.group-squares.${c.group}`)
+                .attr('width', bBox.width)
+                .attr('height', bBox.height)
+                .attr('x', bBox.x)
+                .attr('y', bBox.y)
+
+
+
+        }
+
+
+
+
 
     }
 
-   
+
 
 }
 
@@ -444,7 +449,7 @@ onMounted(() => {
 <template>
     <div id="bubbles" class="h-100">
         <svg :onClick="toggleClick" class="svg-holder" :viewBox="viewBox">
-            
+
             <g v-for="g in props.data.skills" :class="'group ' + g.group" :key="g.group">
                 <g v-for="(d, i) in g.items" :key="d.title">
 
