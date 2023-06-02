@@ -49,6 +49,7 @@
     },
     "workexperience": [
         {
+            "short":"NOV-CA",
             "company": {
                 "name": "National Oilwell Varco (NOV)",
                 "description": "NOV delivers highly engineered flexible pipe systems for the biggest companies in the offshore oil and gas industry",
@@ -70,6 +71,7 @@
             ]
         },
         {
+            "short":"NOV-SAS",
             "company": {
                 "name": "NOV",
                 "description": "",
@@ -92,6 +94,7 @@
             ]
         },
         {
+            "short":"NOV-PSD",
             "company": {
                 "name": "NOV",
                 "description": "",
@@ -115,6 +118,7 @@
             ]
         },
         {
+            "short":"NOV-PID",
             "company": {
                 "name": "NOV",
                 "description": "",
@@ -135,6 +139,7 @@
             ]
         },
         {
+            "short":"ODS",
             "company": {
                 "name": "Lloyds Register / Odegaard & Danneskiold-Samsoe",
                 "description": "Odegaard & Danneskold-Samsøe (ODS) carried out Engineering consultancy within fluid dynamics, noise and vibration. ODS was acquired by Lloyds Register in 2005",
@@ -155,6 +160,7 @@
             ]
         },
         {
+            "short":"SMK",
             "company": {
                 "name": "Danish Navy Material Command",
                 "description": "Government/Military Organization",
@@ -174,6 +180,7 @@
     ],
     "education": [
         {
+            "short":"DTU-MSC",
             "school": "DTU - Technical University of Denmark",
             "logo": "dtu.svg",
             "link": "https://www.dtu.dk/english/",
@@ -192,6 +199,7 @@
             "description": "Thesis work at DTU, Blast Performance of CFRP Composites: The project was carried out in cooperation with the Danish Defense Research Establishment (now a part of (FMT) and Falck-Schmidt Defense System. The project dealt with carbon fiber composite materials subjected to high explosives and included numerical modelling and design of and execution of blast experiments."
         },
         {
+            "short":"DTU-BSC",
             "school": "DTU - Technical University of Denmark",
             "title": "B.Sc. Naval Architecture and Marine Engineering",
             "logo": "dtu.svg",
@@ -210,6 +218,7 @@
     ],
     "certifications": [
         {
+            "short":"IPMA-D",
             "name": "IPMA - D",
             "institution": "IPMA: International Project Management Association",
             "issued": "May 2015",
@@ -220,6 +229,7 @@
             "link": "https://ipma.world/"
         },
         {
+            "short":"BCB",
             "name": "Berkeley Coding Bootcamp",
             "institution": "UC Berkeley Extension",
             "issued": "May 2021",
@@ -262,7 +272,8 @@
                     "link": "",
                     "description": "Most of the engineering i have worked on is below the water surface, either in the water column connecting surface to seabed or resting on the seafloor"
                 }
-            ]
+            ],
+            "linked_to":["DTU-MSC", "DTU-BSC", "ODS", "NOV-PID", "NOV-PSD", "NOV-SAS"]
         },
         {
             "group": "structural_dynamics",
@@ -296,7 +307,8 @@
                     "link": "",
                     "description": "Carrying out noise and vibration measurements in difficult conditions all over the worlds using novel equipment, hereunder microphones hydrophones accelerometers strain gauges etc. and analyzing the results afterwards"
                 }
-            ]
+            ],
+            "linked_to":["DTU-MSC","ODS", "NOV-PID", "NOV-PSD"]
         },
         {
             "group": "project_management",
@@ -337,7 +349,8 @@
                     "link": "",
                     "description": "Extensive experience as project manager for Front End Engineering Design projects, carried out for major global energy companies, scopes typically ranging 1000-5000 engineering hours."
                 }
-            ]
+            ],
+            "linked_to":["NOV-SAS", "IPMA-D"]
         },
         {
             "group": "webstack",
@@ -553,7 +566,8 @@
                     "link": "https://www.rancher.com/",
                     "description": "Kubernetes container orchestration made easy"
                 }
-            ]
+            ],
+            "linked_to":["BCB", "NOV-SAS", "NOV-CA"]
         },
         {
             "group": "applications",
@@ -643,7 +657,8 @@
                     "link": "https://learn.microsoft.com/en-us/office/vba/api/overview/excel",
                     "description": "We have taken Excel and vba way beyond it's intended use ;-)"
                 }
-            ]
+            ],
+            "linked_to":["DTU-MSC", "DTU-BSC", "ODS", "NOV-PID", "NOV-PSD", "NOV-SAS", "NOV-CA", "BCB"]
         }
     ]
 }

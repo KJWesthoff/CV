@@ -31,9 +31,9 @@ const radiusScale = computed(() => d3.scaleSqrt().domain([1, 5]).range([minBlobR
 // Get the tailwind colors from config
 const twConfig = resolveConfig(tailwindConfig)
 
-// remove the relative color choises from the tw list
+// remove the relative color choices from the tw list
 //const colorList = Object.keys(baseColors).filter(i => !['inherit', 'current', 'transparent', 'neutral','black','white','red','pink','rose','violet'].includes(i) ).reverse()
-const colorList = ['green', 'blue', 'orange', 'zinc', 'slate', 'rose']
+const colorList = ['green', 'blue', 'orange', 'zinc', 'red', 'rose']
 
 // bastard variable with a list of the top keys in data (for ordial scalig etc.)
 const groups = props.data.skills.map(d => d.group)
@@ -81,7 +81,7 @@ const showUpSim = computed(() => d3.forceSimulation()
     .force("y", d3.forceY().y(d => {
         return yPos(d.group)
     }))
-    .force("x", d3.forceX(1).x(width.value / 2)
+    .force("x", d3.forceX(1).x(width.value * 2 / 3)
     ))
 
 
@@ -94,8 +94,13 @@ onMounted(() => {
 })
 
 
+// ----------------------------------
+//  First page: Re-set and Throw all be blobs in
+// ----------------------------------
+
 const messItUpClick = function () {
     console.log("messItUp")
+    showUpSim.value.stop()
 
     messUpSim.value.restart()
 
@@ -104,7 +109,8 @@ const messItUpClick = function () {
     d3.select(".yaxis-timeline-experience").remove()
     d3.selectAll(".group-text").remove()
     d3.selectAll(".group-squares").remove()
-
+    d3.select(".bBoxes").remove()
+    d3.select("g.skill-connectors").remove()
 
     // build the blobs
 
@@ -150,6 +156,10 @@ const messItUpClick = function () {
     }
 }
 
+
+// ----------------------------------
+// Organize the skills blobs
+// ----------------------------------
 
 const tidyUpClick = function () {
     console.log("cleanItUp")
@@ -197,6 +207,10 @@ const tidyUpClick = function () {
 }
 
 
+// ----------------------------------
+// Page with y axis and bounding boxes summary
+// ----------------------------------
+
 const showUpClick = function () {
     console.log("showItUp")
     tidyUpSim.value.stop()
@@ -213,44 +227,39 @@ const showUpClick = function () {
 
 
     // Add squares for background to each group
-    console.log("gg: ", props.data.skills)
-    console.log("dd: ", props.data.skills.map(d=>d.group))
-    function getbBox(group) { 
+    function getbBox(group) {
         return d3.select(`g.group.${group}`).node().getBBox()
-    } 
+    }
 
-        d3.select(".svg-holder")
+    d3.select(".svg-holder")
 
-            .append("g")
-            .attr("class", "bBoxes")
-            .selectAll("g.bBoxes")
-            .data(props.data.skills.map(d=>d.group))
-            .enter()
-            .append('g')
-            .attr("id", d => d)
-            .attr("class", "bBox")
-            .append('rect')
-            .attr("class", d=> `group-squares ${d}`)
-            .attr('x', d => getbBox(d).x)
-            .attr('y', d => getbBox(d).y)
-            .attr('width', d =>  getbBox(d).width)
-            .attr('height', d => getbBox(d).height)
-            .attr('rx', "5")
-            .attr('ry', "5")
-            .attr('fill', function (d) {
-                 const cName = twColor(d)
-                 const cValue = 300
-                 return twConfig.theme.colors[cName][cValue];
-            })
-    
-             
-        d3.select(".bBoxes").lower()
-    
+        .append("g")
+        .attr("class", "bBoxes")
+        .selectAll("g.bBoxes")
+        .data(props.data.skills.map(d => d.group))
+        .enter()
+        .append('g')
+        .attr("id", d => d)
+        .attr("class", "bBox")
+        .append('rect')
+        .attr("class", d => `group-squares ${d}`)
+        .attr('x', d => getbBox(d).x)
+        .attr('y', d => getbBox(d).y)
+        .attr('width', d => getbBox(d).width)
+        .attr('height', d => getbBox(d).height)
+        .attr('rx', "5")
+        .attr('ry', "5")
+        .attr('fill', function (d) {
+            const cName = twColor(d)
+            const cValue = 300
+            return twConfig.theme.colors[cName][cValue];
+        })
 
+    // put the bounding boxes back so the icons are on top
+    d3.select(".bBoxes").lower()
 
 
-    showUpSim.value.nodes(data).on("tick", ticked)
-    showUpSim.value.alpha(1).restart()
+
 
 
     // Make an animation removing the blobs, keeping the icons and adding category backgrounds
@@ -263,10 +272,15 @@ const showUpClick = function () {
         .attr("r", d => 0)// radiusScale.value(d.level) / 3)
 
 
+    // ----------------------------------    
+    // Build a Y axis    
+    // ----------------------------------
+
     // add the work experience and education data to the axis
     const work = computed(() => props.data.workexperience.map(d => {
         return {
             "title": d.title,
+            "short": d.short,
             "name": d.company.name,
             "logo": d.company.logo,
             "start": Date.parse(d.tenure.start),
@@ -277,6 +291,7 @@ const showUpClick = function () {
     const education = computed(() => props.data.education.map(d => {
         return {
             "title": d.title,
+            "short": d.short,
             "name": d.school,
             "logo": d.logo,
             "start": Date.parse(d.tenure.start),
@@ -287,6 +302,7 @@ const showUpClick = function () {
     const certification = computed(() => props.data.certifications.map(d => {
         return {
             "title": d.name,
+            "short": d.short,
             "name": d.issuer,
             "logo": d.logo,
             "start": Date.parse(d.issued),
@@ -297,7 +313,7 @@ const showUpClick = function () {
     // Setup an axis with the work/education experience
     const yaxisData = ([...work.value, ...education.value, ...certification.value])
 
-    const yTicks = yaxisData.map(d => d.start)
+    const yTicks = yaxisData.map(d => d.end)
 
 
     // add the work experience on the left
@@ -317,20 +333,119 @@ const showUpClick = function () {
         .style("stroke-width", 0.4)
         .call(axisY)
 
-    const exptitles = d3.select(".svg-holder")
+    const exprienceTitles = d3.select(".svg-holder")
         .append("g")
         .attr("class", "yaxis-timeline-experience")
         .selectAll("text")
         .data(yaxisData)
         .enter()
         .append("text")
+        .attr("id", d => d.short)
         .text(d => d.title)
         .style("font-size", 4)
         .style("alignment-baseline", 'central')
         .attr("x", 17)
-        .attr("y", d => scaleY(d.start))
+        .attr("y", d => scaleY(d.end))
 
 
+    function drawTexts() {
+        d3.selectAll(".svg-holder")
+            .append("g")
+            .selectAll("text")
+            .data(props.data.skills)
+            .enter()
+            .append('text')
+            .attr("class", "group-text")
+            .style("font-size", 5)
+            .style("text-anchor", "start")
+            .text(d => d.name)
+            .attr("x", d => {
+                let Bbox = d3.select(`rect.group-squares.${d.group}`).node().getBBox()
+                return Bbox.x + Bbox.width + 5
+            })
+            .attr("y", d => {
+                let Bbox = d3.select(`rect.group-squares.${d.group}`).node().getBBox()
+                return Bbox.y + Bbox.height / 2
+            })
+            .attr("font-weight", 900)
+    }
+    // Calculate and add links between experience ans skills bounding boxes
+
+
+
+
+    // loop over each skill box and find out what it comes from
+    function drawLinks() {
+
+        let linkData = []
+        for (let skill of props.data.skills) {
+            for (let source of skill.linked_to) {
+                let sourceBbox = d3.select(`text#${source}`).node().getBBox()
+                let yaxisTextBbox = d3.select(`g.yaxis-timeline-experience`).node().getBBox()
+                let sourceX = yaxisTextBbox.x + yaxisTextBbox.width + 2
+                let sourceY = sourceBbox.y + sourceBbox.height / 2
+
+                let targetBbox = d3.select(`rect.group-squares.${skill.group}`).node().getBBox()
+                let targetX = targetBbox.x - 2
+                let targetY = targetBbox.y + targetBbox.height / 2
+
+                let link = {
+                    "sourcePosition": [sourceX, sourceY],
+                    "targetPosition": [targetX, targetY],
+                    "sourceName": source,
+                    "targetName": skill.group
+                }
+
+
+                linkData.push(link)
+            }
+
+        }
+        const linkGen = d3.linkHorizontal()
+            .source(d => d.sourcePosition)
+            .target(d => d.targetPosition)
+
+        const svg = d3.select(".svg-holder");
+
+        const skillConnectors = svg.append('g')
+            .attr("class", "skill-connectors");
+
+        const lines = skillConnectors.selectAll("path")
+            .data(linkData);
+
+        lines.enter()
+            .append("path")
+            .attr("d", linkGen)
+            .attr("fill", "none")
+            .attr('stroke', function (d) {
+                const cName = twColor(d.targetName);
+                const cValue = 300;
+                return twConfig.theme.colors[cName][cValue];
+            })
+            .style("stroke-width", 1);
+
+        // Add the second line
+        lines.enter()
+            .append("path")
+            .call(function (selection) {
+                selection.attr("d", linkGen)
+                    .attr("fill", "none")
+                    .attr('stroke', 'black')  // Customize the color
+                    .style("stroke-width", 0.2);  // Customize the stroke width
+            });
+
+    }
+
+
+
+
+
+    // ----------------------------------    
+    // Run the force sim            
+    // ----------------------------------
+
+    showUpSim.value.nodes(data).on("tick", ticked)
+    showUpSim.value.alpha(1).restart()
 
 
 
@@ -358,17 +473,21 @@ const showUpClick = function () {
 
             let bBox = d3.select(`g.group.${c.group}`).node().getBBox()
             d3.select(`rect.group-squares.${c.group}`)
-                .attr('width', bBox.width+10)
-                .attr('height', bBox.height+10)
-                .attr('x', bBox.x-5)
-                .attr('y', bBox.y-5)
+                .attr('width', bBox.width + 10)
+                .attr('height', bBox.height + 10)
+                .attr('x', bBox.x - 5)
+                .attr('y', bBox.y - 5)
 
-                
+
 
         }
+        d3.select(".bBoxes").lower()
 
-
-
+        // remove the old links and draw new  ones
+        d3.select("g.skill-connectors").remove()
+        drawLinks()
+        d3.selectAll("text.group-text").remove()
+        drawTexts()
 
 
     }
