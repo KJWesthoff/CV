@@ -464,7 +464,7 @@ const showUpClick = function () {
                 const cValue = 300;
                 return twConfig.theme.colors[cName][cValue];
             })
-            .style("stroke-width", 1);
+            .style("stroke-width", 1.5);
 
         // Add the second line
         lines.enter()
