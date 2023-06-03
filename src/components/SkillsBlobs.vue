@@ -4,7 +4,7 @@
 
 import { onMounted, ref, watch } from 'vue';
 import * as d3 from 'd3'
-import { computed, defineProps } from 'vue'
+import { computed, defineProps, defineEmits } from 'vue'
 
 import resolveConfig from 'tailwindcss/resolveConfig'
 import tailwindConfig from '../../tailwind.config'
@@ -16,6 +16,8 @@ const height = ref(180);
 const minBlobRadius = 4
 const maxBlobRadius = 12
 const props = defineProps(['data'])
+const emit = defineEmits(['pageChange'])
+
 
 // make the view box dynamic
 const viewBox = computed(() => {
@@ -330,7 +332,7 @@ const showUpClick = function () {
 
     // Setup an axis with the work/education experience
     const yaxisData = ([...work.value, ...education.value, ...certification.value])
-    console.log(yaxisData)
+  
     const yTicks = yaxisData.map(d => d.end)
 
 
@@ -362,7 +364,7 @@ const showUpClick = function () {
         .tickSize(2, 2)
         .tickValues(yTicks)
         .tickFormat(d => {
-            console.log(d, new Date(d).getFullYear())
+           
             return new Date(d).getFullYear()
 
         })
@@ -556,6 +558,9 @@ function toggleClick() {
 }
 
 watch(page_idx, () => {
+    emit('pageChange', page_idx.value)
+
+
     if (page_idx.value == 0) {
         messItUpClick()
     }
