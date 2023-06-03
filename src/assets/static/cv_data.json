@@ -51,7 +51,7 @@
         {
             "short":"NOV-CA",
             "company": {
-                "name": "National Oilwell Varco (NOV)",
+                "name": "National Oilwell Varco (NOV, Flexibles)",
                 "description": "NOV delivers highly engineered flexible pipe systems for the biggest companies in the offshore oil and gas industry",
                 "location": "San Mateo, California",
                 "logo": "nov.svg"
@@ -120,10 +120,10 @@
         {
             "short":"NOV-PID",
             "company": {
-                "name": "NOV",
+                "name": "NKT Flexibles",
                 "description": "",
                 "location": "Copenhagen, Denmark",
-                "logo": "nov.svg"
+                "logo": "nkt-flexibles.svg"
             },
             "title": "Design Engineer, Pipe Design",
             "tenure": {
