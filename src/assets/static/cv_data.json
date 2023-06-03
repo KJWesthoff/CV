@@ -1,7 +1,7 @@
 {
     "about": {
         "name": "Karl-Johan Westhoff",
-        "summary": "Curious, engineer with an awesome 15+ year's of experience designing and building structures for the Ocean, aligning processes and making the software tools for doing the engineering. I have extensive experience with managing client facing and technically challenging projects of various size.",
+        "summary": "Curious, engineer with an awesome 15+ year's of experience designing and building structures for the Ocean, making the software tools for doing the engineering and aligning processes. I have extensive experience with managing client facing and technically challenging projects of various size.",
         "quotes": [
             {
                 "quote": "You are the kind of person who kan make things work, that's is why we gave you all the impossible jobs",
@@ -273,7 +273,7 @@
                     "description": "Most of the engineering i have worked on is below the water surface, either in the water column connecting surface to seabed or resting on the seafloor"
                 }
             ],
-            "linked_to":["DTU-MSC", "DTU-BSC", "ODS", "NOV-PID", "NOV-PSD", "NOV-SAS"]
+            "linked_to":["DTU-MSC", "DTU-BSC", "ODS", "NOV-PID", "NOV-PSD", "NOV-SAS", "SMK"]
         },
         {
             "group": "structural_dynamics",
@@ -354,7 +354,7 @@
         },
         {
             "group": "webstack",
-            "name": "Web Stack",
+            "name": "Full Stack Web Dev",
             "items": [
                 {
                     "title": "JS",
