@@ -9,7 +9,6 @@ import { computed, defineProps } from 'vue'
 import resolveConfig from 'tailwindcss/resolveConfig'
 import tailwindConfig from '../../tailwind.config'
 
-
 // config paramates for man svg "stage"
 const width = ref(300);
 const height = ref(180);
@@ -17,7 +16,6 @@ const height = ref(180);
 const minBlobRadius = 4
 const maxBlobRadius = 12
 const props = defineProps(['data'])
-
 
 // make the view box dynamic
 const viewBox = computed(() => {
@@ -33,7 +31,7 @@ const twConfig = resolveConfig(tailwindConfig)
 
 // remove the relative color choices from the tw list
 //const colorList = Object.keys(baseColors).filter(i => !['inherit', 'current', 'transparent', 'neutral','black','white','red','pink','rose','violet'].includes(i) ).reverse()
-const colorList = [ 'blue', 'green', 'orange', 'zinc', 'red', 'rose']
+const colorList = ['blue', 'green', 'orange', 'zinc', 'red', 'rose']
 
 // bastard variable with a list of the top keys in data (for ordial scalig etc.)
 const groups = props.data.skills.map(d => d.group)
@@ -46,8 +44,8 @@ const twValue = d3.scaleOrdinal().domain([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
     .range([50, 100, 200, 300, 400, 500, 600, 700, 800, 900]);
 
 
-const xPos = d3.scaleOrdinal().domain(groups).range([...Array(groups.length).keys()].map(i => (i + 1) * width.value / (groups.length + 1)))
-const yPos = d3.scaleOrdinal().domain(groups).range([...Array(groups.length).keys()].map(i => (i + 1) * height.value / (groups.length + 1)))
+const xPos = computed(()=>d3.scaleOrdinal().domain(groups).range([...Array(groups.length).keys()].map(i => (i + 1) * width.value / (groups.length + 1))))
+const yPos = computed(()=>d3.scaleOrdinal().domain(groups).range([...Array(groups.length).keys()].map(i => (i + 1) * height.value / (groups.length + 1))))
 
 // Process the data into a flat structure
 const data = props.data.skills.reduce((a, c) => {
@@ -70,7 +68,7 @@ const messUpSim = computed(() => d3.forceSimulation()
 const tidyUpSim = computed(() => d3.forceSimulation()
     .force('charge', d3.forceManyBody().strength(-4))
     .force("x", d3.forceX().x(d => {
-        return xPos(d.group)
+        return xPos.value(d.group)
     }))
     .force("y", d3.forceY(1).y(height.value / 2))
 )
@@ -79,7 +77,7 @@ const showUpSim = computed(() => d3.forceSimulation()
     .force('charge', d3.forceManyBody().strength(-2))
     .force('collision', d3.forceCollide().radius(d => radiusScale.value(d.level) / 3))
     .force("y", d3.forceY().y(d => {
-        return yPos(d.group)
+        return yPos.value(d.group)
     }))
     .force("x", d3.forceX(1).x(width.value * 2 / 3)
     ))
@@ -179,10 +177,10 @@ const tidyUpClick = function () {
         .style("font-size", 5)
         .style("text-anchor", "middle")
         .text(d => d.name)
-        .attr("x", d => xPos(d.group))
+        .attr("x", d => xPos.value(d.group))
         .attr("font-weight", 900)
         .attr("y", height.value / 6)
-        .attr('transform', d => 'rotate(-50 ' + xPos(d.group) + ' ' + height.value / 6 + ')')
+        .attr('transform', d => 'rotate(-50 ' + xPos.value(d.group) + ' ' + height.value / 6 + ')')
 
     tidyUpSim.value.nodes(data).on("tick", ticked)
     tidyUpSim.value.alpha(1).restart()
@@ -318,9 +316,9 @@ const showUpClick = function () {
 
     // add the work experience on the left
     // y axis
-    const scaleY = d3.scaleLinear().domain([Math.min(...yTicks), Date.now()]).range([height.value - 10, 10])
+    const scaleY = computed(()=>d3.scaleLinear().domain([Math.min(...yTicks), Date.now()]).range([height.value - 10, 10]))
     const axisY = d3.axisLeft()
-        .scale(scaleY)
+        .scale(scaleY.value)
         .tickSize(2, 2)
         .tickValues(yTicks)
         .tickFormat(d => new Date(d).getFullYear())
@@ -345,7 +343,7 @@ const showUpClick = function () {
         .style("font-size", 4)
         .style("alignment-baseline", 'central')
         .attr("x", 17)
-        .attr("y", d => scaleY(d.end))
+        .attr("y", d => scaleY.value(d.end))
 
 
     function drawTexts() {
