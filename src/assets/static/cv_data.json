@@ -1,6 +1,7 @@
 {
     "about": {
         "name": "Karl-Johan Westhoff",
+        "title": "Engineer",
         "summary": "Engineer with an awesome 15+ year's of experience designing and building structures for the Ocean and making the software tools for doing the engineering. I have extensive experience with managing client facing and technically challenging projects of various size.",
         "quotes": [
             {
@@ -354,7 +355,7 @@
         },
         {
             "group": "webstack",
-            "name": "Full Stack Web Dev",
+            "name": "Full Stack Web",
             "items": [
                 {
                     "title": "JS",

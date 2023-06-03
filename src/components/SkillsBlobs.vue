@@ -81,7 +81,7 @@ const showUpSim = computed(() => d3.forceSimulation()
     .force("y", d3.forceY().y(d => {
         return yPos.value(d.group)
     }))
-    .force("x", d3.forceX(1).x(width.value * 2 / 3)
+    .force("x", d3.forceX(1).x(width.value * 3 / 4-2)
     ))
 
 
@@ -372,8 +372,8 @@ const showUpClick = function () {
 
     d3.select(".svg-holder").append("g")
         .attr("class", "y-axis")
-        .attr("transform", "translate(15,0)")
-        .style("font-size", 4)
+        .attr("transform", "translate(16,0)")
+        .style("font-size", 5)
         .style("stroke-width", 0.4)
         .call(axisY)
 
@@ -386,9 +386,9 @@ const showUpClick = function () {
         .append("text")
         .attr("id", d => d.short)
         .text(d => d.title)
-        .style("font-size", 4)
+        .style("font-size", 5)
         .style("alignment-baseline", 'central')
-        .attr("x", 17)
+        .attr("x", 18)
         .attr("y", d => scaleY.value(d.end))
 
 
@@ -405,7 +405,7 @@ const showUpClick = function () {
             .text(d => d.name)
             .attr("x", d => {
                 let Bbox = d3.select(`rect.group-squares.${d.group}`).node().getBBox()
-                return Bbox.x + Bbox.width + 5
+                return Bbox.x + Bbox.width + 3
             })
             .attr("y", d => {
                 let Bbox = d3.select(`rect.group-squares.${d.group}`).node().getBBox()
