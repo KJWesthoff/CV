@@ -44,8 +44,8 @@ const twValue = d3.scaleOrdinal().domain([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
     .range([50, 100, 200, 300, 400, 500, 600, 700, 800, 900]);
 
 
-const xPos = computed(()=>d3.scaleOrdinal().domain(groups).range([...Array(groups.length).keys()].map(i => (i + 1) * width.value / (groups.length + 1))))
-const yPos = computed(()=>d3.scaleOrdinal().domain(groups).range([...Array(groups.length).keys()].map(i => (i + 1) * height.value / (groups.length + 1))))
+const xPos = computed(() => d3.scaleOrdinal().domain(groups).range([...Array(groups.length).keys()].map(i => (i + 1) * width.value / (groups.length + 1))))
+const yPos = computed(() => d3.scaleOrdinal().domain(groups).range([...Array(groups.length).keys()].map(i => (i + 1) * height.value / (groups.length + 1))))
 
 // Process the data into a flat structure
 const data = props.data.skills.reduce((a, c) => {
@@ -274,6 +274,26 @@ const showUpClick = function () {
     // Build a Y axis    
     // ----------------------------------
 
+    
+    // Auxillry function to parse the date string (it 55#"!)"#(#) did'nt work on ios/firefox)
+    function parseDateString(dateString) {
+        const parts = dateString.split(' '); // Split the date string into parts
+        const monthName = parts[0]; // Extract the month name
+        const year = parseInt(parts[1]); // Extract the year and convert it to a number
+
+        // Create a date object with the month and year values
+        const dateObject = new Date(`${monthName} 1, ${year}`);
+
+        // Check if the date object is valid
+        if (isNaN(dateObject.getTime())) {
+            return null; // Invalid date string
+        }
+
+        // Return the epoch milliseconds
+        return dateObject.getTime();
+    }
+
+
     // add the work experience and education data to the axis
     const work = computed(() => props.data.workexperience.map(d => {
         return {
@@ -281,8 +301,8 @@ const showUpClick = function () {
             "short": d.short,
             "name": d.company.name,
             "logo": d.company.logo,
-            "start": Date.parse(d.tenure.start),
-            "end": Date.parse(d.tenure.end)
+            "start": parseDateString(d.tenure.start),
+            "end": parseDateString(d.tenure.end)
         }
     }))
 
@@ -292,8 +312,8 @@ const showUpClick = function () {
             "short": d.short,
             "name": d.school,
             "logo": d.logo,
-            "start": Date.parse(d.tenure.start),
-            "end": Date.parse(d.tenure.end)
+            "start": parseDateString(d.tenure.start),
+            "end": parseDateString(d.tenure.end)
         }
     }))
 
@@ -303,25 +323,49 @@ const showUpClick = function () {
             "short": d.short,
             "name": d.issuer,
             "logo": d.logo,
-            "start": Date.parse(d.issued),
-            "end": Date.parse(d.issued)
+            "start": parseDateString(d.issued),
+            "end": parseDateString(d.issued)
         }
     }))
 
     // Setup an axis with the work/education experience
     const yaxisData = ([...work.value, ...education.value, ...certification.value])
-
+    console.log(yaxisData)
     const yTicks = yaxisData.map(d => d.end)
+
+
+    // Auxillry function to parse the date string (it 55#"!)"#(#) did'nt work on ios/firefox)
+    function parseDateString(dateString) {
+        const parts = dateString.split(' '); // Split the date string into parts
+        const monthName = parts[0]; // Extract the month name
+        const year = parseInt(parts[1]); // Extract the year and convert it to a number
+
+        // Create a date object with the month and year values
+        const dateObject = new Date(`${monthName} 1, ${year}`);
+
+        // Check if the date object is valid
+        if (isNaN(dateObject.getTime())) {
+            return null; // Invalid date string
+        }
+
+        // Return the epoch milliseconds
+        return dateObject.getTime();
+    }
 
 
     // add the work experience on the left
     // y axis
-    const scaleY = computed(()=>d3.scaleLinear().domain([Math.min(...yTicks), Date.now()]).range([height.value - 10, 10]))
+    const scaleY = computed(() => d3.scaleLinear().domain([Math.min(...yTicks), Date.now()]).range([height.value - 10, 10]))
+
     const axisY = d3.axisLeft()
         .scale(scaleY.value)
         .tickSize(2, 2)
         .tickValues(yTicks)
-        .tickFormat(d => new Date(d).getFullYear())
+        .tickFormat(d => {
+            console.log(d, new Date(d).getFullYear())
+            return new Date(d).getFullYear()
+
+        })
 
 
     d3.select(".svg-holder").append("g")
