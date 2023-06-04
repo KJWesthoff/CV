@@ -218,17 +218,7 @@
         }
     ],
     "certifications": [
-        {
-            "short":"IPMA-D",
-            "name": "IPMA - D",
-            "institution": "IPMA: International Project Management Association",
-            "issued": "May 2015",
-            "expires": "May 2020",
-            "logo": "ipma.svg",
-            "validation": "DEN3789",
-            "description": "",
-            "link": "https://ipma.world/"
-        },
+
         {
             "short":"BCB",
             "name": "Berkeley Coding Bootcamp",
@@ -239,6 +229,17 @@
             "validation": "74b1446548425e1612008cd5d849e0aa",
             "description": "",
             "link": "https://bootcamp.berkeley.edu/coding/"
+        },
+        {
+            "short":"IPMA-D",
+            "name": "IPMA - D",
+            "institution": "IPMA: International Project Management Association",
+            "issued": "May 2015",
+            "expires": "May 2020",
+            "logo": "ipma.svg",
+            "validation": "DEN3789",
+            "description": "",
+            "link": "https://ipma.world/"
         }
     ],
     "volunteering": [
