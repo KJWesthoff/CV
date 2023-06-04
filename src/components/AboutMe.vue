@@ -14,17 +14,17 @@ import data from '../assets/static/cv_data.json'
                 <p class="font-bold">Other things i have done and what I learned</p>
                 <ul class="list-disc">
                     <li class="ml-10 mb-1" v-for=" d in data.about.personal.learnings">
-                    {{ d.item }} <br>
-                    Taught me:  <span class="italic">"{{ d.learned }}"</span>
+                        {{ d.item }} <br>
+                        Taught me: <span class="italic">"{{ d.learned }}"</span>
                     </li>
                 </ul>
 
                 <p class="font-bold"> In my free time I enjoy</p>
                 <ul>
-                                    <li class="ml-10" v-for ="d in data.about.personal.interests">
-                    {{ d }}
-                                    </li>
-                                </ul>
+                    <li class="ml-10" v-for="d in data.about.personal.interests">
+                        {{ d }}
+                    </li>
+                </ul>
 
 
             </div>
@@ -42,6 +42,28 @@ import data from '../assets/static/cv_data.json'
                     </li>
                 </ul>
             </div> -->
+
+        </div>
+
+        <div class="text-xs flex flex-row mt-5">
+            This page was built using
+            <a class = "flex flex-row items-start ml-1" href="https://vuejs.org/" target="_blank" rel="noopener noreferrer">vue 
+                <icon class="mr-1 ml-1" name="vue.svg"/>,
+            </a>
+
+            <a class = "flex flex-row items-start ml-1 mr-1" href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer"> tailwind
+                <icon class="mr-1 ml-1" name="tailwind.svg" />
+            </a> and
+            <a class = "flex flex-row items-start mr-1 ml-1" href="https://d3js.org/" target="_blank" rel="noopener noreferrer">d3
+                <icon class="mr-1 ml-1" name="d3.svg" />
+            </a> and is deployed on
+            <a class = "flex flex-row items-start" href="https://kjwesthoff.github.io/CV/" target="_blank" rel="noopener noreferrer">github pages
+                <icon class="mr-1 ml-1" name="github-mark.svg" />
+                using actions
+            </a>
+
+
         </div>
     </div>
+        
 </template>
