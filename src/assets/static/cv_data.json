@@ -2,7 +2,7 @@
     "about": {
         "name": "Karl-Johan Westhoff",
         "title": "Engineer",
-        "summary": "Engineer with an awesome 15+ year's of experience designing and building structures for the Ocean and making the software tools for doing the engineering. I have extensive experience with managing client facing and technically challenging projects of various size.",
+        "summary": "Engineer with an awesome 15+ year's of experience designing and building structures for the Ocean and making the software tools for doing the engineering. I have extensive experience as project manager for client facing and technically challenging projects of various size.",
         "quotes": [
             {
                 "quote": "You are the kind of person who kan make things work, that's is why we gave you all the impossible jobs",
@@ -30,7 +30,7 @@
                 },
                 {
                     "item": "Long distance triathlons",
-                    "learned": "Tenacity and to appreciate that every effort you put in training pays off (pb. 10:31hrs on the IM distance)"
+                    "learned": "Tenacity! And to appreciate that every effort you put into training pays off (p.b. 10:31hrs on the IM distance)"
                 },
                 {
                     "item": "Remodelling our house",
@@ -557,7 +557,7 @@
                 {
                     "title": "D3",
                     "logo": "d3.svg",
-                    "level": 4,
+                    "level": 5,
                     "link": "https://d3js.org/",
                     "description": "Fantastic data visualization, if you can dream it -you can make it happen with D3, this figure was made using D3js"
                 },
