@@ -22,18 +22,21 @@ function pageChange(s) {
         <div>
             <div v-if="page == 0">
                 <h1 class="text-lg font-bold underline underline-offset-4">Skills</h1>
-                <span class = "italic">(Hover for details Click to clean it up)</span>
+                <span class = "italic print:hidden">(Hover for details Click to clean it up)</span>
             </div>
             <div v-if="page == 1">
                 <h1 class="text-lg font-bold underline underline-offset-4">Skills Categorized</h1>
-                <span class = "italic">(Click again to show the connections)</span>
+                <span class = "italic print:hidden">(Click again to show the connections)</span>
             </div>
-            <div v-if="page == 2" class="flex justify-around">
-                <h1 class="text-lg font-bold underline underline-offset-4">Work Timeline</h1>
+            <div v-if="page == 2">
+            <div class="flex justify-around">
+                <h1 class="text-lg font-bold underline underline-offset-4">Curriculum Vitae Timeline</h1>
 
                 <h1 class="text-lg font-bold underline underline-offset-4">Experience</h1>
-                
+            </div>  
+            <span class = "italic print:hidden">(Click to Re-set)</span>
             </div>
+
         </div>
         <SkillsBlobs @page-change="(n) => pageChange(n)" :data="data"></SkillsBlobs>
 
