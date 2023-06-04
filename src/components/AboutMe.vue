@@ -47,17 +47,17 @@ import data from '../assets/static/cv_data.json'
 
         <div class="text-xs flex flex-row mt-5">
             This page was built using
-            <a class = "flex flex-row items-start ml-1" href="https://vuejs.org/" target="_blank" rel="noopener noreferrer">vue 
+            <a class = "flex flex-row items-start ml-1" href="https://vuejs.org/" target="_blank" rel="noopener noreferrer">Vue 
                 <icon class="mr-1 ml-1" name="vue.svg"/>,
             </a>
 
-            <a class = "flex flex-row items-start ml-1 mr-1" href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer"> tailwind
+            <a class = "flex flex-row items-start ml-1 mr-1" href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer"> Tailwind
                 <icon class="mr-1 ml-1" name="tailwind.svg" />
             </a> and
-            <a class = "flex flex-row items-start mr-1 ml-1" href="https://d3js.org/" target="_blank" rel="noopener noreferrer">d3
+            <a class = "flex flex-row items-start mr-1 ml-1" href="https://d3js.org/" target="_blank" rel="noopener noreferrer">D3
                 <icon class="mr-1 ml-1" name="d3.svg" />
             </a> and is deployed on
-            <a class = "flex flex-row items-start" href="https://kjwesthoff.github.io/CV/" target="_blank" rel="noopener noreferrer">github pages
+            <a class = "flex flex-row items-start" href="https://kjwesthoff.github.io/CV/" target="_blank" rel="noopener noreferrer">Github Pages
                 <icon class="mr-1 ml-1" name="github-mark.svg" />
                 using actions
             </a>
