@@ -658,6 +658,13 @@
                     "level": 4,
                     "link": "https://learn.microsoft.com/en-us/office/vba/api/overview/excel",
                     "description": "We have taken Excel and vba way beyond it's intended use ;-)"
+                },
+                {
+                    "title": "Chat GPT",
+                    "logo": "chatgpt.svg",
+                    "level": 2,
+                    "link": "https://openai.com/blog/chatgpt",
+                    "description": "Use it for coding It's like having a super experienced senior developer you can ask and it does not get bothered"
                 }
             ],
             "linked_to":["DTU-MSC", "DTU-BSC", "ODS", "NOV-PID", "NOV-PSD", "NOV-SAS", "NOV-CA", "BCB"]
