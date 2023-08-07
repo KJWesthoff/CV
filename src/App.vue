@@ -12,7 +12,7 @@ import AboutMe from './components/AboutMe.vue';
   <Header/>
   <Skills class="break-after-page"></Skills>  
   <WorkExperience/>
-  <Education class="break-before-page"></Education>
+  <Education></Education>
   <Certifications/>
   <AboutMe/>
 </template>
