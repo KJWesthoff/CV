@@ -552,7 +552,7 @@
                     "logo": "beanie.svg",
                     "level": 2,
                     "link": "https://beanie-odm.dev/",
-                    "description": "Awesome ODM tool for Mogodb built on Pydantic, i used it for a FastAPI backend"
+                    "description": "Awesome ODM tool for Mongodb built on Pydantic, i used it for a FastAPI backend"
                 },
                 {
                     "title": "D3",
