@@ -2,21 +2,7 @@
     "about": {
         "name": "Karl-Johan Westhoff",
         "title": "Engineer",
-        "summary": "Engineer with an awesome 15+ year's of experience designing and building structures for the Ocean and making the software tools for doing the engineering. I have extensive experience as project manager for client facing and technically challenging projects of various size.",
-        "quotes": [
-            {
-                "quote": "You are the kind of person who kan make things work, that's is why we gave you all the impossible jobs",
-                "by": "Former manager"
-            },
-            {
-                "quote": "Karl-Johan do you hold a Ph.D? - no wait that cant be - because you are actually funny",
-                "by": "Former colleague"
-            },
-            {
-                "quote": "Look at this man, working so hard he has no time to talk to me",
-                "by": "Customer, on a barge in Africa, (I was busy doing a 3.rd party approval of equipment over a mobile link)"
-            }
-        ],
+        "summary": "Experienced engineer with 15+ years of expertise designing safe and secure ocean structures and developing software tools to power engineering solutions. I have extensive experience as project manager for client facing and technically challenging projects of various size.",
         "offerings": [
             "Experience from the worlds largest infrastructure projects in teh O&G industry",
             "Desire to optimize processes and the capabilities to actually plug in and energize digitalization",
@@ -185,7 +171,7 @@
             "school": "UC Berkeley School of Information",
             "logo": "berkeleyseal.svg",
             "link": "https://www.ischool.berkeley.edu/programs/mics",
-            "title": "Master of Information and Cybersecurity (MICS In Progress)",
+            "title": "UC Berkeley MICS (In Progress)",
             "tenure": {
                 "start": "January 2024",
                 "end": "June 2025 (Planned)"
