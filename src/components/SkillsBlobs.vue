@@ -11,10 +11,10 @@ import tailwindConfig from '../../tailwind.config'
 
 // config paramates for man svg "stage"
 const width = ref(300);
-const height = ref(180);
+const height = ref(190);
 
-const minBlobRadius = 4
-const maxBlobRadius = 12
+const minBlobRadius = 3
+const maxBlobRadius = 10
 const props = defineProps(['data'])
 const emit = defineEmits(['pageChange'])
 
@@ -33,7 +33,9 @@ const twConfig = resolveConfig(tailwindConfig)
 
 // remove the relative color choices from the tw list
 //const colorList = Object.keys(baseColors).filter(i => !['inherit', 'current', 'transparent', 'neutral','black','white','red','pink','rose','violet'].includes(i) ).reverse()
-const colorList = ['blue', 'green', 'orange', 'zinc', 'red', 'rose']
+// const colorList = ['blue', 'red', 'green',  'zinc', 'violet', 'orange', 'yellow']
+const colorList = ['red', 'zinc', 'yellow', 'blue', 'orange', 'green', 'violet']
+
 
 // bastard variable with a list of the top keys in data (for ordial scalig etc.)
 const groups = props.data.skills.map(d => d.group)
@@ -81,7 +83,7 @@ const showUpSim = computed(() => d3.forceSimulation()
     .force("y", d3.forceY().y(d => {
         return yPos.value(d.group)
     }))
-    .force("x", d3.forceX(1).x(width.value * 3 / 4-2)
+    .force("x", d3.forceX(1).x(width.value * 3 / 4 - 2)
     ))
 
 
@@ -276,8 +278,8 @@ const showUpClick = function () {
     // Build a Y axis    
     // ----------------------------------
 
-    
-    // Auxillry function to parse the date string (it 55#"!)"#(#) did'nt work on ios/firefox)
+
+    // Auxillary function to parse the date string (it 55#"!)"#(#) did'nt work on ios/firefox)
     function parseDateString(dateString) {
         const parts = dateString.split(' '); // Split the date string into parts
         const monthName = parts[0]; // Extract the month name
@@ -332,11 +334,10 @@ const showUpClick = function () {
 
     // Setup an axis with the work/education experience
     const yaxisData = ([...work.value, ...education.value, ...certification.value])
-  
+
     const yTicks = yaxisData.map(d => d.end)
 
-
-    // Auxillry function to parse the date string (it 55#"!)"#(#) did'nt work on ios/firefox)
+    // Auxillary function to parse the date string (it 55#"!)"#(#) did'nt work on ios/firefox)
     function parseDateString(dateString) {
         const parts = dateString.split(' '); // Split the date string into parts
         const monthName = parts[0]; // Extract the month name
@@ -357,25 +358,68 @@ const showUpClick = function () {
 
     // add the work experience on the left
     // y axis
-    const scaleY = computed(() => d3.scaleLinear().domain([Math.min(...yTicks), Date.now()]).range([height.value - 10, 10]))
+
+    // get the max date from yaxisData 
+
+
+    const scaleY = computed(() => d3.scaleLinear().domain([Math.min(...yTicks), Math.max(...yTicks)]).range([height.value - 16, 16]))
+
+
 
     const axisY = d3.axisLeft()
         .scale(scaleY.value)
         .tickSize(2, 2)
         .tickValues(yTicks)
         .tickFormat(d => {
-           
+
             return new Date(d).getFullYear()
 
         })
 
 
-    d3.select(".svg-holder").append("g")
+
+    /* d3.select(".svg-holder").append("g")
+    .attr("class", "y-axis")
+    .attr("transform", "translate(16,0)")
+    .style("font-size", 5)
+    .style("stroke-width", 0.4)
+    .call(axisY)
+*/
+
+    // Append the Y-axis to the SVG
+    const yAxisGroup = d3.select(".svg-holder")
+        .append("g")
         .attr("class", "y-axis")
         .attr("transform", "translate(16,0)")
         .style("font-size", 5)
+        .style('stroke-dasharray', '0.5,0.5')
+        .style("stroke-width", 0.1)
+        //.call(axisY);
+
+/*     const solidY = 2024
+    // Draw the solid part of the axis line
+    yAxisGroup.append('line')
+        .attr('class', 'solid-line')
+        .attr('x1', 0)
+        .attr('y1', scaleY.value.range()[0])
+        .attr('x2', 0)
+        .attr('y2', scaleY.value(Date.now()))
+        .style("stroke-width", 0.4);
+       
+
+    // Draw the dotted part of the axis line
+    yAxisGroup.append('line')
+        .attr('class', 'dotted-line')
+        .attr('x1', 0)
+        .attr('y1', scaleY.value(Date.now()))
+        .attr('x2', 0)
+        .attr('y2', scaleY.value.range()[1])
         .style("stroke-width", 0.4)
-        .call(axisY)
+        .style('stroke-dasharray', '0.5,0.5'); */
+    
+    yAxisGroup.call(axisY)  
+
+
 
     const exprienceTitles = d3.select(".svg-holder")
         .append("g")
