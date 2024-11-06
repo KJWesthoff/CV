@@ -181,7 +181,8 @@
                 "Risk Management",
                 "Cryptography",
                 "Networks",
-                "Software/OS Security"
+                "Software/OS Security",
+                "Machine Learning"
                 
             ],
             "description": "UC Berkeley Graduate Programme, world class Instructors "
@@ -346,7 +347,15 @@
                     "level": 3,
                     "link": "https://nmap.org/",
                     "description": "Goto network scanning and inventory tool"
+                },
+                {
+                    "title": "Splunk",
+                    "logo": "Splunk.svg",
+                    "level": 2,
+                    "link": "https://www.splunk.com/",
+                    "description": "SIEM/log analysis tool"
                 }
+
             ],
             "linked_to":["BCB","CSB", "NOV-CA", "MICS" ]
         },
@@ -564,6 +573,7 @@
                     "link": "https://www.rancher.com/",
                     "description": "Kubernetes container orchestration made easy"
                 }
+               
             ],
             "linked_to":["BCB", "NOV-SAS", "NOV-CA"]
         },
@@ -766,7 +776,15 @@
                     "level": 2,
                     "link": "https://openai.com/blog/chatgpt",
                     "description": "Use it for coding It's like having a super experienced senior developer you can ask and it does not get bothered"
+                },
+                {
+                    "title": "Neovim",
+                    "logo": "nvim.svg",
+                    "level": 3,
+                    "link": "https://neovim.io",
+                    "description": "Efficient text editor"
                 }
+
             ],
             "linked_to":["DTU-MSC", "DTU-BSC", "ODS", "NOV-PID", "NOV-PSD", "NOV-SAS", "NOV-CA", "BCB" , "CSB"]
         }
