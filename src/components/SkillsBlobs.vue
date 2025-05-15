@@ -10,8 +10,8 @@ import resolveConfig from 'tailwindcss/resolveConfig'
 import tailwindConfig from '../../tailwind.config'
 
 // config paramates for man svg "stage"
-const width = ref(300);
-const height = ref(230);
+const width = ref(320);
+const height = ref(240);
 
 const minBlobRadius = 3
 const maxBlobRadius = 10
