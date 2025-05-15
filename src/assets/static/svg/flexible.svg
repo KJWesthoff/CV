@@ -2,7 +2,7 @@
   <path fill="#D9D9D9" d="M22.582 37.28H51.582V90.28H22.582z" transform="rotate(-17.5 22.582 37.28)"/>
   <path fill="#D9D9D9" d="M23.896 14.847H36.896V35.847H23.896z" transform="rotate(-17.5 23.896 14.847)"/>
   <path fill="#D9D9D9" d="M11 10.525H46V18.525H11z" transform="rotate(-17.5 11 10.525)"/>
-  <path stroke="#DDC916" stroke-width="10" d="M52.9997 80.9999C77 157 124 79.9999 157 116C190 152 127 206 195.431 203.746"/>
+  <path fill="none" stroke="#DDC916" stroke-width="10" d="M52.9997 80.9999C77 157 124 79.9999 157 116C190 152 127 206 195.431 203.746"/>
   <ellipse cx="136.5" cy="131.5" fill="#D9D9D9" rx="21.5" ry="20.5"/>
   <g filter="url(#a)" opacity=".5">
     <path stroke="#000" stroke-width="5" d="M4.011 211.5 236.011 212.522"/>
@@ -15,7 +15,7 @@
   <path stroke="#000" stroke-width="5" d="M155 50C169 67.5 182 50 182 50"/>
   <path stroke="#000" stroke-width="5" d="M182 50.4999C196 67.9999 209 50.4999 209 50.4999"/>
   <path stroke="#000" stroke-width="5" d="M209 50C223 67.5 236 50 236 50"/>
-  <path fill="#D9D9D9" stroke="#DDC916" stroke-width="10" d="M76.5727 190L87.2004 203.5H32.628L42.9684 190H76.5727Z"/>
+  <path fill="none" stroke="#DDC916" stroke-width="10" d="M76.5727 190L87.2004 203.5H32.628L42.9684 190H76.5727Z"/>
   <path stroke="#000" stroke-width="5" d="M136.5 152 136.5 210"/>
   <defs>
     <filter id="a" width="240.022" height="14.022" x="0" y="209" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">

@@ -1,18 +1,11 @@
 <script setup>
-import Header from './components/Header.vue'
-import Skills from './components/Skills.vue'
-import WorkExperience from './components/WorkExperience.vue'
-import Education from './components/Education.vue';
-import Certifications from './components/Certifications.vue';
-import AboutMe from './components/AboutMe.vue';
+
+
+import MainApp from './views/MainApp.vue'
+import {RouterView} from "vue-router"
 
 </script>
 
 <template>
-  <Header/>
-  <Skills class="break-after-page"></Skills>  
-  <WorkExperience/>
-  <Education class="break-before-page"></Education>
-  <Certifications/>
-  <AboutMe/>
+  <RouterView/> 
 </template>

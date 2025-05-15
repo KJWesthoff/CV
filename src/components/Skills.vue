@@ -21,7 +21,7 @@ function pageChange(s) {
         
         <div>
             <div v-if="page == 0">
-                <h1 class="text-lg font-bold underline underline-offset-4">Skills</h1>
+                <h1 class="text-2xl font-bold underline underline-offset-4">Skills</h1>
                 <span class = "italic print:hidden">(Hover for details Click to clean it up)</span>
              
             </div>

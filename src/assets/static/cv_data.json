@@ -2,21 +2,7 @@
     "about": {
         "name": "Karl-Johan Westhoff",
         "title": "Engineer",
-        "summary": "Engineer with an awesome 15+ year's of experience designing and building structures for the Ocean and making the software tools for doing the engineering. I have extensive experience as project manager for client facing and technically challenging projects of various size.",
-        "quotes": [
-            {
-                "quote": "You are the kind of person who kan make things work, that's is why we gave you all the impossible jobs",
-                "by": "Former manager"
-            },
-            {
-                "quote": "Karl-Johan do you hold a Ph.D? - no wait that cant be - because you are actually funny",
-                "by": "Former colleague"
-            },
-            {
-                "quote": "Look at this man, working so hard he has no time to talk to me",
-                "by": "Customer, on a barge in Africa, (I was busy doing a 3.rd party approval of equipment over a mobile link)"
-            }
-        ],
+        "summary": "Experienced engineer with 15+ years of expertise designing safe and secure ocean structures and developing software tools to power engineering solutions. I have extensive experience as project manager for client facing and technically challenging projects of various size.",
         "offerings": [
             "Experience from the worlds largest infrastructure projects in teh O&G industry",
             "Desire to optimize processes and the capabilities to actually plug in and energize digitalization",
@@ -26,7 +12,7 @@
             "learnings": [
                 {
                     "item": "Sailboat racing",
-                    "learned": "Even if you have the best crew, only one mistake at the helm can mess everything up"
+                    "learned": "Even if you have the best crew, only one mistake at the helm can mess everything up, being at the wheel comes with obligations"
                 },
                 {
                     "item": "Long distance triathlons",
@@ -39,7 +25,7 @@
             ],
             "interests": [
                 "Camping and hiking in beautiful USA with my family",
-                "Mountain biking in the bay area",
+                "Mountain biking in the Bay Area",
                 "Experience and learn new things (i have recently build an IOT connected plant watering system)"
             ]
         },
@@ -67,7 +53,7 @@
                 "Building software skills"
             ],
             "learnings": [
-                "A lot about building software",
+                "Learned a lot about building and delivering software in a corporate context",
                 "Structuring work from home"
             ]
         },
@@ -114,8 +100,8 @@
                 "Build software skills developing a multitude of engineering design tools."
             ],
             "learnings": [
-                "Processes, and that they need constant improvements",
-                "Passing on knowledge and inspire others"
+                "Processes, and that these need constant improvements",
+                "Learned to pass on knowledge and inspire others"
             ]
         },
         {
@@ -136,7 +122,7 @@
                 "Participate in technical meetings with clients"
             ],
             "learnings": [
-                "How to play a part in the much bigger context of a offshore O&G project"
+                "Learned how to play a part in the much bigger context of a offshore O&G project"
             ]
         },
         {
@@ -157,7 +143,7 @@
                 "Field measurement work, acoustics and structural vibration"
             ],
             "learnings": [
-                "Working independently, take responsibility and make things work"
+                "Learned working independently, responsibility and to make things work"
             ]
         },
         {
@@ -175,11 +161,32 @@
                 "end": "June 2006"
             },
             "tasks": [
-                "Continuing an internship I worked in the ship design department, carrying out 3d-modelling and cad workshop drawings."
+                "Continuing an internship I worked in the ship design department, carrying out 3d-modelling and CAD workshop drawings."
             ]
         }
     ],
     "education": [
+        {
+            "short":"MICS",
+            "school": "UC Berkeley School of Information",
+            "logo": "berkeleyseal.svg",
+            "link": "https://www.ischool.berkeley.edu/programs/mics",
+            "title": "UC Berkeley MICS (In Progress)",
+            "tenure": {
+                "start": "January 2024",
+                "end": "December 2025"
+            },
+            "keywords": [
+                "Cybersecurity",
+                "Risk Management",
+                "Cryptography",
+                "Networks",
+                "Software/OS Security",
+                "Machine Learning",
+                "Data Science"
+            ],
+            "description": "UC Berkeley Graduate Programme, world class Instructors "
+        },
         {
             "short":"DTU-MSC",
             "school": "DTU - Technical University of Denmark",
@@ -231,6 +238,17 @@
             "link": "https://bootcamp.berkeley.edu/coding/"
         },
         {
+            "short":"CSB",
+            "name": "Caltech Cybersecurity Bootcamp",
+            "institution": "Simplilearn | Caltech",
+            "issued": "May 2024",
+            "expires": "",
+            "logo": "caltech.svg",
+            "validation": "74b1446548425e1612008cd5d849e0aa",
+            "description": "",
+            "link": "https://pg-p.ctme.caltech.edu/cybersecurity-certification-bootcamp"
+        },
+        {
             "short":"IPMA-D",
             "name": "IPMA - D",
             "institution": "IPMA: International Project Management Association",
@@ -244,115 +262,139 @@
     ],
     "volunteering": [
         {
-            "item": "Voluneering in my son's 1st & 2'nd grade",
+            "item": "Voluneering in my son's 1st, 2'nd and 3'rd grade",
             "description": ""
         }
     ],
     "skills": [
         {
-            "group": "ocean_engineering",
-            "name": "Ocean Engineering",
+            "group": "aiml",
+            "name": "AI/ML",
             "items": [
-                {
-                    "title": "Offshore Oil and Gas Industry",
-                    "logo": "rig.svg",
-                    "level": 7,
-                    "link": "",
-                    "description": "10+ yas in the flexible pipe industry making big and awesome structures, adhering to the second-to-none requirements and standards for safety in oil & gas industry. I have worked with submerged structured, both in the water column and on seabed"
-                },
-                {
-                    "title": "Ships Structures",
-                    "logo": "ship.svg",
-                    "level": 7,
-                    "link": "",
-                    "description": "Calculating strains and stresses of floating structures subjected to wave loads, and producing engineering designs adhering to class standards"
-                },
-                {
-                    "title": "Sub Sea Structures",
-                    "logo": "flexible.svg",
-                    "level": 9,
-                    "link": "",
-                    "description": "Most of the engineering i have worked on is below the water surface, either in the water column connecting surface to seabed or resting on the seafloor"
-                }
-            ],
-            "linked_to":["DTU-MSC", "DTU-BSC", "ODS", "NOV-PID", "NOV-PSD", "NOV-SAS", "SMK"]
-        },
-        {
-            "group": "structural_dynamics",
-            "name": "Structural Dynamics",
-            "items": [
-                {
-                    "title": "Shock and Explosions",
-                    "logo": "explosion.svg",
-                    "level": 2,
-                    "link": "",
-                    "description": "Experience with really fast dynamics modelling blast events in explicit finite element (Autodyn) carrying out my M.Sc. thesis."
-                },
-                {
-                    "title": "Strength of Marine Structures",
-                    "logo": "ship_global.svg",
-                    "level": 5,
-                    "link": "",
-                    "description": "Modelling and reporting strength and dynamic response of ships to waves and propulsion both on commercial vessels and the worlds largest superyachts"
-                },
-                {
-                    "title": "Fatigue of Structures in Wave Loading)",
-                    "logo": "wave.svg",
-                    "level": 5,
-                    "link": "",
-                    "description": "Fatigue modelling is a requirement for structures in the O&G domain, and flexible pipes are complex structures to determine stress response of"
-                },
-                {
-                    "title": "In-field Measurement Campaigns",
-                    "logo": "vibration.svg",
+                 {
+                    "title": "Neural Networks",
+                    "logo": "tensorflow.svg",
                     "level": 4,
-                    "link": "",
-                    "description": "Carrying out noise and vibration measurements in difficult conditions all over the worlds using novel equipment, hereunder microphones hydrophones accelerometers strain gauges etc. and analyzing the results afterwards"
+                    "link": "https://ischoolonline.berkeley.edu/cybersecurity/curriculum/",
+                    "description": "MICS course on machine learning"
+                },
+                {
+                    "title": "HuggingFace",
+                    "logo": "huggingface.svg",
+                    "level": 4,
+                    "link": "https://huggingface.co/",
+                    "description": "MICS course on natural language processing learning"
+                },
+                                {
+                    "title": "AI",
+                    "logo": "ai.svg",
+                    "level": 4,
+                    "link": "https://ischoolonline.berkeley.edu/cybersecurity/curriculum/",
+                    "description": "Foundational courses at Berkeley on ML and NLP"
                 }
+               
+
             ],
-            "linked_to":["DTU-MSC","ODS", "NOV-PID", "NOV-PSD"]
+            "linked_to":["BCB","CSB","MICS" ]
         },
         {
-            "group": "project_management",
-            "name": "Project Management",
+            "group": "cybersecurity",
+            "name": "Cybersecurity",
             "items": [
-                {
-                    "title": "Project Planning",
-                    "logo": "gantt.svg",
-                    "level": 5,
-                    "link": "",
-                    "description": "I am used to the rigorous planning, constant updates and constant coordination required to succeed in the huge infrastructure projects of the Oil and Gas industry, including agile short term task planning using PDCA lean boards etc. to full fledged Gantt charted projects which are to interface with the largest infrastructure projects in the world."
+                 {
+                    "title": "Security Testing",
+                    "logo": "hacker.svg",
+                    "level": 4,
+                    "link": "https://ischoolonline.berkeley.edu/cybersecurity/curriculum/",
+                    "description": "MICS foundation course"
                 },
                 {
-                    "title": "Risk Analyses",
-                    "logo": "risk_analyses.svg",
-                    "level": 5,
-                    "link": "",
-                    "description": "Risk analyses is a part of everything in the Oil and Gas industry both regarding financial risks and the risk for life. I am used to adhering  to the stringiest requirements and carrying out risk management at all levels including everything from strategic risk analyses/planning over HIRA's to Toolbox talks in fhe field. I like the oil and gas industry for this particular reason -always think safety, it is your loved ones who will suffer if you are injured"
+                    "title": "Operations",
+                    "logo": "operations.svg",
+                    "level": 4,
+                    "link": "https://ischoolonline.berkeley.edu/cybersecurity/curriculum/",
+                    "description": "MICS foundation course"
                 },
                 {
-                    "title": "Engineering Studies",
-                    "logo": "pm_engineering.svg",
-                    "level": 5,
-                    "link": "",
-                    "description": "Extensive experience as project manager for Front End Engineering Design projects carried out for major global energy companies, every thing from lifetime extension of assets over evaluation of exceeded parameters to full forensics of failed equipments and root cause analyses there of"
+                    "title": "Compliance",
+                    "logo": "compliance.svg",
+                    "level": 4,
+                    "link": "https://ischoolonline.berkeley.edu/cybersecurity/curriculum/",
+                    "description": "MICS foundation course"
                 },
                 {
-                    "title": "Client Services",
-                    "logo": "pm_service.svg",
-                    "level": 5,
-                    "link": "",
-                    "description": "Management of a plethora of Client focused technical assistance with inputs from many engineering disciplines, keeping our clients operations running safely"
+                    "title": "Network",
+                    "logo": "network-wired.svg",
+                    "level": 4,
+                    "link": "https://ischoolonline.berkeley.edu/cybersecurity/curriculum/",
+                    "description": "MICS foundation course"
                 },
                 {
-                    "title": "FEED",
-                    "logo": "pm_multitask.svg",
+                    "title": "Cryptography",
+                    "logo": "crypto.svg",
+                    "level": 4,
+                    "link": "https://ischoolonline.berkeley.edu/cybersecurity/curriculum/",
+                    "description": "MICS foundation course"
+                },
+                {
+                    "title": "Bash",
+                    "logo": "bash.svg",
                     "level": 5,
-                    "link": "",
-                    "description": "Extensive experience as project manager for Front End Engineering Design projects, carried out for major global energy companies, scopes typically ranging 1000-5000 engineering hours."
+                    "link": "https://www.gnu.org/software/bash/",
+                    "description": "The terminal tool for Linux"
+                },
+                {
+                    "title": "KALI",
+                    "logo": "kali.svg",
+                    "level": 4,
+                    "link": "https://www.kali.org/",
+                    "description": "Classic hacking linux distro"
+                },
+                {
+                    "title": "Metasploit",
+                    "logo": "metasploit.svg",
+                    "level": 3,
+                    "link": "https://www.metasploit.com/",
+                    "description": "The script kiddy tool"
+                },
+                {
+                    "title": "Wireshark",
+                    "logo": "wireshark.svg",
+                    "level": 4,
+                    "link": "https://www.wireshark.org/",
+                    "description": "Network packet capture and analysis tool"
+                },
+                {
+                    "title": "Burpsuite",
+                    "logo": "burpsuite.svg",
+                    "level": 4,
+                    "link": "https://portswigger.net/burp",
+                    "description": "Web application security testing/exploiting"
+                },
+                {
+                    "title": "NMAP",
+                    "logo": "nmap.svg",
+                    "level": 3,
+                    "link": "https://nmap.org/",
+                    "description": "Goto network scanning and inventory tool"
+                },
+                {
+                    "title": "Splunk",
+                    "logo": "Splunk.svg",
+                    "level": 2,
+                    "link": "https://www.splunk.com/",
+                    "description": "SIEM/log analysis tool"
+                },
+                {
+                    "title": "Forensics",
+                    "logo": "autopsy.svg",
+                    "level": 3,
+                    "link": "https://www.autopsy.com/",
+                    "description": "Digital forensics tool"
                 }
+
             ],
-            "linked_to":["NOV-SAS", "IPMA-D"]
+            "linked_to":["BCB","CSB", "NOV-CA", "MICS" ]
         },
         {
             "group": "webstack",
@@ -552,7 +594,7 @@
                     "logo": "beanie.svg",
                     "level": 2,
                     "link": "https://beanie-odm.dev/",
-                    "description": "Awesome ODM tool for Mogodb built on Pydantic, i used it for a FastAPI backend"
+                    "description": "Awesome ODM tool for Mongodb built on Pydantic, i used it for a FastAPI backend"
                 },
                 {
                     "title": "D3",
@@ -568,8 +610,114 @@
                     "link": "https://www.rancher.com/",
                     "description": "Kubernetes container orchestration made easy"
                 }
+               
             ],
             "linked_to":["BCB", "NOV-SAS", "NOV-CA"]
+        },
+        {
+            "group": "project_management",
+            "name": "Project Management",
+            "items": [
+                {
+                    "title": "Project Planning",
+                    "logo": "gantt.svg",
+                    "level": 5,
+                    "link": "",
+                    "description": "I am used to the rigorous planning, constant updates and constant coordination required to succeed in the huge infrastructure projects of the Oil and Gas industry, including agile short term task planning using PDCA lean boards etc. to full fledged Gantt charted projects which are to interface with the largest infrastructure projects in the world."
+                },
+                {
+                    "title": "Risk Analyses",
+                    "logo": "risk_analyses.svg",
+                    "level": 5,
+                    "link": "",
+                    "description": "Risk analyses is a part of everything in the Oil and Gas industry both regarding financial risks and the risk for life. I am used to adhering  to the stringiest requirements and carrying out risk management at all levels including everything from strategic risk analyses/planning over HIRA's to Toolbox talks in fhe field. I like the oil and gas industry for this particular reason -always think safety, it is your loved ones who will suffer if you are injured"
+                },
+                {
+                    "title": "Engineering Studies",
+                    "logo": "pm_engineering.svg",
+                    "level": 5,
+                    "link": "",
+                    "description": "Extensive experience as project manager for Front End Engineering Design projects carried out for major global energy companies, every thing from lifetime extension of assets over evaluation of exceeded parameters to full forensics of failed equipments and root cause analyses there of"
+                },
+                {
+                    "title": "Client Services",
+                    "logo": "pm_service.svg",
+                    "level": 5,
+                    "link": "",
+                    "description": "Management of a plethora of Client focused technical assistance with inputs from many engineering disciplines, keeping our clients operations running safely"
+                },
+                {
+                    "title": "FEED",
+                    "logo": "pm_multitask.svg",
+                    "level": 5,
+                    "link": "",
+                    "description": "Extensive experience as project manager for Front End Engineering Design projects, carried out for major global energy companies, scopes typically ranging 1000-5000 engineering hours."
+                }
+            ],
+            "linked_to":["NOV-SAS", "IPMA-D"]
+        },
+        {
+            "group": "ocean_engineering",
+            "name": "Ocean Engineering",
+            "items": [
+                {
+                    "title": "Offshore Oil and Gas Industry",
+                    "logo": "rig.svg",
+                    "level": 7,
+                    "link": "",
+                    "description": "10+ yas in the flexible pipe industry making big and awesome structures, adhering to the second-to-none requirements and standards for safety in oil & gas industry. I have worked with submerged structured, both in the water column and on seabed"
+                },
+                {
+                    "title": "Ships Structures",
+                    "logo": "ship.svg",
+                    "level": 7,
+                    "link": "",
+                    "description": "Calculating strains and stresses of floating structures subjected to wave loads, and producing engineering designs adhering to class standards"
+                },
+                {
+                    "title": "Sub Sea Structures",
+                    "logo": "flexible.svg",
+                    "level": 9,
+                    "link": "",
+                    "description": "Most of the engineering i have worked on is below the water surface, either in the water column connecting surface to seabed or resting on the seafloor"
+                }
+            ],
+            "linked_to":["DTU-MSC", "DTU-BSC", "ODS", "NOV-PID", "NOV-PSD", "NOV-SAS", "SMK"]
+        },
+        {
+            "group": "structural_dynamics",
+            "name": "Structural Dynamics",
+            "items": [
+                {
+                    "title": "Shock and Explosions",
+                    "logo": "explosion.svg",
+                    "level": 2,
+                    "link": "",
+                    "description": "Experience with really fast dynamics modelling blast events in explicit finite element (Autodyn) carrying out my M.Sc. thesis."
+                },
+                {
+                    "title": "Strength of Marine Structures",
+                    "logo": "ship_global.svg",
+                    "level": 5,
+                    "link": "",
+                    "description": "Modelling and reporting strength and dynamic response of ships to waves and propulsion both on commercial vessels and the worlds largest superyachts"
+                },
+                {
+                    "title": "Fatigue of Structures in Wave Loading)",
+                    "logo": "wave.svg",
+                    "level": 5,
+                    "link": "",
+                    "description": "Fatigue modelling is a requirement for structures in the O&G domain, and flexible pipes are complex structures to determine stress response of"
+                },
+                {
+                    "title": "In-field Measurement Campaigns",
+                    "logo": "vibration.svg",
+                    "level": 4,
+                    "link": "",
+                    "description": "Carrying out noise and vibration measurements in difficult conditions all over the worlds using novel equipment, hereunder microphones hydrophones accelerometers strain gauges etc. and analyzing the results afterwards"
+                }
+            ],
+            "linked_to":["DTU-MSC","ODS", "NOV-PID", "NOV-PSD"]
         },
         {
             "group": "applications",
@@ -578,9 +726,9 @@
                 {
                     "title": "Linux",
                     "logo": "linux.svg",
-                    "level": 2,
+                    "level": 4,
                     "link": "https://linuxmint.com/",
-                    "description": "I (and the whole family) uses Linux for our devices at home"
+                    "description": "well versed in the files system, permissions and user management. Furthermore, I (and the whole family) uses Linux for our devices at home"
                 },
                 {
                     "title": "Excel",
@@ -665,9 +813,17 @@
                     "level": 2,
                     "link": "https://openai.com/blog/chatgpt",
                     "description": "Use it for coding It's like having a super experienced senior developer you can ask and it does not get bothered"
+                },
+                {
+                    "title": "Neovim",
+                    "logo": "nvim.svg",
+                    "level": 4,
+                    "link": "https://neovim.io",
+                    "description": "Efficient text editor"
                 }
+
             ],
-            "linked_to":["DTU-MSC", "DTU-BSC", "ODS", "NOV-PID", "NOV-PSD", "NOV-SAS", "NOV-CA", "BCB"]
+            "linked_to":["DTU-MSC", "DTU-BSC", "ODS", "NOV-PID", "NOV-PSD", "NOV-SAS", "NOV-CA", "BCB" , "CSB"]
         }
     ]
 }

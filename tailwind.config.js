@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
   content: [
     "./index.html", 
@@ -15,8 +16,17 @@ export default {
       'desktop': '1280px',
       // => @media (min-width: 1280px) { ... }
     },
-    extend: {},
+    extend: {
+      screens:{
+     // print: {raw:print},
+     // screen: {raw:screen}
+    }
+    },
   },
   plugins: [],
 }
+
+
+
+
 
