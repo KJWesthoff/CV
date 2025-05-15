@@ -34,7 +34,7 @@ const twConfig = resolveConfig(tailwindConfig)
 // remove the relative color choices from the tw list
 //const colorList = Object.keys(baseColors).filter(i => !['inherit', 'current', 'transparent', 'neutral','black','white','red','pink','rose','violet'].includes(i) ).reverse()
 // const colorList = ['blue', 'red', 'green',  'zinc', 'violet', 'orange', 'yellow']
-const colorList = ['red', 'zinc', 'yellow', 'blue', 'orange', 'green', 'violet']
+const colorList = ['lime', 'zinc', 'rose', 'amber', 'indigo', 'green', 'stone']
 
 
 // bastard variable with a list of the top keys in data (for ordial scalig etc.)
