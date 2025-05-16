@@ -1,6 +1,7 @@
 {
   "name": "curriculumvitae",
-  "homepage": "kjwesthoff.github.io/CV",
+  "homepage": "https://kjwesthoff.github.io/CV",
+  "base": "/CV/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
