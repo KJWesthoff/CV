@@ -1,6 +1,5 @@
 {
   "name": "curriculumvitae",
-  "homepage": "https://kjwesthoff.github.io/CV",
   "base": "/CV/",
   "private": true,
   "version": "0.0.0",
@@ -8,9 +7,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "deploy": "gh-pages -d dist",
-    "predeploy": "npm run build && npm run deploy"
+    "preview": "vite preview"
   },
   "dependencies": {
     "d3": "^7.8.4",
