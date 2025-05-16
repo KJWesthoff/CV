@@ -14,7 +14,7 @@ export default defineConfig({
     //   defaultImport:'url'
     // })
   ],
-  base:'',
+  base:'/CV/',
   server: {
     port:8080,
   }
