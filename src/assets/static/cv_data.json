@@ -25,7 +25,7 @@
             ],
             "interests": [
                 "Camping and hiking in beautiful USA with my family",
-                "Mountain biking in the Bay Area",
+                "The opportunity to train our awesome border-collie",
                 "Experience and learn new things (i have recently build an IOT connected plant watering system)"
             ]
         },
@@ -36,7 +36,7 @@
     },
     "workexperience": [
         {
-            "short":"NOV-CA",
+            "short": "NOV-CA",
             "company": {
                 "name": "National Oilwell Varco (NOV, Flexibles)",
                 "description": "NOV delivers highly engineered flexible pipe systems for the biggest companies in the offshore oil and gas industry",
@@ -58,7 +58,7 @@
             ]
         },
         {
-            "short":"NOV-SAS",
+            "short": "NOV-SAS",
             "company": {
                 "name": "NOV",
                 "description": "",
@@ -81,7 +81,7 @@
             ]
         },
         {
-            "short":"NOV-PSD",
+            "short": "NOV-PSD",
             "company": {
                 "name": "NOV",
                 "description": "",
@@ -105,7 +105,7 @@
             ]
         },
         {
-            "short":"NOV-PID",
+            "short": "NOV-PID",
             "company": {
                 "name": "NKT Flexibles",
                 "description": "",
@@ -126,7 +126,7 @@
             ]
         },
         {
-            "short":"ODS",
+            "short": "ODS",
             "company": {
                 "name": "Lloyds Register / Odegaard & Danneskiold-Samsoe",
                 "description": "Odegaard & Danneskold-Samsøe (ODS) carried out Engineering consultancy within fluid dynamics, noise and vibration. ODS was acquired by Lloyds Register in 2005",
@@ -147,7 +147,7 @@
             ]
         },
         {
-            "short":"SMK",
+            "short": "SMK",
             "company": {
                 "name": "Danish Navy Material Command",
                 "description": "Government/Military Organization",
@@ -167,28 +167,46 @@
     ],
     "education": [
         {
-            "short":"MICS",
+            "short": "MICS",
             "school": "UC Berkeley School of Information",
             "logo": "berkeleyseal.svg",
             "link": "https://www.ischool.berkeley.edu/programs/mics",
-            "title": "UC Berkeley MICS (In Progress)",
+            "title": "Master of Information and Cybersecurity (In Progress)",
             "tenure": {
                 "start": "January 2024",
                 "end": "December 2025"
             },
             "keywords": [
                 "Cybersecurity",
-                "Risk Management",
+                "Security Operations",
                 "Cryptography",
                 "Networks",
-                "Software/OS Security",
-                "Machine Learning",
-                "Data Science"
+                "Web Application Security",
+                "Software/OS Security"
             ],
             "description": "UC Berkeley Graduate Programme, world class Instructors "
         },
         {
-            "short":"DTU-MSC",
+            "short": "MIDS",
+            "school": "UC Berkeley School of Information",
+            "logo": "berkeleyseal.svg",
+            "link": "https://www.ischool.berkeley.edu/programs/data-science-certificate",
+            "title": "Graduate Certificate in Applied Data Science",
+            "tenure": {
+                "start": "January 2025",
+                "end": "August 2025"
+            },
+            "keywords": [
+                "Research Design",
+                "Natural Language Processing",
+                "Large Language Models",
+                "Machine Learning",
+                "Data Science"
+            ],
+            "description": "UC Berkeley Graduate Certificate, world class Instructors "
+        },
+        {
+            "short": "DTU-MSC",
             "school": "DTU - Technical University of Denmark",
             "logo": "dtu.svg",
             "link": "https://www.dtu.dk/english/",
@@ -207,7 +225,7 @@
             "description": "Thesis work at DTU, Blast Performance of CFRP Composites: The project was carried out in cooperation with the Danish Defense Research Establishment (now a part of (FMT) and Falck-Schmidt Defense System. The project dealt with carbon fiber composite materials subjected to high explosives and included numerical modelling and design of and execution of blast experiments."
         },
         {
-            "short":"DTU-BSC",
+            "short": "DTU-BSC",
             "school": "DTU - Technical University of Denmark",
             "title": "B.Sc. Naval Architecture and Marine Engineering",
             "logo": "dtu.svg",
@@ -225,20 +243,8 @@
         }
     ],
     "certifications": [
-
         {
-            "short":"BCB",
-            "name": "Berkeley Coding Bootcamp",
-            "institution": "UC Berkeley Extension",
-            "issued": "May 2021",
-            "expires": "",
-            "logo": "berkeley.svg",
-            "validation": "74b1446548425e1612008cd5d849e0aa",
-            "description": "",
-            "link": "https://bootcamp.berkeley.edu/coding/"
-        },
-        {
-            "short":"CSB",
+            "short": "CSB",
             "name": "Caltech Cybersecurity Bootcamp",
             "institution": "Simplilearn | Caltech",
             "issued": "May 2024",
@@ -249,7 +255,18 @@
             "link": "https://pg-p.ctme.caltech.edu/cybersecurity-certification-bootcamp"
         },
         {
-            "short":"IPMA-D",
+            "short": "BCB",
+            "name": "Berkeley Coding Bootcamp",
+            "institution": "UC Berkeley Extension",
+            "issued": "May 2021",
+            "expires": "",
+            "logo": "berkeley.svg",
+            "validation": "74b1446548425e1612008cd5d849e0aa",
+            "description": "",
+            "link": "https://bootcamp.berkeley.edu/coding/"
+        },
+        {
+            "short": "IPMA-D",
             "name": "IPMA - D",
             "institution": "IPMA: International Project Management Association",
             "issued": "May 2015",
@@ -271,7 +288,7 @@
             "group": "aiml",
             "name": "AI/ML",
             "items": [
-                 {
+                {
                     "title": "Neural Networks",
                     "logo": "tensorflow.svg",
                     "level": 4,
@@ -285,23 +302,53 @@
                     "link": "https://huggingface.co/",
                     "description": "MICS course on natural language processing learning"
                 },
-                                {
+                {
                     "title": "AI",
                     "logo": "ai.svg",
                     "level": 4,
                     "link": "https://ischoolonline.berkeley.edu/cybersecurity/curriculum/",
                     "description": "Foundational courses at Berkeley on ML and NLP"
+                },
+                {
+                    "title": "Claude",
+                    "logo": "claude.svg",
+                    "level": 4,
+                    "link": "https://ischoolonline.berkeley.edu/cybersecurity/curriculum/",
+                    "description": "Lost of practical experience with Claude-Cli for various tasks"
+                },
+                {
+                    "title": "Colab",
+                    "logo": "colab.svg",
+                    "level": 4,
+                    "link": "https://ischoolonline.berkeley.edu/cybersecurity/curriculum/",
+                    "description": "Used in many academic projects"
+                },
+                {
+                    "title": "Natural Language Processing",
+                    "logo": "nlp.svg",
+                    "level": 4,
+                    "link": "https://ischoolonline.berkeley.edu/cybersecurity/curriculum/",
+                    "description": "Course at UC Berkeley"
+                },
+                {
+                    "title": "ChatGPT",
+                    "logo": "chatGPT.svg",
+                    "level": 4,
+                    "link": "https://ischoolonline.berkeley.edu/cybersecurity/curriculum/",
+                    "description": "Used in many ways"
                 }
-               
-
             ],
-            "linked_to":["BCB","CSB","MICS" ]
+            "linked_to": [
+                "BCB",
+                "CSB",
+                "MICS"
+            ]
         },
         {
             "group": "cybersecurity",
             "name": "Cybersecurity",
             "items": [
-                 {
+                {
                     "title": "Security Testing",
                     "logo": "hacker.svg",
                     "level": 4,
@@ -367,7 +414,7 @@
                 {
                     "title": "Burpsuite",
                     "logo": "burpsuite.svg",
-                    "level": 4,
+                    "level": 5,
                     "link": "https://portswigger.net/burp",
                     "description": "Web application security testing/exploiting"
                 },
@@ -386,15 +433,26 @@
                     "description": "SIEM/log analysis tool"
                 },
                 {
+                    "title": "Nessus Scanner",
+                    "logo": "nessus.svg",
+                    "level": 2,
+                    "link": "https://www.tenable.com/products/nessus",
+                    "description": "Benchmark endpoint vulnerability scanning tool"
+                },
+                {
                     "title": "Forensics",
                     "logo": "autopsy.svg",
                     "level": 3,
                     "link": "https://www.autopsy.com/",
                     "description": "Digital forensics tool"
                 }
-
             ],
-            "linked_to":["BCB","CSB", "NOV-CA", "MICS" ]
+            "linked_to": [
+                "BCB",
+                "CSB",
+                "NOV-CA",
+                "MICS"
+            ]
         },
         {
             "group": "webstack",
@@ -610,9 +668,12 @@
                     "link": "https://www.rancher.com/",
                     "description": "Kubernetes container orchestration made easy"
                 }
-               
             ],
-            "linked_to":["BCB", "NOV-SAS", "NOV-CA"]
+            "linked_to": [
+                "BCB",
+                "NOV-SAS",
+                "NOV-CA"
+            ]
         },
         {
             "group": "project_management",
@@ -654,7 +715,10 @@
                     "description": "Extensive experience as project manager for Front End Engineering Design projects, carried out for major global energy companies, scopes typically ranging 1000-5000 engineering hours."
                 }
             ],
-            "linked_to":["NOV-SAS", "IPMA-D"]
+            "linked_to": [
+                "NOV-SAS",
+                "IPMA-D"
+            ]
         },
         {
             "group": "ocean_engineering",
@@ -682,7 +746,15 @@
                     "description": "Most of the engineering i have worked on is below the water surface, either in the water column connecting surface to seabed or resting on the seafloor"
                 }
             ],
-            "linked_to":["DTU-MSC", "DTU-BSC", "ODS", "NOV-PID", "NOV-PSD", "NOV-SAS", "SMK"]
+            "linked_to": [
+                "DTU-MSC",
+                "DTU-BSC",
+                "ODS",
+                "NOV-PID",
+                "NOV-PSD",
+                "NOV-SAS",
+                "SMK"
+            ]
         },
         {
             "group": "structural_dynamics",
@@ -717,7 +789,12 @@
                     "description": "Carrying out noise and vibration measurements in difficult conditions all over the worlds using novel equipment, hereunder microphones hydrophones accelerometers strain gauges etc. and analyzing the results afterwards"
                 }
             ],
-            "linked_to":["DTU-MSC","ODS", "NOV-PID", "NOV-PSD"]
+            "linked_to": [
+                "DTU-MSC",
+                "ODS",
+                "NOV-PID",
+                "NOV-PSD"
+            ]
         },
         {
             "group": "applications",
@@ -726,7 +803,7 @@
                 {
                     "title": "Linux",
                     "logo": "linux.svg",
-                    "level": 4,
+                    "level": 5,
                     "link": "https://linuxmint.com/",
                     "description": "well versed in the files system, permissions and user management. Furthermore, I (and the whole family) uses Linux for our devices at home"
                 },
@@ -821,9 +898,18 @@
                     "link": "https://neovim.io",
                     "description": "Efficient text editor"
                 }
-
             ],
-            "linked_to":["DTU-MSC", "DTU-BSC", "ODS", "NOV-PID", "NOV-PSD", "NOV-SAS", "NOV-CA", "BCB" , "CSB"]
+            "linked_to": [
+                "DTU-MSC",
+                "DTU-BSC",
+                "ODS",
+                "NOV-PID",
+                "NOV-PSD",
+                "NOV-SAS",
+                "NOV-CA",
+                "BCB",
+                "CSB"
+            ]
         }
     ]
 }

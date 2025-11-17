@@ -9,9 +9,9 @@ import { computed, defineProps, defineEmits } from 'vue'
 import resolveConfig from 'tailwindcss/resolveConfig'
 import tailwindConfig from '../../tailwind.config'
 
-// config paramates for man svg "stage"
-const width = ref(320);
-const height = ref(240);
+// config parameters for man svg "stage"
+const width = ref(350);
+const height = ref(250);
 
 const minBlobRadius = 3
 const maxBlobRadius = 10
@@ -362,7 +362,7 @@ const showUpClick = function () {
     // get the max date from yaxisData 
 
 
-    const scaleY = computed(() => d3.scaleLinear().domain([Math.min(...yTicks), Math.max(...yTicks)]).range([height.value - 16, 16]))
+    const scaleY = computed(() => d3.scaleLinear().domain([Math.min(...yTicks), Math.max(...yTicks)]).range([height.value - 10, 10]))
 
 
 
@@ -391,7 +391,7 @@ const showUpClick = function () {
         .append("g")
         .attr("class", "y-axis")
         .attr("transform", "translate(16,0)")
-        .style("font-size", 5)
+        .style("font-size", 4)
         .style('stroke-dasharray', '0.5,0.5')
         .style("stroke-width", 0.1)
         //.call(axisY);
@@ -430,7 +430,7 @@ const showUpClick = function () {
         .append("text")
         .attr("id", d => d.short)
         .text(d => d.title)
-        .style("font-size", 5)
+        .style("font-size", 4)
         .style("alignment-baseline", 'central')
         .attr("x", 18)
         .attr("y", d => scaleY.value(d.end))

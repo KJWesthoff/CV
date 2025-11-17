@@ -21,7 +21,7 @@ const data = props.data
                 <h6>Issued: {{ data.issued }} - {{ data.expired }}</h6>
             </div>
             <!-- <ul class="list-disc" v-for="task in data.education.keywords">
-                <li class="ml-10 mb-1">{{ task }}</li>
+                <li class="ml-10 mb-0">{{ task }}</li>
             </ul> -->
 
         </div>

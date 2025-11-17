@@ -27,10 +27,10 @@ const data = props.data
 
             </div>
             <ul class="list-disc" v-for="task in data.tasks">
-                <li class="ml-10 mb-1">{{ task }}</li>
+                <li class="ml-10 mb-0">{{ task }}</li>
             </ul>
             <ul class="list-disc" v-for="task in data.learnings">
-                <li class="ml-10 mb-1"> {{ task }}</li>
+                <li class="ml-10 mb-0"> {{ task }}</li>
             </ul>
 
         </div>
