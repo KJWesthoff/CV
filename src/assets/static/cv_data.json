@@ -286,7 +286,7 @@
     "skills": [
         {
             "group": "aiml",
-            "name": "AI/ML",
+            "name": "AI/ML/NLP",
             "items": [
                 {
                     "title": "Neural Networks",
@@ -445,7 +445,15 @@
                     "level": 3,
                     "link": "https://www.autopsy.com/",
                     "description": "Digital forensics tool"
+                },
+                {
+                    "title": "Active Directory",
+                    "logo": "bloodhound.svg",
+                    "level": 4,
+                    "link": "https://bloodhound.specterops.io/get-started/introduction",
+                    "description": "AD enumeraion"
                 }
+ 
             ],
             "linked_to": [
                 "BCB",
