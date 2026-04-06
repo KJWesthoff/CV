@@ -24,15 +24,16 @@
                 }
             ],
             "interests": [
-                "Camping and hiking in beautiful USA with my family",
+                "Camping and hiking beautiful places with my family",
                 "The opportunity to train our awesome border-collie",
                 "Experience and learn new things (i have recently build an IOT connected plant watering system)"
             ]
         },
         "email": "karl.johan.westhoff@gmail.com",
-        "phone": "(408) 416-1761",
+        "phone": "+45 20 31 41 21",
         "linkedin": "https://www.linkedin.com/in/karl-johan-westhoff-36460011",
-        "github": "https://github.com/KJWesthoff"
+        "github": "https://github.com/KJWesthoff",
+        "CV":  "https://kjwesthoff.github.io/CV/"
     },
     "workexperience": [
         {
