@@ -1,7 +1,7 @@
 {
     "about": {
         "name": "Karl-Johan Westhoff",
-        "title": "Engineer",
+        "title": "AI Cybersecurity and Engineering",
         "summary": "Experienced engineer with 15+ years of expertise designing safe and secure ocean structures and developing software tools to power engineering solutions. I have extensive experience as project manager for client facing and technically challenging projects of various size.",
         "offerings": [
             "Experience from the worlds largest infrastructure projects in teh O&G industry",
@@ -12,7 +12,7 @@
             "learnings": [
                 {
                     "item": "Sailboat racing",
-                    "learned": "Even if you have the best crew, only one mistake at the helm can mess everything up, being at the wheel comes with obligations"
+                    "learned": "Even if you have the best crew, only one mistake at the helm can have large consequences, being at the wheel comes with obligations"
                 },
                 {
                     "item": "Long distance triathlons",
@@ -20,11 +20,11 @@
                 },
                 {
                     "item": "Remodelling our house",
-                    "learned": "Appreciate all the help you can get, competent professionals are worth it"
+                    "learned": "Appreciate all the help you can get, competent professionals are a gift to yout project"
                 }
             ],
             "interests": [
-                "Camping and hiking beautiful places with my family",
+                "Camping and hiking in beautiful places with my family",
                 "The opportunity to train our awesome border-collie",
                 "Experience and learn new things (i have recently build an IOT connected plant watering system)"
             ]
@@ -302,6 +302,13 @@
                     "level": 4,
                     "link": "https://huggingface.co/",
                     "description": "MICS course on natural language processing learning"
+                },
+                {
+                    "title": "OpenClaw",
+                    "logo": "openclaw.svg",
+                    "level": 4,
+                    "link": "https://openclaw.ai/",
+                    "description": "Strictly usen in sandboxed vm, for autonomous pentesting"
                 },
                 {
                     "title": "AI",
