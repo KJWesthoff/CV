@@ -77,9 +77,14 @@ const tidyUpSim = computed(() => d3.forceSimulation()
     .force("y", d3.forceY(1).y(height.value / 2))
 )
 
+const timelineIconScale = (d) => d.group === 'webstack' ? 0.6 : 1
+const timelineCollisionRadius = (d) => d.group === 'webstack'
+    ? radiusScale.value(d.level) * 0.6 / 6
+    : radiusScale.value(d.level) / 3
+
 const showUpSim = computed(() => d3.forceSimulation()
-    .force('charge', d3.forceManyBody().strength(-2))
-    .force('collision', d3.forceCollide().radius(d => radiusScale.value(d.level) / 3))
+    .force('charge', d3.forceManyBody().strength(d => d.group === 'webstack' ? -0.3 : -2))
+    .force('collision', d3.forceCollide().radius(d => timelineCollisionRadius(d)))
     .force("y", d3.forceY().y(d => {
         return yPos.value(d.group)
     }))
@@ -196,7 +201,6 @@ const tidyUpClick = function () {
             .attr('y', function (d) {
                 return d.y - radiusScale.value(d.level) / 2;
             })
-
 
         circles
             .attr('cx', function (d) {
@@ -540,10 +544,16 @@ const showUpClick = function () {
     function ticked() {
         icons
             .attr('x', function (d) {
-                return d.x - radiusScale.value(d.level) / 2;
+                return d.x - radiusScale.value(d.level) * timelineIconScale(d) / 2;
             })
             .attr('y', function (d) {
-                return d.y - radiusScale.value(d.level) / 2;
+                return d.y - radiusScale.value(d.level) * timelineIconScale(d) / 2;
+            })
+            .attr('height', function (d) {
+                return radiusScale.value(d.level) * timelineIconScale(d);
+            })
+            .attr('width', function (d) {
+                return radiusScale.value(d.level) * timelineIconScale(d);
             })
             .raise()
 
