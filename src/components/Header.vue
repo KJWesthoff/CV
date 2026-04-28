@@ -27,6 +27,9 @@ import data from '../assets/static/cv_data.json'
         <div class="flex items-center">
           <icon name="github-mark.svg" class="items-center mr-2"></icon><a :href="data.about.github">{{ data.about.github }}</a>
         </div>
+        <div class="flex items-center">
+          <icon name="wave.svg" class="items-center mr-2"></icon><a :href="data.about.CV">{{ data.about.CV }}</a>
+        </div>
       </div>
 
     </div>
