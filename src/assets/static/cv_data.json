@@ -185,7 +185,8 @@
                 "Web Application Security",
                 "Software/OS Security"
             ],
-            "description": "UC Berkeley Graduate Programme, world class Instructors "
+            "description": "UC Berkeley Graduate Programme, world class Instructors ",
+            "verify": "CeD.26OK-60F0-KLFK.pdf"
         },
         {
             "short": "MIDS",
@@ -204,7 +205,8 @@
                 "Machine Learning",
                 "Data Science"
             ],
-            "description": "UC Berkeley Graduate Certificate, world class Instructors "
+            "description": "UC Berkeley Graduate Certificate, world class Instructors ",
+            "verify": "CeD.26OK-60F0-KLFK.pdf"
         },
         {
             "short": "DTU-MSC",
