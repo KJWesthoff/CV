@@ -45,7 +45,7 @@ import data from '../assets/static/cv_data.json'
 
         </div>
 
-        <div class="text-xs flex flex-row mt-5">
+        <div class="text-xs flex flex-row mt-5 print:hidden">
             This page was built using
             <a class = "flex flex-row items-start ml-1" href="https://vuejs.org/" target="_blank" rel="noopener noreferrer">Vue 
                 <icon class="mr-1 ml-1" name="vue.svg"/>,

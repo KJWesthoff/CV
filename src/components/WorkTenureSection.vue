@@ -11,7 +11,7 @@ const data = props.data
 </script>
 
 <template>
-    <div class="mt-5">
+    <div class="mt-5 no-break-inside">
         <h2 class="text-2xl font-bold">{{ data.title }}</h2>
         <h4 class="flex justify between text-2xl">
             <icon class="mr-5" :name="data.company.logo"></icon>{{ data.company.name }}
